@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <exported-packages>
+        <source-packages/>
+    </exported-packages>
+
+    <providers>
+        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbs2018.base.backoffice.activities.monitor.MonitorUiRoute</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbs2018.base.backoffice.activities.monitor.RouteToMonitorRequestEmitter</provider>
+    </providers>
+
+    <dependencies>
+        <used-by-source-modules>
+            <undetected-module>javafx-controls</undetected-module>
+        </used-by-source-modules>
+    </dependencies>
+
+</project>

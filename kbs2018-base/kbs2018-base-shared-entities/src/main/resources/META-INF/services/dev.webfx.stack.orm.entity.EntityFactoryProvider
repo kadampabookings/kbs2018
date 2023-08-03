@@ -1,0 +1,4 @@
+org.kadampabookings.kbs2018.base.shared.entities.impl.DateInfoImpl$ProvidedFactory
+org.kadampabookings.kbs2018.base.shared.entities.impl.EventImpl$ProvidedFactory
+org.kadampabookings.kbs2018.base.shared.entities.impl.OptionImpl$ProvidedFactory
+org.kadampabookings.kbs2018.base.shared.entities.impl.SystemMetricsEntityImpl$ProvidedFactory

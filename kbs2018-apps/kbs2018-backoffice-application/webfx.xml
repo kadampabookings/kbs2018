@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project applicationId="org.kadampabookings.kbs.backoffice" applicationLabel="KBS">
+
+    <exported-packages>
+        <source-packages/>
+    </exported-packages>
+
+    <providers>
+        <provider interface="javafx.application.Application">org.kadampabookings.kbs2018.backoffice.KBSBackOfficeApplication</provider>
+    </providers>
+
+    <dependencies>
+        <used-by-source-modules/>
+
+        <!-- Allow configuration variables from environment in Java executables (OpenJFX or Gluon) -->
+        <plugin-module executable-target="java">webfx-stack-conf-env-java</plugin-module>
+
+        <!-- Base activities -->
+        <plugin-module>modality-base-backoffice-activities-all</plugin-module>
+
+        <!-- CRM activities -->
+        <plugin-module>kbs2018-crm-backoffice-activities-all</plugin-module>
+
+        <!-- Ecommerce activities -->
+        <plugin-module>kbs2018-ecommerce-backoffice-activities-all</plugin-module>
+
+        <!-- Hotel activities -->
+        <plugin-module>kbs2018-hotel-backoffice-activities-roomsgraphic</plugin-module>
+
+        <!-- Event activities -->
+        <plugin-module>kbs2018-event-backoffice-activities-all</plugin-module>
+
+        <!-- Catering activities -->
+        <plugin-module>modality-catering-backoffice-activities-all</plugin-module>
+
+    </dependencies>
+
+</project>

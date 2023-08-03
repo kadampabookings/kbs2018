@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <exported-packages>
+        <source-packages/>
+    </exported-packages>
+
+    <dependencies>
+        <used-by-source-modules/>
+        <plugin-module>modality-base-client-icons</plugin-module>
+    </dependencies>
+
+    <embed-resources>
+        <resource>images/svg/mono/certificate.svg</resource>
+        <resource>images/svg/mono/calendar.svg</resource>
+        <resource>images/svg/mono/price-tag.svg</resource>
+        <resource>images/svg/color/price-tag.svg</resource>
+    </embed-resources>
+
+</project>
