@@ -47,7 +47,7 @@ module kbs2018.backoffice.application.openjfx {
     // Exported packages
     exports org.kadampabookings.kbs2018.backoffice.activities.event.clone.openjfx;
 
-    // Meta Resource package
+    // Resources packages
     opens dev.webfx.platform.meta.exe;
 
 }
