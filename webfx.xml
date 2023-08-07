@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project name="kbs2018">
+
+    <parent name="webfx-parent"/>
+
+    <groupId>org.kadampabookings</groupId>
+    <version>1.0.0-SNAPSHOT</version>
 
     <modules>
         <subdirectories-modules/>
     </modules>
+
+    <required-libraries>
+        <webfx-library artifact="one.modality:modality:1.0.0-SNAPSHOT"/>
+    </required-libraries>
+
+    <maven-repositories>
+        <snapshot-repository id="webfx-snapshots">https://oss.sonatype.org/content/repositories/snapshots/</snapshot-repository>
+        <snapshot-repository id="modality-snapshots">https://s01.oss.sonatype.org/content/repositories/snapshots/</snapshot-repository>
+    </maven-repositories>
 
 </project>
