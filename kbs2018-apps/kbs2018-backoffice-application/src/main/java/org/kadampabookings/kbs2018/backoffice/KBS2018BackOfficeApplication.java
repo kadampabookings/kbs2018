@@ -5,9 +5,9 @@ import one.modality.base.client.application.ModalityClientApplication;
 /**
  * @author Bruno Salmon
  */
-public class KBSBackOfficeApplication extends ModalityClientApplication {
+public class KBS2018BackOfficeApplication extends ModalityClientApplication {
 
-    public KBSBackOfficeApplication() {
+    public KBS2018BackOfficeApplication() {
         super(new ModalityBackOfficeStarterActivity());
     }
 }

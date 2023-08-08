@@ -1,5 +1,7 @@
 // File managed by WebFX (DO NOT EDIT MANUALLY)
 
+import org.kadampabookings.kbs2018.backoffice.KBS2018BackOfficeApplication;
+
 module kbs2018.backoffice.application {
 
     // Direct dependencies modules
@@ -23,6 +25,6 @@ module kbs2018.backoffice.application {
     exports org.kadampabookings.kbs2018.backoffice;
 
     // Provided services
-    provides javafx.application.Application with org.kadampabookings.kbs2018.backoffice.KBSBackOfficeApplication;
+    provides javafx.application.Application with KBS2018BackOfficeApplication;
 
 }
