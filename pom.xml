@@ -13,7 +13,7 @@
     </parent>
 
     <groupId>org.kadampabookings</groupId>
-    <artifactId>kbs2018</artifactId>
+    <artifactId>kbsx</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <repositories>
@@ -42,13 +42,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>kbs2018-apps</module>
-        <module>kbs2018-base</module>
-        <module>kbs2018-catering</module>
-        <module>kbs2018-crm</module>
-        <module>kbs2018-ecommerce</module>
-        <module>kbs2018-event</module>
-        <module>kbs2018-hotel</module>
+        <module>kbsx-apps</module>
+        <module>kbsx-base</module>
+        <module>kbsx-catering</module>
+        <module>kbsx-crm</module>
+        <module>kbsx-ecommerce</module>
+        <module>kbsx-event</module>
+        <module>kbsx-hotel</module>
     </modules>
 
 </project>

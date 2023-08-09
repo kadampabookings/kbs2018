@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <exported-packages>
+        <source-packages/>
+    </exported-packages>
+
+    <dependencies>
+        <used-by-source-modules/>
+    </dependencies>
+
+    <providers>
+        <provider interface="dev.webfx.stack.orm.entity.EntityFactoryProvider">org.kadampabookings.kbsx.base.shared.entities.impl.DateInfoImpl$ProvidedFactory</provider>
+        <provider interface="dev.webfx.stack.orm.entity.EntityFactoryProvider">org.kadampabookings.kbsx.base.shared.entities.impl.EventImpl$ProvidedFactory</provider>
+        <provider interface="dev.webfx.stack.orm.entity.EntityFactoryProvider">org.kadampabookings.kbsx.base.shared.entities.impl.OptionImpl$ProvidedFactory</provider>
+        <provider interface="dev.webfx.stack.orm.entity.EntityFactoryProvider">org.kadampabookings.kbsx.base.shared.entities.impl.SystemMetricsEntityImpl$ProvidedFactory</provider>
+    </providers>
+
+</project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <exported-packages>
+        <source-packages/>
+    </exported-packages>
+
+    <providers>
+        <provider interface="org.kadampabookings.kbsx.base.server.services.systemmetrics.spi.SystemMetricsServiceProvider">org.kadampabookings.kbsx.base.server.services.systemmetrics.spi.java.JavaSystemMetricsServiceProvider</provider>
+    </providers>
+
+    <dependencies>
+        <used-by-source-modules/>
+    </dependencies>
+
+</project>

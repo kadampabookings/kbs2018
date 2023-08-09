@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File managed by WebFX (DO NOT EDIT MANUALLY) -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.kadampabookings</groupId>
+        <artifactId>kbsx</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kbsx-base</artifactId>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>kbsx-base-backoffice-activities-monitor</module>
+        <module>kbsx-base-backoffice-multilangeditor</module>
+        <module>kbsx-base-client-aggregates</module>
+        <module>kbsx-base-client-icons</module>
+        <module>kbsx-base-client-sessionrecorder</module>
+        <module>kbsx-base-server-sessioncloser</module>
+        <module>kbsx-base-server-systemmetrics</module>
+        <module>kbsx-base-server-systemmetrics-java</module>
+        <module>kbsx-base-shared-entities</module>
+    </modules>
+
+</project>

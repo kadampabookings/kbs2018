@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File managed by WebFX (DO NOT EDIT MANUALLY) -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.kadampabookings</groupId>
+        <artifactId>kbsx</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kbsx-event</artifactId>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>kbsx-event-backoffice-activities-all</module>
+        <module>kbsx-event-backoffice-activities-cloneevent</module>
+        <module>kbsx-event-backoffice-activities-cloneevent-routing</module>
+        <module>kbsx-event-backoffice-activities-events</module>
+        <module>kbsx-event-backoffice-activities-options</module>
+        <module>kbsx-event-client-activity-eventdependent</module>
+        <module>kbsx-event-client-bookingcalendar</module>
+        <module>kbsx-event-client-calendar</module>
+        <module>kbsx-event-client-sectionpanel</module>
+        <module>kbsx-event-frontoffice-activities-all</module>
+        <module>kbsx-event-frontoffice-activities-fees</module>
+        <module>kbsx-event-frontoffice-activities-options</module>
+        <module>kbsx-event-frontoffice-activities-program</module>
+        <module>kbsx-event-frontoffice-activities-startbooking</module>
+        <module>kbsx-event-frontoffice-activities-terms</module>
+    </modules>
+
+</project>

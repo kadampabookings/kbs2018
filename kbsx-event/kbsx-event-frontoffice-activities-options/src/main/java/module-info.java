@@ -1,0 +1,44 @@
+// File managed by WebFX (DO NOT EDIT MANUALLY)
+
+module kbsx.event.frontoffice.activities.options {
+
+    // Direct dependencies modules
+    requires java.base;
+    requires javafx.base;
+    requires javafx.controls;
+    requires javafx.graphics;
+    requires kbsx.base.client.icons;
+    requires kbsx.base.shared.entities;
+    requires kbsx.ecommerce.client.bookingprocess;
+    requires kbsx.ecommerce.client.businesslogic;
+    requires kbsx.ecommerce.frontoffice.activities.person;
+    requires kbsx.event.client.bookingcalendar;
+    requires kbsx.event.client.sectionpanel;
+    requires kbsx.hotel.shared.time;
+    requires modality.base.client.entities;
+    requires modality.base.client.util;
+    requires modality.base.client.validation;
+    requires modality.base.shared.entities;
+    requires webfx.extras.flexbox;
+    requires webfx.extras.imagestore;
+    requires webfx.extras.util.layout;
+    requires webfx.kit.util;
+    requires webfx.platform.console;
+    requires webfx.platform.uischeduler;
+    requires webfx.platform.util;
+    requires webfx.platform.windowhistory;
+    requires webfx.stack.i18n;
+    requires webfx.stack.orm.domainmodel.activity;
+    requires webfx.stack.orm.entity;
+    requires webfx.stack.orm.entity.controls;
+    requires webfx.stack.routing.uirouter;
+
+    // Exported packages
+    exports org.kadampabookings.kbsx.event.frontoffice.activities.options;
+    exports org.kadampabookings.kbsx.event.frontoffice.activities.options.routing;
+    exports org.kadampabookings.kbsx.event.frontoffice.operations.options;
+
+    // Provided services
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.options.OptionsUiRoute;
+
+}

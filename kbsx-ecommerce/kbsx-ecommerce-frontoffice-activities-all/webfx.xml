@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <exported-packages>
+        <source-packages/>
+    </exported-packages>
+
+    <dependencies>
+        <used-by-source-modules/>
+
+        <plugin-module>kbsx-ecommerce-frontoffice-activities-person</plugin-module>
+        <plugin-module>kbsx-ecommerce-frontoffice-activities-summary</plugin-module>
+        <plugin-module>kbsx-ecommerce-frontoffice-activities-cart</plugin-module>
+        <plugin-module>kbsx-ecommerce-frontoffice-activities-payment</plugin-module>
+        <plugin-module>kbsx-ecommerce-frontoffice-activities-contactus</plugin-module>
+
+    </dependencies>
+
+</project>
