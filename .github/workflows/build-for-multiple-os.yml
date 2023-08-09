@@ -35,8 +35,8 @@ jobs:
     strategy:
       matrix:
         app: [
-          { name: 'KbsXBackOffice',  parent-module: '', module-token: 'kbsx-backoffice',  gwt-token: 'kbsx_backoffice',  gluon-token: 'KbsxBackoffice',  web-push-branch: '', android-package-name: 'org.kadampabookings.kbsx.backoffice',  android-track: 'beta', ios-bundle-id: 'org.kadampabookings.kbsx.backoffice',  version: '1.0.0-SNAPSHOT' },
-          { name: 'KbsXFrontOffice', parent-module: '', module-token: 'kbsx-frontoffice', gwt-token: 'kbsx_frontoffice', gluon-token: 'KbsxFrontoffice', web-push-branch: '', android-package-name: 'org.kadampabookings.kbsx.frontoffice', android-track: 'beta', ios-bundle-id: 'org.kadampabookings.kbsx.frontoffice', version: '1.0.0-SNAPSHOT' }
+          { name: 'KbsXBackOffice',  parent-module: 'kbsx-apps', module-token: 'kbsx-backoffice',  gwt-token: 'kbsx_backoffice',  gluon-token: 'KbsxBackoffice',  web-push-branch: '', android-package-name: 'org.kadampabookings.kbsx.backoffice',  android-track: 'beta', ios-bundle-id: 'org.kadampabookings.kbsx.backoffice',  version: '1.0.0-SNAPSHOT' },
+          { name: 'KbsXFrontOffice', parent-module: 'kbsx-apps', module-token: 'kbsx-frontoffice', gwt-token: 'kbsx_frontoffice', gluon-token: 'KbsxFrontoffice', web-push-branch: '', android-package-name: 'org.kadampabookings.kbsx.frontoffice', android-track: 'beta', ios-bundle-id: 'org.kadampabookings.kbsx.frontoffice', version: '1.0.0-SNAPSHOT' }
         ]
         os-config:  [1, 2, 3, 4]
         include:
