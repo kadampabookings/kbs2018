@@ -8,10 +8,10 @@ module kbsx.frontoffice.application.gluon {
     requires webfx.extras.visual.grid.peers.openjfx;
     requires webfx.extras.webtext.peers.openjfx;
     requires webfx.kit.openjfx;
+    requires webfx.platform.blob.java;
     requires webfx.platform.boot.java;
     requires webfx.platform.console.java;
     requires webfx.platform.fetch.java;
-    requires webfx.platform.file.java;
     requires webfx.platform.json.java;
     requires webfx.platform.os.gluon;
     requires webfx.platform.resource.gluon;
