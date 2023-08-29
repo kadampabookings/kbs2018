@@ -5,8 +5,7 @@ import dev.webfx.platform.async.FutureBroadcaster;
 import dev.webfx.platform.util.Numbers;
 import dev.webfx.platform.util.Objects;
 import dev.webfx.platform.util.collection.Collections;
-import dev.webfx.stack.com.bus.BusService;
-import dev.webfx.stack.com.bus.spi.impl.json.client.websocket.WebSocketBusOptions;
+import dev.webfx.platform.windowlocation.WindowLocation;
 import dev.webfx.stack.db.query.QueryArgument;
 import dev.webfx.stack.db.query.QueryResult;
 import dev.webfx.stack.db.query.QueryService;
@@ -247,7 +246,7 @@ final class EventAggregateImpl implements EventAggregate {
     // Private implementation methods
 
     private static String getHost() {
-        return ((WebSocketBusOptions) BusService.getBusOptions()).getServerHost();
+        return WindowLocation.getHost();
     }
 
     @Override

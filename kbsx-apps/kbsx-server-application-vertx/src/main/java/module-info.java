@@ -22,7 +22,6 @@ module kbsx.server.application.vertx {
     requires webfx.stack.authn.oauth2.vertx;
     requires webfx.stack.authn.server.portal;
     requires webfx.stack.com.bus.json.vertx;
-    requires webfx.stack.conf.format.json;
     requires webfx.stack.db.querypush.server;
     requires webfx.stack.db.querypush.server.simple;
     requires webfx.stack.db.querysubmit.vertx;
@@ -34,8 +33,5 @@ module kbsx.server.application.vertx {
     requires webfx.stack.push.server.simple;
     requires webfx.stack.routing.router.vertx;
     requires webfx.stack.session.vertx;
-
-    // Resources packages
-    opens dev.webfx.platform.meta.exe;
 
 }

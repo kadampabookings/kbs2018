@@ -5,15 +5,16 @@
         <source-packages/>
     </exported-packages>
 
-    <providers>
-        <provider interface="javafx.application.Application">org.kadampabookings.kbsx.backoffice.KbsExperimentalBackOfficeApplication</provider>
-    </providers>
-
     <dependencies>
         <used-by-source-modules/>
 
         <!-- Allow configuration variables from environment in Java executables (OpenJFX or Gluon) -->
-        <plugin-module executable-target="java">webfx-stack-conf-env-java</plugin-module>
+        <plugin-module executable-target="java">webfx-platform-substitution-var-env</plugin-module>
+        <!-- Allow configuration variables from local storage in GWT executables -->
+        <plugin-module executable-target="gwt">webfx-platform-substitution-var-localstorage</plugin-module>
+        <plugin-module executable-target="gwt">webfx-platform-substitution-var-windowlocation</plugin-module>
+
+        <plugin-module>modality-base-backoffice-application</plugin-module>
 
         <!-- Base activities -->
         <plugin-module>modality-base-backoffice-activities-all</plugin-module>

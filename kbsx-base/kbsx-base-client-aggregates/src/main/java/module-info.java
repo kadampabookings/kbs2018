@@ -9,8 +9,7 @@ module kbsx.base.client.aggregates {
     requires transitive webfx.platform.async;
     requires webfx.platform.console;
     requires webfx.platform.util;
-    requires webfx.stack.com.bus;
-    requires webfx.stack.com.bus.json.client.websocket;
+    requires webfx.platform.windowlocation;
     requires webfx.stack.db.query;
     requires webfx.stack.orm.domainmodel;
     requires transitive webfx.stack.orm.entity;

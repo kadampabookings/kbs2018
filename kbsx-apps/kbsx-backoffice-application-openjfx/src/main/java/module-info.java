@@ -30,9 +30,9 @@ module kbsx.backoffice.application.openjfx {
     requires webfx.stack.authn.login.ui.gateway.webviewbased.openjfx;
     requires webfx.stack.authn.login.ui.portal;
     requires webfx.stack.authn.remote;
+    requires webfx.stack.com.bus.json.client;
     requires webfx.stack.com.bus.json.client.websocket.java;
     requires webfx.stack.com.websocket.java;
-    requires webfx.stack.conf.format.json;
     requires webfx.stack.db.query.buscall;
     requires webfx.stack.db.querysubmit.java.jdbc;
     requires webfx.stack.db.submit.buscall;
@@ -46,8 +46,5 @@ module kbsx.backoffice.application.openjfx {
 
     // Exported packages
     exports org.kadampabookings.kbsx.backoffice.activities.event.clone.openjfx;
-
-    // Resources packages
-    opens dev.webfx.platform.meta.exe;
 
 }

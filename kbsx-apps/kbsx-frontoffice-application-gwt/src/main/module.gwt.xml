@@ -73,30 +73,107 @@
     <inherits name="elemental2.core.Core"/>
     <!--=================================< elemental2-dom >=================================-->
     <inherits name="elemental2.dom.Dom"/>
-    <!--===============================< elemental2-promise >===============================-->
-    <source path="elemental2/promise"/>
     <!--=================================< elemental2-svg >=================================-->
     <inherits name="elemental2.svg.Svg"/>
     <!--====================================< gwt-user >====================================-->
     <inherits name="com.google.gwt.user.User"/>
     <!--=================================< java-nio-emul >==================================-->
     <inherits name="org.gwtproject.nio.GwtNioSupport"/>
-    <!--==========================< kbsx-frontoffice-application >==========================-->
-    <source path="org/kadampabookings/kbsx/frontoffice"/>
+    <!--==========================< kbsx-base-client-aggregates >===========================-->
+    <source path="org/kadampabookings/kbsx/base/client/aggregates/cart"/>
+    <source path="org/kadampabookings/kbsx/base/client/aggregates/event"/>
+    <source path="org/kadampabookings/kbsx/base/client/aggregates/person"/>
+    <!--=============================< kbsx-base-client-icons >=============================-->
+    <source path="org/kadampabookings/kbsx/base/client/actions"/>
+    <source path="org/kadampabookings/kbsx/base/client/icons"/>
+    <!--===========================< kbsx-base-shared-entities >============================-->
+    <source path="org/kadampabookings/kbsx/base/shared/entities"/>
+    <source path="org/kadampabookings/kbsx/base/shared/entities/impl"/>
+    <source path="org/kadampabookings/kbsx/base/shared/entities/markers"/>
+    <source path="org/kadampabookings/kbsx/base/shared/services/systemmetrics"/>
+    <!--===================< kbsx-ecommerce-client-bookingoptionspanel >====================-->
+    <source path="org/kadampabookings/kbsx/ecommerce/client/controls/bookingoptionspanel"/>
+    <!--======================< kbsx-ecommerce-client-bookingprocess >======================-->
+    <source path="org/kadampabookings/kbsx/ecommerce/client/activity/bookingprocess"/>
+    <!--======================< kbsx-ecommerce-client-businesslogic >=======================-->
+    <source path="org/kadampabookings/kbsx/ecommerce/client/businessdata/feesgroup"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/client/businessdata/preselection"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/client/businessdata/workingdocument"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/client/businesslogic/feesgroup"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/client/businesslogic/option"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/client/businesslogic/pricing"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/client/businesslogic/rules"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/client/businesslogic/workingdocument"/>
+    <!--===================< kbsx-ecommerce-frontoffice-activities-cart >===================-->
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/cart"/>
+    <!--===============< kbsx-ecommerce-frontoffice-activities-cart-routing >===============-->
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/cart/base"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/cart/routing"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/cart"/>
+    <!--================< kbsx-ecommerce-frontoffice-activities-contactus >=================-->
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/contactus"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/contactus/routing"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/contactus"/>
+    <!--=================< kbsx-ecommerce-frontoffice-activities-payment >==================-->
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/payment"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/payment/routing"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/payment"/>
+    <!--==================< kbsx-ecommerce-frontoffice-activities-person >==================-->
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/person"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/person/routing"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/person"/>
+    <!--=================< kbsx-ecommerce-frontoffice-activities-summary >==================-->
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/summary"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/summary/routing"/>
+    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/summary"/>
+    <!--===================< kbsx-event-client-activity-eventdependent >====================-->
+    <source path="org/kadampabookings/kbsx/event/client/activity/eventdependent"/>
+    <!--=======================< kbsx-event-client-bookingcalendar >========================-->
+    <source path="org/kadampabookings/kbsx/event/client/controls/bookingcalendar"/>
+    <!--===========================< kbsx-event-client-calendar >===========================-->
+    <source path="org/kadampabookings/kbsx/event/client/businessdata/calendar"/>
+    <source path="org/kadampabookings/kbsx/event/client/businessdata/calendar/impl"/>
+    <source path="org/kadampabookings/kbsx/event/client/controls/calendargraphic"/>
+    <source path="org/kadampabookings/kbsx/event/client/controls/calendargraphic/impl"/>
+    <!--=========================< kbsx-event-client-sectionpanel >=========================-->
+    <source path="org/kadampabookings/kbsx/event/client/controls/sectionpanel"/>
+    <!--=====================< kbsx-event-frontoffice-activities-fees >=====================-->
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/fees"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/fees/routing"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/fees"/>
+    <!--===================< kbsx-event-frontoffice-activities-options >====================-->
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/options"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/options/routing"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/options"/>
+    <!--===================< kbsx-event-frontoffice-activities-program >====================-->
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/program"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/program/routing"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/program"/>
+    <!--=================< kbsx-event-frontoffice-activities-startbooking >=================-->
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/startbooking"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/startbooking/routing"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/startbooking"/>
+    <!--====================< kbsx-event-frontoffice-activities-terms >=====================-->
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/terms"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/terms/routing"/>
+    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/terms"/>
+    <!--=============================< kbsx-hotel-shared-time >=============================-->
+    <source path="org/kadampabookings/kbsx/hotel/shared/businessdata/time"/>
     <!--=========================< modality-base-client-activity >==========================-->
     <source path="one/modality/base/client/activity"/>
     <source path="one/modality/base/client/activity/table"/>
     <source path="one/modality/base/client/activity/themes"/>
+    <!--==============< modality-base-client-activity-organizationdependent >===============-->
+    <source path="one/modality/base/client/activity/organizationdependent"/>
     <!--========================< modality-base-client-application >========================-->
     <source path="one/modality/base/client/application"/>
     <resource path="images/buddhas"/>
     <public includes="images/buddhas/" path=""/>
     <resource path="one/modality/base/client/images"/>
     <public includes="one/modality/base/client/images/" path=""/>
-    <!--=========================< modality-base-client-busconfig >=========================-->
-    <source path="one/modality/base/client/busconfig"/>
-    <resource path="one/modality/base/client/busconfig"/>
-    <public includes="one/modality/base/client/busconfig/" path=""/>
+    <!--=========================< modality-base-client-entities >==========================-->
+    <source path="one/modality/base/client/entities/util"/>
+    <source path="one/modality/base/client/entities/util/filters"/>
     <!--===========================< modality-base-client-i18n >============================-->
     <source path="one/modality/base/client/operations/i18n"/>
     <source path="one/modality/base/client/services/i18n"/>
@@ -145,21 +222,14 @@
     <source path="one/modality/base/client/operationactionsloading"/>
     <!--=====================< modality-base-client-presentationmodel >=====================-->
     <source path="one/modality/base/client/presentationmodel"/>
-    <!--==================< modality-base-frontoffice-activities-account >==================-->
-    <source path="one/modality/base/frontoffice/activities/account"/>
-    <source path="one/modality/base/frontoffice/activities/account/routing"/>
-    <source path="one/modality/base/frontoffice/operations/routes/account"/>
-    <resource path="one/modality/base/frontoffice/activities/account/images"/>
-    <public includes="one/modality/base/frontoffice/activities/account/images/" path=""/>
-    <!--==================< modality-base-frontoffice-activities-alerts >===================-->
-    <source path="one/modality/base/frontoffice/activities/alerts"/>
-    <source path="one/modality/base/frontoffice/activities/alerts/routing"/>
-    <source path="one/modality/base/frontoffice/operations/routes/alerts"/>
-    <!--=======================< modality-base-frontoffice-utility >========================-->
-    <source path="one/modality/base/frontoffice/entities"/>
-    <source path="one/modality/base/frontoffice/fx"/>
-    <source path="one/modality/base/frontoffice/states"/>
-    <source path="one/modality/base/frontoffice/utility"/>
+    <!--===========================< modality-base-client-util >============================-->
+    <source path="one/modality/base/client/util/functions"/>
+    <source path="one/modality/base/client/util/log"/>
+    <source path="one/modality/base/client/util/routing"/>
+    <!--========================< modality-base-client-validation >=========================-->
+    <source path="one/modality/base/client/validation"/>
+    <!--=====================< modality-base-frontoffice-application >======================-->
+    <source path="one/modality/base/frontoffice/application"/>
     <!--========================< modality-base-shared-domainmodel >========================-->
     <source path="one/modality/base/shared/domainmodel/formatters"/>
     <source path="one/modality/base/shared/domainmodel/functions"/>
@@ -173,18 +243,25 @@
     <source path="one/modality/base/shared/entities/formatters"/>
     <source path="one/modality/base/shared/entities/impl"/>
     <source path="one/modality/base/shared/entities/markers"/>
+    <!--====================< modality-crm-backoffice-organization-fx >=====================-->
+    <source path="one/modality/crm/backoffice/organization/fx"/>
     <!--======================< modality-crm-client-activities-login >======================-->
     <source path="one/modality/crm/client/activities/login"/>
     <!--==================< modality-crm-client-activities-unauthorized >===================-->
     <source path="one/modality/crm/client/activities/unauthorized"/>
+    <!--==========================< modality-crm-client-authn-fx >==========================-->
+    <source path="one/modality/crm/shared/services/authn/fx"/>
     <!--===========================< modality-crm-client-authz >============================-->
     <source path="one/modality/crm/client/services/authz"/>
-    <!--=================< modality-event-frontoffice-activities-booking >==================-->
-    <source path="one/modality/event/frontoffice/activities/booking"/>
-    <source path="one/modality/event/frontoffice/activities/booking/routing"/>
-    <source path="one/modality/event/frontoffice/activities/booking/steps"/>
-    <source path="one/modality/event/frontoffice/activities/booking/views"/>
-    <source path="one/modality/event/frontoffice/operations/routes/booking"/>
+    <!--======================< modality-crm-client-personaldetails >=======================-->
+    <source path="one/modality/crm/client/controls/personaldetails"/>
+    <!--===========================< modality-crm-shared-authn >============================-->
+    <source path="one/modality/crm/shared/services/authn"/>
+    <source path="one/modality/crm/shared/services/authn/serial"/>
+    <!--=======================< modality-event-backoffice-event-fx >=======================-->
+    <source path="one/modality/event/backoffice/event/fx"/>
+    <!--=================< modality-event-client-activity-eventdependent >==================-->
+    <source path="one/modality/event/client/activity/eventdependent"/>
     <!--===============================< webfx-extras-cell >================================-->
     <source path="dev/webfx/extras/cell/collator"/>
     <source path="dev/webfx/extras/cell/renderer"/>
@@ -291,29 +368,21 @@
     <!--==============================< webfx-platform-async >==============================-->
     <source path="dev/webfx/platform/async"/>
     <source path="dev/webfx/platform/async/impl"/>
-    <!--==============================< webfx-platform-blob >===============================-->
-    <source path="dev/webfx/platform/blob"/>
-    <source path="dev/webfx/platform/blob/spi"/>
-    <!--============================< webfx-platform-blob-gwt >=============================-->
-    <source path="dev/webfx/platform/blob/spi/impl/gwt"/>
     <!--==============================< webfx-platform-boot >===============================-->
     <source path="dev/webfx/platform/boot"/>
     <source path="dev/webfx/platform/boot/spi"/>
     <source path="dev/webfx/platform/boot/spi/impl"/>
     <!--============================< webfx-platform-boot-gwt >=============================-->
     <source path="dev/webfx/platform/boot/spi/impl/gwt"/>
+    <!--==============================< webfx-platform-conf >===============================-->
+    <source path="dev/webfx/platform/conf"/>
+    <source path="dev/webfx/platform/conf/impl"/>
+    <source path="dev/webfx/platform/conf/spi"/>
     <!--=============================< webfx-platform-console >=============================-->
     <source path="dev/webfx/platform/console"/>
     <source path="dev/webfx/platform/console/spi"/>
     <!--===========================< webfx-platform-console-gwt >===========================-->
     <source path="dev/webfx/platform/console/spi/impl/gwt"/>
-    <!--==============================< webfx-platform-fetch >==============================-->
-    <source path="dev/webfx/platform/fetch"/>
-    <source path="dev/webfx/platform/fetch/spi"/>
-    <source path="dev/webfx/platform/streams"/>
-    <!--============================< webfx-platform-fetch-gwt >============================-->
-    <source path="dev/webfx/platform/fetch/spi/impl/gwt"/>
-    <source path="dev/webfx/platform/streams/spi/impl/gwt"/>
     <!--========================< webfx-platform-javabase-emul-gwt >========================-->
     <super-source includes="java/lang/ref/" path=""/>
     <super-source includes="java/net/" path=""/>
@@ -356,6 +425,16 @@
     <source path="dev/webfx/platform/storage/spi"/>
     <!--===========================< webfx-platform-storage-gwt >===========================-->
     <source path="dev/webfx/platform/storage/spi/impl/gwt"/>
+    <!--==========================< webfx-platform-substitution >===========================-->
+    <source path="dev/webfx/platform/substitution"/>
+    <source path="dev/webfx/platform/substitution/spi"/>
+    <!--========================< webfx-platform-substitution-var >=========================-->
+    <source path="dev/webfx/platform/substitution/spi/impl/var"/>
+    <source path="dev/webfx/platform/substitution/var/spi"/>
+    <!--==================< webfx-platform-substitution-var-localstorage >==================-->
+    <source path="dev/webfx/platform/substitution/var/spi/impl/localstorage"/>
+    <!--=================< webfx-platform-substitution-var-windowlocation >=================-->
+    <source path="dev/webfx/platform/substitution/var/spi/impl/windowlocation"/>
     <!--===========================< webfx-platform-uischeduler >===========================-->
     <source path="dev/webfx/platform/uischeduler"/>
     <source path="dev/webfx/platform/uischeduler/spi"/>
@@ -367,6 +446,10 @@
     <source path="dev/webfx/platform/util/collection"/>
     <source path="dev/webfx/platform/util/function"/>
     <source path="dev/webfx/platform/util/keyobject"/>
+    <source path="dev/webfx/platform/util/keyobject/parser"/>
+    <source path="dev/webfx/platform/util/keyobject/parser/spi"/>
+    <source path="dev/webfx/platform/util/keyobject/parser/spi/impl/properties"/>
+    <source path="dev/webfx/platform/util/keyobject/util"/>
     <source path="dev/webfx/platform/util/serviceloader"/>
     <source path="dev/webfx/platform/util/tuples"/>
     <source path="dev/webfx/platform/util/uuid"/>
@@ -439,10 +522,11 @@
     <!--==============================< webfx-stack-com-bus >===============================-->
     <source path="dev/webfx/stack/com/bus"/>
     <source path="dev/webfx/stack/com/bus/spi"/>
-    <source path="dev/webfx/stack/com/bus/spi/impl"/>
     <!--============================< webfx-stack-com-bus-call >============================-->
     <source path="dev/webfx/stack/com/bus/call"/>
     <source path="dev/webfx/stack/com/bus/call/spi"/>
+    <!--===========================< webfx-stack-com-bus-client >===========================-->
+    <source path="dev/webfx/stack/com/bus/spi/impl/client"/>
     <!--============================< webfx-stack-com-bus-json >============================-->
     <source path="dev/webfx/stack/com/bus/spi/impl/json"/>
     <!--========================< webfx-stack-com-bus-json-client >=========================-->
@@ -460,14 +544,6 @@
     <source path="dev/webfx/stack/com/websocket/spi"/>
     <!--=========================< webfx-stack-com-websocket-gwt >==========================-->
     <source path="dev/webfx/stack/com/websocket/spi/impl/gwt"/>
-    <!--================================< webfx-stack-conf >================================-->
-    <source path="dev/webfx/stack/conf"/>
-    <source path="dev/webfx/stack/conf/spi"/>
-    <source path="dev/webfx/stack/conf/spi/impl"/>
-    <!--==========================< webfx-stack-conf-format-json >==========================-->
-    <source path="dev/webfx/stack/conf/spi/impl/format/json"/>
-    <!--===========================< webfx-stack-conf-resource >============================-->
-    <source path="dev/webfx/stack/conf/spi/impl/resource"/>
     <!--============================< webfx-stack-db-datascope >============================-->
     <source path="dev/webfx/stack/db/datascope"/>
     <source path="dev/webfx/stack/db/datascope/aggregate"/>

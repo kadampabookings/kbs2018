@@ -128,6 +128,12 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
+            <artifactId>webfx-platform-json</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-json-java</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
@@ -166,6 +172,13 @@
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-storagelocation-gluon</artifactId>
             <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.webfx</groupId>
+            <artifactId>webfx-platform-substitution-var-env</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -254,25 +267,6 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-conf</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-conf-env-java</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-conf-format-json</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
             <artifactId>webfx-stack-db-query-buscall</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
@@ -339,6 +333,7 @@
                         <list>util</list>
                     </attachList>
                     <resourcesList>
+                        <list>dev/webfx/platform/conf/[^/]+$</list>
                         <list>dev/webfx/platform/meta/exe/[^/]+$</list>
                         <list>dev/webfx/stack/authn/login/ui/spi/impl/gateway/facebook/[^/]+$</list>
                         <list>dev/webfx/stack/authn/login/ui/spi/impl/gateway/google/[^/]+$</list>
@@ -365,7 +360,6 @@
                         <list>images/svg/color/[^/]+$</list>
                         <list>images/svg/mono/[^/]+$</list>
                         <list>javafx/scene/control/skin/checkbox/[^/]+$</list>
-                        <list>one/modality/base/client/busconfig/[^/]+$</list>
                         <list>one/modality/base/client/css/[^/]+$</list>
                         <list>one/modality/base/client/fonts/[^/]+$</list>
                         <list>one/modality/base/client/ganttcanvas/images/s32/[^/]+$</list>

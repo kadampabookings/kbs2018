@@ -7,10 +7,8 @@ module kbsx.frontoffice.application.openjfx {
     requires webfx.extras.webtext.peers.openjfx;
     requires webfx.kit.openjfx;
     requires webfx.kit.platform.visibility.openjfx;
-    requires webfx.platform.blob.java;
     requires webfx.platform.boot.java;
     requires webfx.platform.console.java;
-    requires webfx.platform.fetch.java;
     requires webfx.platform.json.java;
     requires webfx.platform.os.java;
     requires webfx.platform.resource.java;
@@ -29,7 +27,6 @@ module kbsx.frontoffice.application.openjfx {
     requires webfx.stack.com.bus.json.client;
     requires webfx.stack.com.bus.json.client.websocket.java;
     requires webfx.stack.com.websocket.java;
-    requires webfx.stack.conf.format.json;
     requires webfx.stack.db.query.buscall;
     requires webfx.stack.db.querysubmit.java.jdbc;
     requires webfx.stack.db.submit.buscall;
@@ -38,8 +35,5 @@ module kbsx.frontoffice.application.openjfx {
     requires webfx.stack.orm.dql.submit.interceptor;
     requires webfx.stack.session.client;
     requires webfx.stack.ui.fxraiser.json;
-
-    // Resources packages
-    opens dev.webfx.platform.meta.exe;
 
 }

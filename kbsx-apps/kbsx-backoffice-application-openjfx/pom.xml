@@ -155,6 +155,12 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
+            <artifactId>webfx-platform-json</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-json-java</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
@@ -193,6 +199,13 @@
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-storagelocation-java</artifactId>
             <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.webfx</groupId>
+            <artifactId>webfx-platform-substitution-var-env</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -270,25 +283,6 @@
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-stack-com-websocket-java</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-conf</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-conf-env-java</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-conf-format-json</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 
