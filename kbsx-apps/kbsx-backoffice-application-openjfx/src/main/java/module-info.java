@@ -8,8 +8,6 @@ module kbsx.backoffice.application.openjfx {
     requires kbsx.event.backoffice.activities.cloneevent;
     requires kbsx.event.backoffice.activities.cloneevent.routing;
     requires modality.base.shared.domainmodel;
-    requires modality.ecommerce.payment.custom.buscall;
-    requires modality.ecommerce.payment.custom.remote;
     requires webfx.extras.webtext.peers.openjfx;
     requires webfx.kit.openjfx;
     requires webfx.kit.platform.visibility.openjfx;
