@@ -39,13 +39,6 @@
         </dependency>
 
         <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-kit-javafxweb-emul</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
             <groupId>com.google.elemental2</groupId>
             <artifactId>elemental2-svg</artifactId>
         </dependency>
@@ -303,13 +296,7 @@
             <groupId>one.modality</groupId>
             <artifactId>modality-base-client-icons</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>one.modality</groupId>
-            <artifactId>modality-base-client-operationactionsloading</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <scope>provided</scope>
             <classifier>sources</classifier>
         </dependency>
 
@@ -371,20 +358,6 @@
 
         <dependency>
             <groupId>one.modality</groupId>
-            <artifactId>modality-crm-client-activities-login</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>one.modality</groupId>
-            <artifactId>modality-crm-client-activities-unauthorized</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>one.modality</groupId>
             <artifactId>modality-crm-client-authn-fx</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <classifier>sources</classifier>
@@ -392,7 +365,7 @@
 
         <dependency>
             <groupId>one.modality</groupId>
-            <artifactId>modality-crm-client-authz</artifactId>
+            <artifactId>modality-crm-client-authz-required-plugin</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <classifier>sources</classifier>
         </dependency>
@@ -738,27 +711,6 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-kit-javafxweb-peers-base</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-kit-javafxweb-peers-gwt</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-kit-javafxweb-registry-gwt</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
             <artifactId>webfx-kit-launcher</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <classifier>sources</classifier>
@@ -794,14 +746,14 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-ast-json</artifactId>
+            <artifactId>webfx-platform-ast-json-gwt</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <classifier>sources</classifier>
         </dependency>
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-ast-json-gwt</artifactId>
+            <artifactId>webfx-platform-ast-json-plugin</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <classifier>sources</classifier>
         </dependency>
@@ -941,14 +893,14 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-substitution-var-localstorage</artifactId>
+            <artifactId>webfx-platform-substitution-var-localstorage-plugin</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <classifier>sources</classifier>
         </dependency>
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-substitution-var-windowlocation</artifactId>
+            <artifactId>webfx-platform-substitution-var-windowlocation-plugin</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <classifier>sources</classifier>
         </dependency>
@@ -1019,90 +971,6 @@
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-stack-authn-buscall</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-buscall</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-remote</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui-gateway</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui-gateway-facebook</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui-gateway-google</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui-gateway-mojoauth</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui-gateway-password</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui-gateway-webviewbased</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui-gateway-webviewbased-gwt</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-authn-login-ui-portal</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <classifier>sources</classifier>
         </dependency>

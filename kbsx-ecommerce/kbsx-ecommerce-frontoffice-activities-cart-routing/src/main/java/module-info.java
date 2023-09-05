@@ -12,7 +12,7 @@ module kbsx.ecommerce.frontoffice.activities.cart.routing {
     requires modality.base.shared.entities;
     requires webfx.extras.util.background;
     requires webfx.kit.util;
-    requires webfx.platform.ast.json;
+    requires webfx.platform.ast.json.plugin;
     requires webfx.platform.util;
     requires webfx.platform.windowhistory;
     requires webfx.stack.i18n;

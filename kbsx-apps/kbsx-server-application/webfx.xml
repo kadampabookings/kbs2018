@@ -8,9 +8,9 @@
     <dependencies>
         <used-by-source-modules/>
 
-        <plugin-module>modality-base-server-application-all</plugin-module> <!-- contains some default configuration settings -->
-        <plugin-module>modality-crm-server-application-all</plugin-module>
-        <plugin-module>modality-ecommerce-server-application-all</plugin-module>
+        <plugin-module>modality-base-server-max-plugin</plugin-module> <!-- contains some default configuration settings -->
+        <plugin-module>modality-crm-server-max-plugin</plugin-module>
+        <plugin-module>modality-ecommerce-server-max-plugin</plugin-module>
 
         <plugin-module>kbsx-base-server-sessioncloser</plugin-module>
         <plugin-module>kbsx-base-server-systemmetrics</plugin-module>

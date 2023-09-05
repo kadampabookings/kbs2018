@@ -13,7 +13,7 @@ module kbsx.event.backoffice.activities.cloneevent {
     requires modality.base.client.activity;
     requires modality.base.shared.domainmodel;
     requires modality.base.shared.entities;
-    requires modality.ecommerce.backoffice.activities.bookings;
+    requires modality.ecommerce.backoffice.activity.bookings.plugin;
     requires modality.event.client.activity.eventdependent;
     requires webfx.kit.util;
     requires webfx.platform.uischeduler;

@@ -18,7 +18,7 @@ module kbsx.hotel.backoffice.activities.roomsgraphic {
     requires webfx.extras.util.layout;
     requires webfx.extras.visual.grid;
     requires webfx.kit.util;
-    requires webfx.platform.ast.json;
+    requires webfx.platform.ast.json.plugin;
     requires webfx.platform.windowhistory;
     requires webfx.stack.com.serial;
     requires webfx.stack.db.datascope;

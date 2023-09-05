@@ -71,7 +71,7 @@
 
         <dependency>
             <groupId>one.modality</groupId>
-            <artifactId>modality-ecommerce-backoffice-activities-bookings</artifactId>
+            <artifactId>modality-ecommerce-backoffice-activity-bookings-plugin</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
