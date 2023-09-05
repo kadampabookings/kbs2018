@@ -2,7 +2,7 @@ package org.kadampabookings.kbsx.ecommerce.frontoffice.operations.cart;
 
 import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.routing.CartRouting;
 import dev.webfx.stack.routing.uirouter.operations.RoutePushRequest;
-import dev.webfx.platform.json.Json;
+import dev.webfx.platform.ast.json.Json;
 import dev.webfx.platform.windowhistory.spi.BrowsingHistory;
 
 import java.time.Instant;

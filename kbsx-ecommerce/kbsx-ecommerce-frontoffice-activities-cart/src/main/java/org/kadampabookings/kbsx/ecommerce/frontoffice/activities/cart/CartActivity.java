@@ -1,5 +1,6 @@
 package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart;
 
+import dev.webfx.stack.ui.controls.dialog.DialogBuilderUtil;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Node;
@@ -27,8 +28,7 @@ import dev.webfx.stack.i18n.I18n;
 import dev.webfx.stack.ui.action.Action;
 import dev.webfx.stack.ui.action.ActionBinder;
 import dev.webfx.stack.ui.action.impl.WritableAction;
-import dev.webfx.stack.ui.controls.dialog.DialogCallback;
-import dev.webfx.stack.ui.controls.dialog.DialogUtil;
+import dev.webfx.stack.ui.dialog.DialogCallback;
 import dev.webfx.stack.ui.controls.dialog.GridPaneBuilder;
 import dev.webfx.extras.flexbox.FlexBox;
 import dev.webfx.extras.util.layout.LayoutUtil;
@@ -309,7 +309,7 @@ final class CartActivity extends CartBasedActivity {
     }
 
     private void cancelBooking() {
-        DialogUtil.showModalNodeInGoldLayout(new GridPaneBuilder()
+        DialogBuilderUtil.showModalNodeInGoldLayout(new GridPaneBuilder()
                         .addNodeFillingRow(newLabel("BookingCancellation"))
                         .addNodeFillingRow(newLabel("ConfirmBookingCancellation"))
                         .addButtons("YesBookingCancellation", dialogCallback -> {

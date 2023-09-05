@@ -14,7 +14,7 @@ import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.stack.orm.entity.Entity;
 import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.stack.db.datascope.aggregate.AggregateScope;
-import dev.webfx.platform.json.Json;
+import dev.webfx.platform.ast.json.Json;
 import dev.webfx.stack.com.serial.SerialCodecManager;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

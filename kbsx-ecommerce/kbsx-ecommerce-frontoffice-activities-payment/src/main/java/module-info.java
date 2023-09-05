@@ -25,7 +25,7 @@ module kbsx.ecommerce.frontoffice.activities.payment {
     requires webfx.stack.routing.uirouter;
     requires webfx.stack.session.state.client.fx;
     requires webfx.stack.ui.action;
-    requires webfx.stack.ui.controls;
+    requires webfx.stack.ui.dialog;
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment;

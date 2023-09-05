@@ -36,6 +36,7 @@ module kbsx.ecommerce.frontoffice.activities.cart {
     requires webfx.stack.routing.uirouter;
     requires webfx.stack.ui.action;
     requires webfx.stack.ui.controls;
+    requires webfx.stack.ui.dialog;
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart;

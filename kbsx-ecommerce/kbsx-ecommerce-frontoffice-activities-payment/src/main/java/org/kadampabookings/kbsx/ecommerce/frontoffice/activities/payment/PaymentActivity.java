@@ -14,7 +14,7 @@ import dev.webfx.stack.orm.entity.EntityStoreQuery;
 import dev.webfx.stack.orm.entity.UpdateStore;
 import dev.webfx.stack.session.state.client.fx.FXServerSessionId;
 import dev.webfx.stack.ui.action.Action;
-import dev.webfx.stack.ui.controls.dialog.DialogUtil;
+import dev.webfx.stack.ui.dialog.DialogUtil;
 import dev.webfx.extras.util.layout.LayoutUtil;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

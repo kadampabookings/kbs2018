@@ -12,7 +12,7 @@ import one.modality.base.client.activity.themes.Theme;
 import one.modality.base.shared.domainmodel.formatters.DateFormatter;
 import dev.webfx.stack.routing.uirouter.activity.presentation.view.impl.PresentationViewActivityImpl;
 import dev.webfx.stack.ui.controls.button.ButtonFactoryMixin;
-import dev.webfx.stack.ui.controls.dialog.DialogUtil;
+import dev.webfx.stack.ui.dialog.DialogUtil;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 

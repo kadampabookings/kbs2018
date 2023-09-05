@@ -22,6 +22,7 @@ module kbsx.event.backoffice.activities.cloneevent {
     requires webfx.stack.orm.entity;
     requires webfx.stack.routing.uirouter;
     requires webfx.stack.ui.controls;
+    requires webfx.stack.ui.dialog;
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.backoffice.activities.cloneevent;

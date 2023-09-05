@@ -26,6 +26,7 @@ module kbsx.event.backoffice.activities.options {
     requires webfx.stack.orm.reactive.visual;
     requires webfx.stack.routing.uirouter;
     requires webfx.stack.ui.controls;
+    requires webfx.stack.ui.dialog;
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.backoffice.activities.options;

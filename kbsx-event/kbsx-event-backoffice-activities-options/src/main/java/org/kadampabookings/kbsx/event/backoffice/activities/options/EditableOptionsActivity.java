@@ -1,5 +1,6 @@
 package org.kadampabookings.kbsx.event.backoffice.activities.options;
 
+import dev.webfx.stack.ui.controls.dialog.DialogBuilderUtil;
 import javafx.beans.property.Property;
 import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
@@ -19,9 +20,9 @@ import one.modality.base.shared.entities.Label;
 import org.kadampabookings.kbsx.base.shared.entities.Option;
 import dev.webfx.extras.visual.controls.grid.VisualGrid;
 import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.ReactiveVisualMapper;
-import dev.webfx.stack.ui.controls.dialog.DialogCallback;
+import dev.webfx.stack.ui.dialog.DialogCallback;
 import dev.webfx.stack.ui.controls.dialog.DialogContent;
-import dev.webfx.stack.ui.controls.dialog.DialogUtil;
+import dev.webfx.stack.ui.dialog.DialogUtil;
 import dev.webfx.stack.orm.entity.Entity;
 import dev.webfx.stack.orm.entity.UpdateStore;
 import dev.webfx.kit.util.properties.FXProperties;
@@ -85,7 +86,7 @@ final class EditableOptionsActivity extends OptionsActivity {
     }
 
     private void showRemoveOptionDialog(Option option) {
-        DialogUtil.showDialog(
+        DialogBuilderUtil.showDialog(
                 DialogContent.createConfirmationDialog(
                         "Removing an option",
                         "Do you really want to remove this option?"),

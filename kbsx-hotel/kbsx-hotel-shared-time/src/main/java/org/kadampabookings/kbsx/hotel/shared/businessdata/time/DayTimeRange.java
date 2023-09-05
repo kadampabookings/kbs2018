@@ -1,9 +1,9 @@
 package org.kadampabookings.kbsx.hotel.shared.businessdata.time;
 
 import dev.webfx.platform.util.collection.Collections;
-import dev.webfx.platform.json.Json;
-import dev.webfx.platform.json.ReadOnlyJsonArray;
-import dev.webfx.platform.json.ReadOnlyJsonObject;
+import dev.webfx.platform.ast.json.Json;
+import dev.webfx.platform.ast.json.ReadOnlyJsonArray;
+import dev.webfx.platform.ast.json.ReadOnlyJsonObject;
 
 import java.util.ArrayList;
 import java.util.List;
