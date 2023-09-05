@@ -4,6 +4,8 @@ module kbsx.frontoffice.application.openjfx {
 
     // Direct dependencies modules
     requires kbsx.frontoffice.application;
+    requires modality.base.client.css;
+    requires webfx.extras.visual.grid.peers.openjfx;
     requires webfx.extras.webtext.peers.openjfx;
     requires webfx.kit.openjfx;
     requires webfx.kit.platform.visibility.openjfx;
