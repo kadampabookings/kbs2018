@@ -26,6 +26,7 @@ module kbsx.event.frontoffice.activities.fees {
     requires webfx.extras.visual.grid;
     requires webfx.extras.visual.grid.peers.base;
     requires webfx.kit.util;
+    requires webfx.platform.ast;
     requires webfx.platform.ast.json.plugin;
     requires webfx.platform.console;
     requires webfx.platform.uischeduler;

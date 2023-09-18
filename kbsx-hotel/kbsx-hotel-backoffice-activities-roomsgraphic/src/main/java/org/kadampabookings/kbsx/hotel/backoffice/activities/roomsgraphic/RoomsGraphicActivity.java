@@ -4,6 +4,7 @@ import dev.webfx.extras.flexbox.FlexBox;
 import dev.webfx.extras.imagestore.ImageStore;
 import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
 import dev.webfx.extras.visual.controls.grid.VisualGrid;
+import dev.webfx.platform.ast.ReadOnlyAstArray;
 import dev.webfx.stack.orm.reactive.entities.dql_to_entities.ReactiveEntitiesMapper;
 import dev.webfx.stack.orm.reactive.entities.entities_to_objects.IndividualEntityToObjectMapper;
 import dev.webfx.stack.orm.reactive.entities.entities_to_objects.ReactiveObjectsMapper;
@@ -281,12 +282,13 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
                     if (documentLines == null) // Otherwise (if nobody is selected),
                         documentLines = peopleVisualMapper.getCurrentEntities(); // taking all people
                     // Exporting the document lines primary keys as a json array
-                    return SerialCodecManager.encodePrimitiveArrayToJsonArray(documentLines.stream().map(Entity::getPrimaryKey).toArray()).toJsonString();
+                    ReadOnlyAstArray astArray = SerialCodecManager.encodePrimitiveArrayToAstArray(documentLines.stream().map(Entity::getPrimaryKey).toArray());
+                    return Json.formatNode(astArray);
                 }
 
                 private Object[] importDragSelectionFromDragboard(Object dragContent) {
                     // Parsing the expected json array and decoding it as a java array containing all primary keys
-                    return SerialCodecManager.decodePrimitiveArrayFromJsonArray(Json.parseArray(dragContent.toString()));
+                    return SerialCodecManager.decodePrimitiveArrayFromAstArray(Json.parseArray(dragContent.toString()));
                 }
             }
         }

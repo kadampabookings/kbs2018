@@ -7,25 +7,24 @@ import dev.webfx.extras.cell.renderer.ValueRenderingContext;
 import dev.webfx.extras.imagestore.ImageStore;
 import dev.webfx.extras.type.PrimType;
 import dev.webfx.extras.type.SpecializedTextType;
+import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.visual.*;
 import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
 import dev.webfx.extras.visual.controls.grid.VisualGrid;
-import dev.webfx.platform.console.Console;
-import dev.webfx.platform.ast.json.JsonObject;
-import dev.webfx.stack.i18n.Dictionary;
-import dev.webfx.stack.i18n.I18n;
-import dev.webfx.extras.util.layout.LayoutUtil;
-import dev.webfx.stack.i18n.controls.I18nControls;
-import dev.webfx.stack.orm.entity.EntityList;
 import dev.webfx.kit.util.properties.FXProperties;
-import dev.webfx.platform.uischeduler.UiScheduler;
+import dev.webfx.platform.ast.ReadOnlyAstObject;
 import dev.webfx.platform.ast.json.Json;
-import dev.webfx.platform.ast.json.ReadOnlyJsonObject;
+import dev.webfx.platform.console.Console;
+import dev.webfx.platform.uischeduler.UiScheduler;
 import dev.webfx.platform.util.Arrays;
 import dev.webfx.platform.util.Booleans;
 import dev.webfx.platform.util.Numbers;
 import dev.webfx.platform.util.Objects;
 import dev.webfx.platform.util.tuples.Pair;
+import dev.webfx.stack.i18n.Dictionary;
+import dev.webfx.stack.i18n.I18n;
+import dev.webfx.stack.i18n.controls.I18nControls;
+import dev.webfx.stack.orm.entity.EntityList;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.geometry.Insets;
@@ -39,16 +38,16 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import one.modality.base.client.activity.ModalityButtonFactoryMixin;
 import one.modality.base.client.entities.util.Labels;
+import one.modality.base.shared.entities.Person;
+import org.kadampabookings.kbsx.base.client.aggregates.event.EventAggregate;
 import org.kadampabookings.kbsx.base.client.icons.ModalityIcons;
+import org.kadampabookings.kbsx.base.shared.entities.Option;
 import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.BookingProcessActivity;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.feesgroup.FeesGroup;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.preselection.OptionsPreselection;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
-import one.modality.base.client.activity.ModalityButtonFactoryMixin;
-import org.kadampabookings.kbsx.base.client.aggregates.event.EventAggregate;
-import org.kadampabookings.kbsx.base.shared.entities.Option;
-import one.modality.base.shared.entities.Person;
 import org.kadampabookings.kbsx.event.frontoffice.operations.options.RouteToOptionsRequest;
 
 import java.util.function.Consumer;
@@ -142,10 +141,10 @@ final class FeesActivity extends BookingProcessActivity {
     private void displayFeesGroupsNow() {
         int n = feesGroups.length;
         VisualResultBuilder rsb = VisualResultBuilder.create(n, new VisualColumn[]{
-                VisualColumn.create((value, context) -> renderFeesGroupHeader((Pair<ReadOnlyJsonObject, String>) value)),
+                VisualColumn.create((value, context) -> renderFeesGroupHeader((Pair<ReadOnlyAstObject, String>) value)),
                 VisualColumn.create((value, context) -> renderFeesGroupBody((VisualResult) value)),
                 VisualColumn.create(null, SpecializedTextType.HTML)});
-        JsonObject jsonImage = Json.parseObject(ModalityIcons.priceTagColorSvg16JsonUrl);
+        ReadOnlyAstObject jsonImage = Json.parseObject(ModalityIcons.priceTagColorSvg16JsonUrl);
         ColumnWidthCumulator[] cumulators = {new ColumnWidthCumulator(), new ColumnWidthCumulator(), new ColumnWidthCumulator()};
         for (int i = 0; i < n; i++) {
             FeesGroup feesGroup = feesGroups[i];
@@ -204,7 +203,7 @@ final class FeesActivity extends BookingProcessActivity {
     }
 
 
-    private Node renderFeesGroupHeader(Pair<ReadOnlyJsonObject, String> pair) {
+    private Node renderFeesGroupHeader(Pair<ReadOnlyAstObject, String> pair) {
         boolean hasUnemployedRate = hasUnemployedRate();
         boolean hasFacilityFeeRate = hasFacilityFeeRate();
         boolean hasDiscountRates = hasUnemployedRate || hasFacilityFeeRate;

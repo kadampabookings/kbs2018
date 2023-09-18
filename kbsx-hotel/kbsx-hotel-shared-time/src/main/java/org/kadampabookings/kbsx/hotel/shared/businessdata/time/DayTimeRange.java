@@ -1,9 +1,9 @@
 package org.kadampabookings.kbsx.hotel.shared.businessdata.time;
 
 import dev.webfx.platform.util.collection.Collections;
-import dev.webfx.platform.ast.json.Json;
-import dev.webfx.platform.ast.json.ReadOnlyJsonArray;
-import dev.webfx.platform.ast.json.ReadOnlyJsonObject;
+import dev.webfx.platform.ast.AST;
+import dev.webfx.platform.ast.ReadOnlyAstArray;
+import dev.webfx.platform.ast.ReadOnlyAstObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +30,8 @@ public class DayTimeRange {
         } else {
             TimeRangeRule _generalRule = null;
             exceptionRules = new ArrayList<>();
-            ReadOnlyJsonObject json = Json.parseObject(text);
-            ReadOnlyJsonArray keys = json.keys();
+            ReadOnlyAstObject json = AST.parseObject(text, "json");
+            ReadOnlyAstArray keys = json.keys();
             for (int i = 0; i < keys.size(); i++) {
                 String key = keys.getString(i);
                 String value = json.getString(key);
