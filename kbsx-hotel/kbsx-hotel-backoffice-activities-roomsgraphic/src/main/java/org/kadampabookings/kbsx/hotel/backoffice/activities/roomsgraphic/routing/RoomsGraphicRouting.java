@@ -7,7 +7,7 @@ import one.modality.base.client.util.routing.ModalityRoutingUtil;
  */
 public final class RoomsGraphicRouting {
 
-    private final static String ANY_PATH = "/rooms-graphic(/event/:eventId)?";
+    private final static String ANY_PATH = "RouteToStatements(/event/:eventId)?";
     private final static String EVENT_PATH = "/rooms-graphic/event/:eventId";
 
     public static String getAnyPath() {

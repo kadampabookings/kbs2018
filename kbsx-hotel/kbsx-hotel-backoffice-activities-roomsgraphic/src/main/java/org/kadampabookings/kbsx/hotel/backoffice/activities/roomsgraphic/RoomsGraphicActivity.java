@@ -31,6 +31,9 @@ import javafx.scene.input.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import one.modality.base.backoffice.controls.masterslave.MasterSlaveView;
+import one.modality.base.client.gantt.fx.interstice.FXGanttInterstice;
+import one.modality.base.client.gantt.fx.visibility.FXGanttVisibility;
+import one.modality.base.client.gantt.fx.visibility.GanttVisibility;
 import one.modality.base.shared.entities.Document;
 import one.modality.base.shared.entities.DocumentLine;
 import one.modality.base.shared.entities.ResourceConfiguration;
@@ -79,6 +82,19 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
         return container = masterSlaveView.buildUi();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        FXGanttVisibility.setGanttVisibility(GanttVisibility.EVENTS);
+        FXGanttInterstice.setGanttIntersticeRequired(true);
+    }
+
+    @Override
+    public void onPause() {
+        FXGanttVisibility.setGanttVisibility(GanttVisibility.HIDDEN);
+        FXGanttInterstice.setGanttIntersticeRequired(false);
+        super.onPause();
+    }
 
     class IndividualSiteToTabMapper implements IndividualEntityToObjectMapper<Site, Tab> {
 

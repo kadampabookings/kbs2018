@@ -18,7 +18,7 @@ public final class EventsUiRoute extends UiRouteImpl {
     public static UiRoute<?> uiRoute() {
         return UiRoute.createRegex(
                 PathBuilder.toRegexPath(EventsRouting.getAnyPath())
-                , false
+                , true
                 , EventsActivity::new
                 , ViewDomainActivityContextFinal::new
         );

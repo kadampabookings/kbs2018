@@ -16,7 +16,7 @@ public final class CloneEventUiRoute extends UiRouteImpl {
 
     public static UiRoute<?> uiRoute() {
         return UiRoute.create(CloneEventRouting.getPath()
-                , false
+                , true
                 , CloneEventActivity::new
                 , DomainPresentationActivityContextFinal::new
         );

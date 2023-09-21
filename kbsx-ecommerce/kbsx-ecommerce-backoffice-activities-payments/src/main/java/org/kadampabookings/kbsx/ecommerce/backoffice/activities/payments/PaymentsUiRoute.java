@@ -17,7 +17,7 @@ public final class PaymentsUiRoute extends UiRouteImpl {
 
     public static UiRoute<?> uiRoute() {
         return UiRoute.createRegex(PathBuilder.toRegexPath(PaymentsRouting.getPath())
-                , false
+                , true
                 , PaymentsActivity::new
                 , ViewDomainActivityContextFinal::new
         );

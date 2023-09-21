@@ -17,7 +17,7 @@ public final class AuthorizationsUiRoute extends UiRouteImpl {
     public static UiRoute<?> uiRoute() {
         return UiRoute.create(AuthorizationsRouting.getPath()
                 , true
-                , AuthorizationsViewActivity::new
+                , AuthorizationsActivity::new
                 , ViewDomainActivityContextFinal::new
         );
     }

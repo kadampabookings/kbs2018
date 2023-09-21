@@ -16,7 +16,7 @@ public final class LetterUiRoute extends UiRouteImpl {
 
     public static UiRoute<?> uiRoute() {
         return UiRoute.create(LetterRouting.getPath()
-                , false
+                , true
                 , LetterActivity::new
                 , ViewDomainActivityContextFinal::new
         );

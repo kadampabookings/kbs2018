@@ -13,7 +13,7 @@ public final class StatementsRouting {
         return PATH;
     }
 
-    public static String getPaymentsPath(Object eventId) {
+    public static String getStatementsPath(Object eventId) {
         return ModalityRoutingUtil.interpolateEventIdInPath(eventId, PATH);
     }
 

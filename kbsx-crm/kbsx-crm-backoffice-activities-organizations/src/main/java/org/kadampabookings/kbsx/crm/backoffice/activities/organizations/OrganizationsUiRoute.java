@@ -16,7 +16,7 @@ public final class OrganizationsUiRoute extends UiRouteImpl {
 
     public static UiRoute<?> uiRoute() {
         return UiRoute.create(OrganizationsRouting.getPath()
-                , false
+                , true
                 , OrganizationsActivity::new
                 , DomainPresentationActivityContextFinal::new
         );

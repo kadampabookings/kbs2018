@@ -18,7 +18,7 @@ public final class LettersUiRoute extends UiRouteImpl {
     public static UiRoute<?> uiRoute() {
         return UiRoute.createRegex(
                 PathBuilder.toRegexPath(LettersRouting.getAnyPath())
-                , false
+                , true
                 , LettersActivity::new
                 , DomainPresentationActivityContextFinal::new
         );

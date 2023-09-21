@@ -16,7 +16,7 @@ public final class EditableOptionsUiRoute extends UiRouteImpl<ViewDomainActivity
 
     public static UiRoute<ViewDomainActivityContextFinal> uiRoute() {
         return UiRoute.create(OptionsRouting.getPath()
-                , false
+                , true
                 , EditableOptionsActivity::new
                 , ViewDomainActivityContextFinal::new
         );

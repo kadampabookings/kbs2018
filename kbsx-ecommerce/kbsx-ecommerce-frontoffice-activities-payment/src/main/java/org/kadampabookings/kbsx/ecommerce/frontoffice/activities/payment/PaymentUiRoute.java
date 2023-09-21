@@ -16,7 +16,7 @@ public final class PaymentUiRoute extends UiRouteImpl {
 
     public static UiRoute<?> uiRoute() {
         return UiRoute.create(PaymentRouting.getPath()
-                , false
+                , true
                 , PaymentActivity::new
                 , ViewDomainActivityContextFinal::new
         );

@@ -16,7 +16,7 @@ public final class ContactUsUiRoute extends UiRouteImpl {
 
     public static UiRoute<?> uiRoute() {
         return UiRoute.create(ContactUsRouting.getPath()
-                , false
+                , true
                 , ContactUsActivity::new
                 , ViewDomainActivityContextFinal::new
         );

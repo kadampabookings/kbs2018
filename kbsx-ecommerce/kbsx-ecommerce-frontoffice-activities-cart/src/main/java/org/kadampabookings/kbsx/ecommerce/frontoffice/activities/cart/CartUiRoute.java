@@ -16,7 +16,7 @@ public final class CartUiRoute extends UiRouteImpl {
 
     public static UiRoute<?> uiRoute() {
         return UiRoute.create(CartRouting.getPath()
-                , false
+                , true
                 , CartActivity::new
                 , ViewDomainActivityContextFinal::new
         );

@@ -17,7 +17,7 @@ public final class StatisticsUiRoute extends UiRouteImpl {
 
     public static UiRoute<?> uiRoute() {
         return UiRoute.createRegex(PathBuilder.toRegexPath(StatisticsRouting.getAnyPath())
-                , false
+                , true
                 , EventStatisticsActivity::new
                 , ViewDomainActivityContextFinal::new
         );

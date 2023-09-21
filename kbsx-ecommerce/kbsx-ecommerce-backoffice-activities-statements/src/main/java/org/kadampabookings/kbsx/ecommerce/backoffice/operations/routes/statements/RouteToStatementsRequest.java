@@ -13,7 +13,7 @@ public final class RouteToStatementsRequest extends RoutePushRequest implements 
     private final static String OPERATION_CODE = "RouteToStatements";
 
     public RouteToStatementsRequest(Object eventId, BrowsingHistory history) {
-        super(StatementsRouting.getPaymentsPath(eventId), history);
+        super(StatementsRouting.getStatementsPath(eventId), history);
     }
 
     @Override

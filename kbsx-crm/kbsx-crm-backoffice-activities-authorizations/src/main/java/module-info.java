@@ -6,7 +6,11 @@ module kbsx.crm.backoffice.activities.authorizations {
     requires javafx.base;
     requires javafx.controls;
     requires javafx.graphics;
+    requires modality.base.backoffice.mainframe.fx;
+    requires modality.base.backoffice.tile;
+    requires modality.base.client.activity;
     requires webfx.extras.visual.grid;
+    requires webfx.kit.util;
     requires webfx.platform.windowhistory;
     requires webfx.stack.orm.domainmodel.activity;
     requires webfx.stack.orm.dql;

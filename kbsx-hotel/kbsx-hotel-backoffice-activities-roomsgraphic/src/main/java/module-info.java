@@ -8,6 +8,7 @@ module kbsx.hotel.backoffice.activities.roomsgraphic {
     requires javafx.controls;
     requires javafx.graphics;
     requires modality.base.backoffice.masterslave;
+    requires modality.base.client.gantt.fx;
     requires modality.base.client.presentationmodel;
     requires modality.base.client.util;
     requires modality.base.shared.entities;
