@@ -63,7 +63,7 @@ final class SummaryActivity extends BookingProcessActivity {
         verticalStack.getChildren().setAll(
                 bookingOptionsPanel.getOptionsPanel(),
                 bookingCalendarSection,
-                personalDetailsPanel.getSectionPanel(),
+                personalDetailsPanel.getContainer(),
                 commentPanel,
                 termsPanel,
                 nextButton

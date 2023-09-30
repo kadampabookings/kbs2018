@@ -2,21 +2,21 @@ package org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic;
 
 import dev.webfx.extras.flexbox.FlexBox;
 import dev.webfx.extras.imagestore.ImageStore;
+import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
 import dev.webfx.extras.visual.controls.grid.VisualGrid;
+import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.platform.ast.ReadOnlyAstArray;
+import dev.webfx.platform.ast.json.Json;
+import dev.webfx.stack.com.serial.SerialCodecManager;
+import dev.webfx.stack.db.datascope.aggregate.AggregateScope;
+import dev.webfx.stack.orm.entity.Entity;
 import dev.webfx.stack.orm.reactive.entities.dql_to_entities.ReactiveEntitiesMapper;
 import dev.webfx.stack.orm.reactive.entities.entities_to_objects.IndividualEntityToObjectMapper;
 import dev.webfx.stack.orm.reactive.entities.entities_to_objects.ReactiveObjectsMapper;
 import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.ReactiveVisualMapper;
 import dev.webfx.stack.ui.action.ActionGroup;
 import dev.webfx.stack.ui.operation.action.OperationActionFactoryMixin;
-import dev.webfx.extras.util.layout.LayoutUtil;
-import dev.webfx.stack.orm.entity.Entity;
-import dev.webfx.kit.util.properties.FXProperties;
-import dev.webfx.stack.db.datascope.aggregate.AggregateScope;
-import dev.webfx.platform.ast.json.Json;
-import dev.webfx.stack.com.serial.SerialCodecManager;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.geometry.Insets;
@@ -30,18 +30,19 @@ import javafx.scene.effect.Effect;
 import javafx.scene.input.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import one.modality.base.backoffice.activities.mainframe.fx.FXMainFrame;
 import one.modality.base.backoffice.controls.masterslave.MasterSlaveView;
 import one.modality.base.client.gantt.fx.interstice.FXGanttInterstice;
 import one.modality.base.client.gantt.fx.visibility.FXGanttVisibility;
 import one.modality.base.client.gantt.fx.visibility.GanttVisibility;
+import one.modality.base.client.presentationmodel.HasSelectedDocumentProperty;
 import one.modality.base.shared.entities.Document;
 import one.modality.base.shared.entities.DocumentLine;
 import one.modality.base.shared.entities.ResourceConfiguration;
 import one.modality.base.shared.entities.Site;
-import one.modality.hotel.backoffice.operations.entities.resourceconfiguration.*;
 import one.modality.event.client.activity.eventdependent.EventDependentPresentationModel;
 import one.modality.event.client.activity.eventdependent.EventDependentViewDomainActivity;
-import one.modality.base.client.presentationmodel.HasSelectedDocumentProperty;
+import one.modality.hotel.backoffice.operations.entities.resourceconfiguration.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +62,6 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
         return selectedDocumentProperty;
     }
 
-    private Pane container; // Keeping a reference to the container to act as parent for dialog windows
     private VisualGrid peopleGridFocus;
     private ReactiveObjectsMapper<Site, Tab> sitesToTabsMapper;
 
@@ -77,9 +77,9 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
                 .setIndividualEntityToObjectMapperFactory(IndividualSiteToTabMapper::new)
                 .storeMappedObjectsInto(sitesTabPane.getTabs())
                 .start();
-        MasterSlaveView masterSlaveView = new MasterSlaveView(sitesTabPane, MasterSlaveView.createAndBindSlaveViewIfApplicable(this, this, () -> container).buildUi());
+        MasterSlaveView masterSlaveView = new MasterSlaveView(sitesTabPane, MasterSlaveView.createAndBindSlaveViewIfApplicable(this, this).buildUi());
         masterSlaveView.slaveVisibleProperty().bind(FXProperties.compute(selectedDocumentProperty(), Objects::nonNull));
-        return container = masterSlaveView.buildUi();
+        return masterSlaveView.buildUi();
     }
 
     @Override
@@ -256,10 +256,10 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
 
                 ActionGroup createContextMenuActionGroup() {
                     return newActionGroup(
-                            newOperationAction(() -> new EditResourceConfigurationPropertiesRequest(getSiteItemResourceConfiguration(), container)),
+                            newOperationAction(() -> new EditResourceConfigurationPropertiesRequest(getSiteItemResourceConfiguration(), FXMainFrame.getDialogArea())),
                             newOperationAction(() -> new ToggleResourceConfigurationOnlineOfflineRequest(getSiteItemResourceConfiguration())),
-                            newOperationAction(() -> new ChangeResourceConfigurationItemRequest(getSiteItemResourceConfiguration(), container, "acco", siteProperty.get().getId())),
-                            newOperationAction(() -> new DeleteResourceRequest(getSiteItemResourceConfiguration(), container))
+                            newOperationAction(() -> new ChangeResourceConfigurationItemRequest(getSiteItemResourceConfiguration(), FXMainFrame.getDialogArea(), "acco", siteProperty.get().getId())),
+                            newOperationAction(() -> new DeleteResourceRequest(getSiteItemResourceConfiguration(), FXMainFrame.getDialogArea()))
                     );
                 }
 

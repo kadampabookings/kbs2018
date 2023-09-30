@@ -52,7 +52,7 @@ final class PersonActivity extends BookingProcessActivity {
         ObservableBooleanValue notLoggedIn = BooleanExpression.booleanExpression(loggedInProperty).not();
         LoginPanel loginPanel = new LoginPanel();
         personalDetailsPanel = new PersonalDetailsPanel(getEvent(), this, pageContainer);
-        Node[] tabContents = {new VBox(10, personalDetailsPanel.getSectionPanel(), nextButton), loginPanel.getNode() };
+        Node[] tabContents = {new VBox(10, personalDetailsPanel.getContainer(), nextButton), loginPanel.getNode() };
         BorderPane accountPane = new BorderPane();
         accountToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             Node displayedNode = tabContents[accountToggleGroup.getToggles().indexOf(newValue)];

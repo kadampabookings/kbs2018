@@ -229,6 +229,8 @@
     <public includes="images/svg/mono/" path=""/>
     <!--=====================< modality-base-client-presentationmodel >=====================-->
     <source path="one/modality/base/client/presentationmodel"/>
+    <!--========================< modality-base-client-profile-fx >=========================-->
+    <source path="one/modality/base/client/profile/fx"/>
     <!--===========================< modality-base-client-util >============================-->
     <source path="one/modality/base/client/util/functions"/>
     <source path="one/modality/base/client/util/log"/>
