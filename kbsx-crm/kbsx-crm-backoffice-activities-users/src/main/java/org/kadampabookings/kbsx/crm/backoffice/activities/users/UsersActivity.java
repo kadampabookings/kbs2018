@@ -97,7 +97,7 @@ final class UsersActivity extends OrganizationDependentViewDomainActivity implem
                 // Applying the user search
                 .ifTrimNotEmpty(pm.searchTextProperty(), s ->
                         s.contains("@") ? where("lower(email) like ?", "%" + s.toLowerCase() + "%")
-                                : DqlStatement.where("abcNames(firstName + ' ' + lastName) like ?", AbcNames.evaluate(s, true)))
+                                : DqlStatement.where("abcNames(fullName) like ?", AbcNames.evaluate(s, true)))
                 .applyDomainModelRowStyle() // Colorizing the rows
                 .start();
     }

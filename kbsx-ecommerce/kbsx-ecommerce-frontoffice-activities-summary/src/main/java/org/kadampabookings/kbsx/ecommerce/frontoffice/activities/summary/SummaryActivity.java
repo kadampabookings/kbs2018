@@ -16,7 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
-import one.modality.crm.client.controls.personaldetails.PersonalDetailsPanel;
+import one.modality.crm.client.controls.personaldetails.BookingPersonalDetailsPanel;
 import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.BookingProcessActivity;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocumentSubmitter;
@@ -35,7 +35,7 @@ final class SummaryActivity extends BookingProcessActivity {
     private BookingOptionsPanel bookingOptionsPanel;
     private Node bookingCalendarSection;
     private BookingCalendar bookingCalendar;
-    private PersonalDetailsPanel personalDetailsPanel;
+    private BookingPersonalDetailsPanel personalDetailsPanel;
     private TextArea commentTextArea;
     private CheckBox termsCheckBox;
     private ObservableStringValue agreeTCTranslationProperty; // to avoid GC
@@ -47,7 +47,7 @@ final class SummaryActivity extends BookingProcessActivity {
         bookingOptionsPanel = new BookingOptionsPanel();
         bookingCalendar = new BookingCalendar(false);
         bookingCalendarSection = SectionPanelFactory.createBookingCalendarSection(bookingCalendar);
-        personalDetailsPanel = new PersonalDetailsPanel(getEvent(), this, pageContainer);
+        personalDetailsPanel = new BookingPersonalDetailsPanel(getEvent(), this, pageContainer);
         personalDetailsPanel.setEditable(false);
 
         BorderPane commentPanel = SectionPanelFactory.createSectionPanel("Comment");

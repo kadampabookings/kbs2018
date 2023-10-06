@@ -13,7 +13,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
-import one.modality.crm.client.controls.personaldetails.PersonalDetailsPanel;
+import one.modality.crm.client.controls.personaldetails.BookingPersonalDetailsPanel;
 import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.BookingProcessActivity;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
 import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.summary.RouteToSummaryRequest;
@@ -23,7 +23,7 @@ import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.summary.RouteTo
  */
 final class PersonActivity extends BookingProcessActivity {
 
-    private PersonalDetailsPanel personalDetailsPanel;
+    private BookingPersonalDetailsPanel personalDetailsPanel;
 
     @Override
     protected void createViewNodes() {
@@ -51,7 +51,7 @@ final class PersonActivity extends BookingProcessActivity {
         ObservableBooleanValue loggedInProperty = FXLoggedIn.loggedInProperty();
         ObservableBooleanValue notLoggedIn = BooleanExpression.booleanExpression(loggedInProperty).not();
         LoginPanel loginPanel = new LoginPanel();
-        personalDetailsPanel = new PersonalDetailsPanel(getEvent(), this, pageContainer);
+        personalDetailsPanel = new BookingPersonalDetailsPanel(getEvent(), this, pageContainer);
         Node[] tabContents = {new VBox(10, personalDetailsPanel.getContainer(), nextButton), loginPanel.getNode() };
         BorderPane accountPane = new BorderPane();
         accountToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
