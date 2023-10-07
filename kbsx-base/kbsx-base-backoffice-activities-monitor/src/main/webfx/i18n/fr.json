@@ -1,0 +1,6 @@
+{
+  "UsedMemory": "Mémoire utilisée",
+  "TotalMemory": "Mémoire totale",
+  "SystemLoadAverage": "Moyenne de la charge serveur",
+  "ProcessCpuLoad": "Utilisation du processeur par KBS"
+}

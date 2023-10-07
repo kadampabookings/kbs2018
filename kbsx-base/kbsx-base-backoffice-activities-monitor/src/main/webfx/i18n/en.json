@@ -1,0 +1,6 @@
+{
+  "UsedMemory": "Used memory",
+  "TotalMemory": "Total memory",
+  "SystemLoadAverage": "System load average",
+  "ProcessCpuLoad": "KBS cpu load"
+}
