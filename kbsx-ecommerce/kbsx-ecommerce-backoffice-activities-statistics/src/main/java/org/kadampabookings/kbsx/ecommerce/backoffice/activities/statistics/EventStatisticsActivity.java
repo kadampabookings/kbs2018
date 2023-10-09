@@ -1,6 +1,6 @@
 package org.kadampabookings.kbsx.ecommerce.backoffice.activities.statistics;
 
-import dev.webfx.extras.util.layout.LayoutUtil;
+import dev.webfx.extras.util.control.ControlUtil;
 import dev.webfx.extras.visual.controls.grid.VisualGrid;
 import dev.webfx.stack.orm.dql.DqlClause;
 import dev.webfx.stack.orm.dql.DqlStatement;
@@ -12,7 +12,6 @@ import one.modality.base.backoffice.controls.masterslave.ConventionalUiBuilder;
 import one.modality.base.backoffice.controls.masterslave.ConventionalUiBuilderMixin;
 import one.modality.base.backoffice.operations.entities.generic.CopyAllRequest;
 import one.modality.base.backoffice.operations.entities.generic.CopySelectionRequest;
-import one.modality.event.client.activity.eventdependent.EventDependentViewDomainActivity;
 import one.modality.base.client.gantt.fx.visibility.FXGanttVisibility;
 import one.modality.base.client.gantt.fx.visibility.GanttVisibility;
 import one.modality.base.shared.entities.Attendance;
@@ -22,6 +21,7 @@ import one.modality.ecommerce.backoffice.operations.entities.document.SendLetter
 import one.modality.ecommerce.backoffice.operations.entities.documentline.DeleteDocumentLineRequest;
 import one.modality.ecommerce.backoffice.operations.entities.documentline.EditDocumentLineRequest;
 import one.modality.ecommerce.backoffice.operations.entities.documentline.ToggleCancelDocumentLineRequest;
+import one.modality.event.client.activity.eventdependent.EventDependentViewDomainActivity;
 
 import static dev.webfx.stack.orm.dql.DqlStatement.where;
 
@@ -46,7 +46,7 @@ final class EventStatisticsActivity extends EventDependentViewDomainActivity imp
 
         Pane container = ui.buildUi();
 
-        setUpContextMenu(LayoutUtil.lookupChild(ui.getGroupMasterSlaveView().getMasterView(), n -> n instanceof VisualGrid), () -> newActionGroup(
+        setUpContextMenu(ControlUtil.lookupChild(ui.getGroupMasterSlaveView().getMasterView(), n -> n instanceof VisualGrid), () -> newActionGroup(
                 newOperationAction(() -> new SendLetterRequest(pm.getSelectedDocument(), container)),
                 newSeparatorActionGroup(
                         newOperationAction(() -> new EditDocumentLineRequest(pm.getSelectedDocumentLine(), container)),

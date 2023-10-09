@@ -2,6 +2,7 @@ package org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic;
 
 import dev.webfx.extras.flexbox.FlexBox;
 import dev.webfx.extras.imagestore.ImageStore;
+import dev.webfx.extras.util.control.ControlUtil;
 import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
 import dev.webfx.extras.visual.controls.grid.VisualGrid;
@@ -140,7 +141,7 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
             // The site item is represented by a ResourceConfiguration group (having this site and item)
             final ObjectProperty<Entity> siteItemProperty = new SimpleObjectProperty<>();
             final Pane boxesContainer = new FlexBox(10, 10);
-            final Tab siteItemTab = new Tab(null, LayoutUtil.createVerticalScrollPane(boxesContainer));
+            final Tab siteItemTab = new Tab(null, ControlUtil.createVerticalScrollPane(boxesContainer));
             final ReactiveObjectsMapper<ResourceConfiguration, Node> siteItemResourceConfigurationsToBoxesMapper;
 
             IndividualSiteItemToTabMapper(Entity siteItem) { // actually a ResourceConfiguration group

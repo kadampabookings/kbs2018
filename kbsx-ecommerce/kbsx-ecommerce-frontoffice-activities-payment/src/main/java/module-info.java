@@ -12,6 +12,7 @@ module kbsx.ecommerce.frontoffice.activities.payment {
     requires modality.base.client.util;
     requires modality.base.shared.domainmodel;
     requires modality.base.shared.entities;
+    requires webfx.extras.util.control;
     requires webfx.extras.util.layout;
     requires webfx.extras.webtext;
     requires webfx.platform.console;

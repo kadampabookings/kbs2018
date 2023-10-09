@@ -11,7 +11,7 @@ module kbsx.ecommerce.frontoffice.activities.contactus {
     requires modality.base.client.validation;
     requires modality.base.shared.entities;
     requires webfx.extras.util.background;
-    requires webfx.extras.util.layout;
+    requires webfx.extras.util.control;
     requires webfx.platform.console;
     requires webfx.platform.uischeduler;
     requires webfx.platform.util;

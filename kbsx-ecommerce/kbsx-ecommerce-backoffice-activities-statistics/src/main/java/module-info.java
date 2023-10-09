@@ -18,7 +18,7 @@ module kbsx.ecommerce.backoffice.activities.statistics {
     requires modality.ecommerce.backoffice.operations.documentline;
     requires modality.event.client.activity.eventdependent;
     requires webfx.extras.type;
-    requires webfx.extras.util.layout;
+    requires webfx.extras.util.control;
     requires webfx.extras.visual;
     requires webfx.extras.visual.grid;
     requires webfx.platform.util;

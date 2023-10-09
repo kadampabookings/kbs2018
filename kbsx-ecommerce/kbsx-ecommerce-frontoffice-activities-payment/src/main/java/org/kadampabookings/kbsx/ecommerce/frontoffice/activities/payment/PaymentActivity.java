@@ -1,5 +1,7 @@
 package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment;
 
+import dev.webfx.extras.util.control.ControlUtil;
+import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.webtext.HtmlText;
 import dev.webfx.platform.console.Console;
 import dev.webfx.platform.uischeduler.UiScheduler;
@@ -15,7 +17,6 @@ import dev.webfx.stack.orm.entity.UpdateStore;
 import dev.webfx.stack.session.state.client.fx.FXServerSessionId;
 import dev.webfx.stack.ui.action.Action;
 import dev.webfx.stack.ui.dialog.DialogUtil;
-import dev.webfx.extras.util.layout.LayoutUtil;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -58,7 +59,7 @@ final class PaymentActivity extends CartBasedActivity {
 
         BorderPane totalSection = SectionPanelFactory.createSectionPanelWithHeaderNodes(newLabel("TotalAmount:"), LayoutUtil.createHGrowable(), totalLabel = new Label());
         VBox vBox = new VBox(20, paymentPrompt, paymentsVBox, totalSection, newLargeGreenButton(makePaymentAction));
-        BorderPane container = new BorderPane(LayoutUtil.createVerticalScrollPaneWithPadding(vBox));
+        BorderPane container = new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(vBox));
 
         displayDocumentPaymentsIfReady();
 

@@ -17,6 +17,7 @@ module kbsx.hotel.backoffice.activities.roomsgraphic {
     requires modality.hotel.backoffice.operations.resourceconfiguration;
     requires webfx.extras.flexbox;
     requires webfx.extras.imagestore;
+    requires webfx.extras.util.control;
     requires webfx.extras.util.layout;
     requires webfx.extras.visual.grid;
     requires webfx.kit.util;

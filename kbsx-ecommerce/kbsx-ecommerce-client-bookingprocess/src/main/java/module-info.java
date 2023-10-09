@@ -13,7 +13,7 @@ module kbsx.ecommerce.client.bookingprocess {
     requires modality.base.shared.entities;
     requires modality.event.client.activity.eventdependent;
     requires webfx.extras.util.background;
-    requires webfx.extras.util.layout;
+    requires webfx.extras.util.control;
     requires webfx.kit.util;
     requires webfx.platform.util;
     requires webfx.stack.orm.datasourcemodel.service;

@@ -1,6 +1,31 @@
 package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart;
 
+import dev.webfx.extras.flexbox.FlexBox;
+import dev.webfx.extras.type.PrimType;
+import dev.webfx.extras.util.control.ControlUtil;
+import dev.webfx.extras.util.layout.LayoutUtil;
+import dev.webfx.extras.visual.VisualResult;
+import dev.webfx.extras.visual.VisualSelection;
+import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
+import dev.webfx.extras.visual.controls.grid.VisualGrid;
+import dev.webfx.platform.async.Future;
+import dev.webfx.platform.console.Console;
+import dev.webfx.platform.uischeduler.UiScheduler;
+import dev.webfx.platform.util.Arrays;
+import dev.webfx.platform.util.collection.Collections;
+import dev.webfx.stack.i18n.I18n;
+import dev.webfx.stack.orm.entity.Entities;
+import dev.webfx.stack.orm.entity.Entity;
+import dev.webfx.stack.orm.entity.UpdateStore;
+import dev.webfx.stack.orm.expression.lci.DomainReader;
+import dev.webfx.stack.orm.expression.terms.function.Function;
+import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.EntitiesToVisualResultMapper;
+import dev.webfx.stack.ui.action.Action;
+import dev.webfx.stack.ui.action.ActionBinder;
+import dev.webfx.stack.ui.action.impl.WritableAction;
 import dev.webfx.stack.ui.controls.dialog.DialogBuilderUtil;
+import dev.webfx.stack.ui.controls.dialog.GridPaneBuilder;
+import dev.webfx.stack.ui.dialog.DialogCallback;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Node;
@@ -9,45 +34,21 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import one.modality.base.client.util.functions.TranslateFunction;
 import one.modality.base.shared.domainmodel.formatters.PriceFormatter;
+import one.modality.base.shared.entities.Document;
+import one.modality.base.shared.entities.Event;
+import one.modality.base.shared.entities.formatters.EventPriceFormatter;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.ActiveWorkingDocumentsByEventStore;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocumentsByCartStore;
 import org.kadampabookings.kbsx.ecommerce.client.controls.bookingoptionspanel.BookingOptionsPanel;
+import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.base.CartBasedActivity;
 import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.contactus.RouteToContactUsRequest;
 import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.payment.RouteToPaymentRequest;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
-import one.modality.base.client.util.functions.TranslateFunction;
-import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.base.CartBasedActivity;
 import org.kadampabookings.kbsx.event.frontoffice.operations.options.RouteToOptionsRequest;
 import org.kadampabookings.kbsx.event.frontoffice.operations.startbooking.RouteToStartBookingRequest;
-import one.modality.base.shared.entities.formatters.EventPriceFormatter;
-import one.modality.base.shared.entities.Document;
-import one.modality.base.shared.entities.Event;
-import dev.webfx.stack.i18n.I18n;
-import dev.webfx.stack.ui.action.Action;
-import dev.webfx.stack.ui.action.ActionBinder;
-import dev.webfx.stack.ui.action.impl.WritableAction;
-import dev.webfx.stack.ui.dialog.DialogCallback;
-import dev.webfx.stack.ui.controls.dialog.GridPaneBuilder;
-import dev.webfx.extras.flexbox.FlexBox;
-import dev.webfx.extras.util.layout.LayoutUtil;
-import dev.webfx.stack.orm.expression.lci.DomainReader;
-import dev.webfx.stack.orm.expression.terms.function.Function;
-import dev.webfx.stack.orm.entity.Entities;
-import dev.webfx.stack.orm.entity.Entity;
-import dev.webfx.stack.orm.entity.UpdateStore;
-import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.EntitiesToVisualResultMapper;
-import dev.webfx.extras.visual.controls.grid.VisualGrid;
-import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
-import dev.webfx.extras.visual.VisualResult;
-import dev.webfx.extras.visual.VisualSelection;
-import dev.webfx.extras.type.PrimType;
-import dev.webfx.platform.uischeduler.UiScheduler;
-import dev.webfx.platform.console.Console;
-import dev.webfx.platform.util.Arrays;
-import dev.webfx.platform.async.Future;
-import dev.webfx.platform.util.collection.Collections;
 
 import java.util.List;
 
@@ -114,7 +115,7 @@ final class CartActivity extends CartBasedActivity {
         // Applying the css background of the event if provided and if ui is ready
         UiScheduler.scheduleDeferred(this::applyEventCssBackgroundIfProvided);
 
-        return new BorderPane(LayoutUtil.createVerticalScrollPaneWithPadding(new VBox(20, bookingsPanel, optionsPanel, paymentsPanel, bottomButtonBar)));
+        return new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(new VBox(20, bookingsPanel, optionsPanel, paymentsPanel, bottomButtonBar)));
     }
 
     private FlexBox createFlexButtonBar(Action... actions) {

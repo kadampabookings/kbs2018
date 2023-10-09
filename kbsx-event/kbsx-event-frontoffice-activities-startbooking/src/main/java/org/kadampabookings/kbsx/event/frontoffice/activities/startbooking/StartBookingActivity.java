@@ -1,6 +1,13 @@
 package org.kadampabookings.kbsx.event.frontoffice.activities.startbooking;
 
+import dev.webfx.extras.imagestore.ImageStore;
+import dev.webfx.extras.util.animation.Animations;
+import dev.webfx.extras.util.control.ControlUtil;
+import dev.webfx.extras.util.layout.LayoutUtil;
+import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.platform.console.Console;
+import dev.webfx.platform.uischeduler.UiScheduler;
+import dev.webfx.stack.ui.action.Action;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -12,20 +19,14 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import org.kadampabookings.kbsx.base.client.actions.ModalityActions;
 import one.modality.base.client.entities.util.Labels;
+import org.kadampabookings.kbsx.base.client.actions.ModalityActions;
 import org.kadampabookings.kbsx.base.shared.entities.Event;
 import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.BookingProcessActivity;
 import org.kadampabookings.kbsx.event.frontoffice.operations.fees.RouteToFeesRequest;
 import org.kadampabookings.kbsx.event.frontoffice.operations.options.RouteToOptionsRequest;
 import org.kadampabookings.kbsx.event.frontoffice.operations.program.RouteToProgramRequest;
 import org.kadampabookings.kbsx.event.frontoffice.operations.terms.RouteToTermsRequest;
-import dev.webfx.stack.ui.action.Action;
-import dev.webfx.extras.util.layout.LayoutUtil;
-import dev.webfx.extras.util.animation.Animations;
-import dev.webfx.kit.util.properties.FXProperties;
-import dev.webfx.extras.imagestore.ImageStore;
-import dev.webfx.platform.uischeduler.UiScheduler;
 
 /**
  * @author Bruno Salmon
@@ -64,7 +65,7 @@ final class StartBookingActivity extends BookingProcessActivity {
         verticalStack.setSpacing(vGap);
         verticalStack.getChildren().setAll(eventImageViewContainer, eventTitle, bookButton, flowPane);
         GridPane goldLayout = LayoutUtil.createGoldLayout(verticalStack, 1.0, 0, null);
-        pageContainer.setCenter(verticalScrollPane = LayoutUtil.createVerticalScrollPane(goldLayout));
+        pageContainer.setCenter(verticalScrollPane = ControlUtil.createVerticalScrollPane(goldLayout));
         goldLayout.minHeightProperty().bind(verticalScrollPane.heightProperty());
     }
 

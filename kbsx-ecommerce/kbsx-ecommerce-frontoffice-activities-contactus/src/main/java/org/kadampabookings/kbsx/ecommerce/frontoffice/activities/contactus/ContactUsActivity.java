@@ -1,22 +1,23 @@
 package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.contactus;
 
-import dev.webfx.stack.orm.domainmodel.activity.viewdomain.impl.ViewDomainActivityBase;
-import dev.webfx.stack.routing.uirouter.operations.RouteBackwardRequest;
-import dev.webfx.stack.ui.action.Action;
 import dev.webfx.extras.util.background.BackgroundFactory;
-import dev.webfx.extras.util.layout.LayoutUtil;
+import dev.webfx.extras.util.control.ControlUtil;
+import dev.webfx.platform.console.Console;
+import dev.webfx.platform.uischeduler.UiScheduler;
+import dev.webfx.platform.util.Strings;
+import dev.webfx.platform.windowlocation.WindowLocation;
+import dev.webfx.stack.orm.domainmodel.activity.viewdomain.impl.ViewDomainActivityBase;
 import dev.webfx.stack.orm.entity.EntityStore;
 import dev.webfx.stack.orm.entity.UpdateStore;
-import dev.webfx.platform.uischeduler.UiScheduler;
-import dev.webfx.platform.windowlocation.WindowLocation;
-import dev.webfx.platform.console.Console;
-import dev.webfx.platform.util.Strings;
+import dev.webfx.stack.routing.uirouter.operations.RouteBackwardRequest;
+import dev.webfx.stack.ui.action.Action;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
+import one.modality.base.client.activity.ModalityButtonFactoryMixin;
 import one.modality.base.client.validation.ModalityValidationSupport;
 import one.modality.base.shared.entities.Document;
 import one.modality.base.shared.entities.Event;
@@ -24,7 +25,6 @@ import one.modality.base.shared.entities.History;
 import one.modality.base.shared.entities.Mail;
 import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.routing.CartRouting;
 import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.contactus.routing.ContactUsRouting;
-import one.modality.base.client.activity.ModalityButtonFactoryMixin;
 
 /**
  * @author Bruno Salmon
@@ -56,7 +56,7 @@ final class ContactUsActivity extends ViewDomainActivityBase
         // Applying the css background of the event if provided and if ui is ready
         UiScheduler.scheduleDeferred(this::applyEventCssBackgroundIfProvided);
 
-        return new BorderPane(LayoutUtil.createVerticalScrollPaneWithPadding(vBox));
+        return new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(vBox));
     }
 
     private void initValidation() {

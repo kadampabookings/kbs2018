@@ -16,6 +16,7 @@ module kbsx.event.frontoffice.activities.startbooking {
     requires modality.base.client.util;
     requires webfx.extras.imagestore;
     requires webfx.extras.util.animation;
+    requires webfx.extras.util.control;
     requires webfx.extras.util.layout;
     requires webfx.kit.util;
     requires webfx.platform.console;
