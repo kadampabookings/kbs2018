@@ -1,6 +1,6 @@
 package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart;
 
-import dev.webfx.extras.flexbox.FlexBox;
+import dev.webfx.extras.panes.FlexPane;
 import dev.webfx.extras.type.PrimType;
 import dev.webfx.extras.util.control.ControlUtil;
 import dev.webfx.extras.util.layout.LayoutUtil;
@@ -79,7 +79,7 @@ final class CartActivity extends CartBasedActivity {
     private WorkingDocument selectedWorkingDocument;
     private BorderPane optionsPanel;
     private BorderPane paymentsPanel;
-    private FlexBox bottomButtonBar;
+    private FlexPane bottomButtonBar;
 
     @Override
     public Node buildUi() {
@@ -95,7 +95,7 @@ final class CartActivity extends CartBasedActivity {
         paymentTable.setFullHeight(true);
         paymentsPanel.setCenter(paymentTable);
 
-        FlexBox bookingButtonBar = createFlexButtonBar(modifyBookingAction, cancelBookingAction, contactUsAction);
+        FlexPane bookingButtonBar = createFlexButtonBar(modifyBookingAction, cancelBookingAction, contactUsAction);
 
         optionsPanel.setBottom(LayoutUtil.createPadding(bookingButtonBar));
 
@@ -118,9 +118,9 @@ final class CartActivity extends CartBasedActivity {
         return new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(new VBox(20, bookingsPanel, optionsPanel, paymentsPanel, bottomButtonBar)));
     }
 
-    private FlexBox createFlexButtonBar(Action... actions) {
+    private FlexPane createFlexButtonBar(Action... actions) {
         // not compiling with GWT return new FlexBox(20, 10, Arrays.map(actions, action -> LayoutUtil.setMaxWidthToInfinite(LayoutUtil.setMinWidthToPref(newButton(action))), Node[]::new));
-        FlexBox flexButtonBar = new FlexBox(20, 10);
+        FlexPane flexButtonBar = new FlexPane(20, 10);
         Arrays.forEach(actions, action -> flexButtonBar.getChildren().add(createFlexButton(action)));
         return flexButtonBar;
     }

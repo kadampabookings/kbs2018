@@ -1,6 +1,6 @@
 package org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic;
 
-import dev.webfx.extras.flexbox.FlexBox;
+import dev.webfx.extras.panes.FlexPane;
 import dev.webfx.extras.imagestore.ImageStore;
 import dev.webfx.extras.util.control.ControlUtil;
 import dev.webfx.extras.util.layout.LayoutUtil;
@@ -31,7 +31,7 @@ import javafx.scene.effect.Effect;
 import javafx.scene.input.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import one.modality.base.backoffice.activities.mainframe.fx.FXMainFrame;
+import one.modality.base.client.mainframe.dialogarea.fx.FXMainFrameDialogArea;
 import one.modality.base.backoffice.controls.masterslave.MasterSlaveView;
 import one.modality.base.client.gantt.fx.interstice.FXGanttInterstice;
 import one.modality.base.client.gantt.fx.visibility.FXGanttVisibility;
@@ -140,7 +140,7 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
         class IndividualSiteItemToTabMapper implements IndividualEntityToObjectMapper<Entity, Tab> {
             // The site item is represented by a ResourceConfiguration group (having this site and item)
             final ObjectProperty<Entity> siteItemProperty = new SimpleObjectProperty<>();
-            final Pane boxesContainer = new FlexBox(10, 10);
+            final Pane boxesContainer = new FlexPane(10, 10);
             final Tab siteItemTab = new Tab(null, ControlUtil.createVerticalScrollPane(boxesContainer));
             final ReactiveObjectsMapper<ResourceConfiguration, Node> siteItemResourceConfigurationsToBoxesMapper;
 
@@ -257,10 +257,10 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
 
                 ActionGroup createContextMenuActionGroup() {
                     return newActionGroup(
-                            newOperationAction(() -> new EditResourceConfigurationPropertiesRequest(getSiteItemResourceConfiguration(), FXMainFrame.getDialogArea())),
+                            newOperationAction(() -> new EditResourceConfigurationPropertiesRequest(getSiteItemResourceConfiguration(), FXMainFrameDialogArea.getDialogArea())),
                             newOperationAction(() -> new ToggleResourceConfigurationOnlineOfflineRequest(getSiteItemResourceConfiguration())),
-                            newOperationAction(() -> new ChangeResourceConfigurationItemRequest(getSiteItemResourceConfiguration(), FXMainFrame.getDialogArea(), "acco", siteProperty.get().getId())),
-                            newOperationAction(() -> new DeleteResourceRequest(getSiteItemResourceConfiguration(), FXMainFrame.getDialogArea()))
+                            newOperationAction(() -> new ChangeResourceConfigurationItemRequest(getSiteItemResourceConfiguration(), FXMainFrameDialogArea.getDialogArea(), "acco", siteProperty.get().getId())),
+                            newOperationAction(() -> new DeleteResourceRequest(getSiteItemResourceConfiguration(), FXMainFrameDialogArea.getDialogArea()))
                     );
                 }
 

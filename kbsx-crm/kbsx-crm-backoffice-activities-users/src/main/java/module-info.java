@@ -16,6 +16,7 @@ module kbsx.crm.backoffice.activities.users {
     requires webfx.platform.windowhistory;
     requires webfx.stack.orm.domainmodel.activity;
     requires webfx.stack.orm.dql;
+    requires webfx.stack.orm.entity.controls;
     requires webfx.stack.orm.expression;
     requires webfx.stack.orm.reactive.dql;
     requires webfx.stack.orm.reactive.visual;

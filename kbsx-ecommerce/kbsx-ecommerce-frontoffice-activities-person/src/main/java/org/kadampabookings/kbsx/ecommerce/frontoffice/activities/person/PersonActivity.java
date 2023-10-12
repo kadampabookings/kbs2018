@@ -1,6 +1,7 @@
 package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.person;
 
 import dev.webfx.kit.util.properties.FXProperties;
+import dev.webfx.stack.orm.entity.controls.entity.selector.ButtonSelectorParameters;
 import dev.webfx.stack.session.state.client.fx.FXLoggedIn;
 import dev.webfx.extras.util.layout.LayoutUtil;
 import javafx.application.Platform;
@@ -51,7 +52,7 @@ final class PersonActivity extends BookingProcessActivity {
         ObservableBooleanValue loggedInProperty = FXLoggedIn.loggedInProperty();
         ObservableBooleanValue notLoggedIn = BooleanExpression.booleanExpression(loggedInProperty).not();
         LoginPanel loginPanel = new LoginPanel();
-        personalDetailsPanel = new BookingPersonalDetailsPanel(getEvent(), this, pageContainer);
+        personalDetailsPanel = new BookingPersonalDetailsPanel(getEvent(), new ButtonSelectorParameters().setButtonFactory(this).setDropParent(pageContainer));
         Node[] tabContents = {new VBox(10, personalDetailsPanel.getContainer(), nextButton), loginPanel.getNode() };
         BorderPane accountPane = new BorderPane();
         accountToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {

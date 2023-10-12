@@ -22,6 +22,7 @@ module kbsx.ecommerce.frontoffice.activities.summary {
     requires webfx.platform.windowhistory;
     requires webfx.stack.i18n;
     requires webfx.stack.orm.domainmodel.activity;
+    requires webfx.stack.orm.entity.controls;
     requires webfx.stack.routing.uirouter;
 
     // Exported packages

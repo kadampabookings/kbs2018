@@ -1,6 +1,7 @@
 package org.kadampabookings.kbsx.crm.backoffice.activities.users;
 
 import dev.webfx.stack.orm.dql.DqlStatement;
+import dev.webfx.stack.orm.entity.controls.entity.selector.ButtonSelectorParameters;
 import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.ReactiveVisualMapper;
 import dev.webfx.stack.ui.action.Action;
 import dev.webfx.stack.ui.action.ActionGroup;
@@ -58,7 +59,7 @@ final class UsersActivity extends OrganizationDependentViewDomainActivity implem
         ObservableObjectValue<Node> graphicProperty = new SimpleObjectProperty<>();
         ObservableBooleanValue disabledProperty = new SimpleBooleanProperty(false);
         ObservableBooleanValue visibleProperty = new SimpleBooleanProperty(true);
-        EventHandler<ActionEvent> actionHandler = e -> new EditUsersPersonalDetailsRequest(getPerson(), this, pane);
+        EventHandler<ActionEvent> actionHandler = e -> new EditUsersPersonalDetailsRequest(getPerson(), new ButtonSelectorParameters().setButtonFactory(this).setDialogParent(pane));
         Collection<Action> actions = Arrays.asList(
                 Action.create(textProperty, graphicProperty, disabledProperty, visibleProperty, actionHandler)
         );

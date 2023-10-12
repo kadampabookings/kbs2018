@@ -4,6 +4,7 @@ import dev.webfx.platform.console.Console;
 import dev.webfx.stack.i18n.I18n;
 import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.platform.util.Strings;
+import dev.webfx.stack.orm.entity.controls.entity.selector.ButtonSelectorParameters;
 import javafx.application.Platform;
 import javafx.beans.value.ObservableStringValue;
 import javafx.event.ActionEvent;
@@ -47,7 +48,7 @@ final class SummaryActivity extends BookingProcessActivity {
         bookingOptionsPanel = new BookingOptionsPanel();
         bookingCalendar = new BookingCalendar(false);
         bookingCalendarSection = SectionPanelFactory.createBookingCalendarSection(bookingCalendar);
-        personalDetailsPanel = new BookingPersonalDetailsPanel(getEvent(), this, pageContainer);
+        personalDetailsPanel = new BookingPersonalDetailsPanel(getEvent(), new ButtonSelectorParameters().setButtonFactory(this).setDropParent(pageContainer));
         personalDetailsPanel.setEditable(false);
 
         BorderPane commentPanel = SectionPanelFactory.createSectionPanel("Comment");

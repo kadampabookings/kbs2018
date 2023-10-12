@@ -7,16 +7,16 @@ module kbsx.hotel.backoffice.activities.roomsgraphic {
     requires javafx.base;
     requires javafx.controls;
     requires javafx.graphics;
-    requires modality.base.backoffice.mainframe.fx;
     requires modality.base.backoffice.masterslave;
     requires modality.base.client.gantt.fx;
+    requires modality.base.client.mainframe.dialogarea.fx;
     requires modality.base.client.presentationmodel;
     requires modality.base.client.util;
     requires modality.base.shared.entities;
     requires modality.event.client.activity.eventdependent;
     requires modality.hotel.backoffice.operations.resourceconfiguration;
-    requires webfx.extras.flexbox;
     requires webfx.extras.imagestore;
+    requires webfx.extras.panes;
     requires webfx.extras.util.control;
     requires webfx.extras.util.layout;
     requires webfx.extras.visual.grid;

@@ -18,7 +18,7 @@ module kbsx.ecommerce.frontoffice.activities.cart {
     requires modality.base.client.util;
     requires modality.base.shared.domainmodel;
     requires modality.base.shared.entities;
-    requires webfx.extras.flexbox;
+    requires webfx.extras.panes;
     requires webfx.extras.type;
     requires webfx.extras.util.control;
     requires webfx.extras.util.layout;

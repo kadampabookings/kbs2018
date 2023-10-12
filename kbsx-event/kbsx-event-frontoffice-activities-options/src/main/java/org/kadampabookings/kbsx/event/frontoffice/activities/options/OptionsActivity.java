@@ -16,7 +16,7 @@ import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.Wo
 import org.kadampabookings.kbsx.event.client.controls.bookingcalendar.BookingCalendar;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
 import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.person.RouteToPersonRequest;
-import dev.webfx.extras.flexbox.FlexBox;
+import dev.webfx.extras.panes.FlexPane;
 import dev.webfx.platform.uischeduler.UiScheduler;
 import dev.webfx.platform.console.Console;
 import dev.webfx.platform.util.Arrays;
@@ -32,7 +32,7 @@ import static dev.webfx.extras.util.layout.LayoutUtil.setMaxWidthToInfinite;
  */
 public class OptionsActivity extends BookingProcessActivity {
 
-    private FlexBox topLevelOptionButtonsContainer;
+    private FlexPane topLevelOptionButtonsContainer;
     private Node bookingCalendarSection;
     protected Label priceText;
     private WorkingDocument lastWorkingDocument;
@@ -83,7 +83,7 @@ public class OptionsActivity extends BookingProcessActivity {
     protected void createViewNodes() {
         super.createViewNodes();
 
-        topLevelOptionButtonsContainer = new FlexBox(4, 4);
+        topLevelOptionButtonsContainer = new FlexPane(4, 4);
         bookingCalendar = createBookingCalendar();
         bookingCalendar.setOnAttendanceChangedRunnable(optionTree::getUpdatedTopLevelOptionSections);
         bookingCalendarSection = SectionPanelFactory.createBookingCalendarSection(bookingCalendar);

@@ -19,8 +19,8 @@ module kbsx.event.frontoffice.activities.options {
     requires modality.base.client.util;
     requires modality.base.client.validation;
     requires modality.base.shared.entities;
-    requires webfx.extras.flexbox;
     requires webfx.extras.imagestore;
+    requires webfx.extras.panes;
     requires webfx.extras.util.layout;
     requires webfx.kit.util;
     requires webfx.platform.console;

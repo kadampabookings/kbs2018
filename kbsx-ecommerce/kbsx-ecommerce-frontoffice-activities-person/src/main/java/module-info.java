@@ -22,6 +22,7 @@ module kbsx.ecommerce.frontoffice.activities.person {
     requires webfx.stack.authn;
     requires webfx.stack.i18n.controls;
     requires webfx.stack.orm.domainmodel.activity;
+    requires webfx.stack.orm.entity.controls;
     requires webfx.stack.routing.uirouter;
     requires webfx.stack.session.state.client.fx;
     requires webfx.stack.ui.controls;

@@ -13,9 +13,10 @@ import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.BorderPane;
-import one.modality.base.backoffice.activities.mainframe.fx.FXMainFrame;
+import one.modality.base.client.mainframe.dialogarea.fx.FXMainFrameDialogArea;
 import one.modality.base.backoffice.tile.TabsBar;
 import one.modality.base.client.activity.ModalityButtonFactoryMixin;
+import one.modality.base.backoffice.mainframe.headertabs.fx.FXMainFrameHeaderTabs;
 
 import static dev.webfx.stack.orm.dql.DqlStatement.where;
 
@@ -68,7 +69,7 @@ final class AuthorizationsActivity extends ViewDomainActivityBase implements Mod
         );
         assignmentsGrid.setOnMouseClicked(e -> {
             if (e.getClickCount() == 2)
-                EntityPropertiesSheet.editEntity(assignmentVisualMapper.getSelectedEntity(), operationsAssignmentColumns, FXMainFrame.getDialogArea());
+                EntityPropertiesSheet.editEntity(assignmentVisualMapper.getSelectedEntity(), operationsAssignmentColumns, FXMainFrameDialogArea.getDialogArea());
         });
         BorderPane leftPane = new BorderPane();
         leftPane.centerProperty().bind(FXProperties.compute(rolesCheckBox.selectedProperty(), roles -> roles ? rolesGrid : manageesGrid));
@@ -83,12 +84,12 @@ final class AuthorizationsActivity extends ViewDomainActivityBase implements Mod
     @Override
     public void onResume() {
         super.onResume();
-        FXMainFrame.setHeaderTabs(headerTabsBar.getTabs());
+        FXMainFrameHeaderTabs.setHeaderTabs(headerTabsBar.getTabs());
     }
 
     @Override
     public void onPause() {
-        FXMainFrame.clearHeaderTabs();
+        FXMainFrameHeaderTabs.clearHeaderTabs();
         super.onPause();
     }
 
