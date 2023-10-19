@@ -52,7 +52,7 @@ final class PersonActivity extends BookingProcessActivity {
         ObservableBooleanValue loggedInProperty = FXLoggedIn.loggedInProperty();
         ObservableBooleanValue notLoggedIn = BooleanExpression.booleanExpression(loggedInProperty).not();
         LoginPanel loginPanel = new LoginPanel();
-        personalDetailsPanel = new BookingPersonalDetailsPanel(getEvent(), new ButtonSelectorParameters().setButtonFactory(this).setDropParent(pageContainer));
+        personalDetailsPanel = new BookingPersonalDetailsPanel(getEventActiveWorkingDocument().getDocument(), new ButtonSelectorParameters().setButtonFactory(this).setDropParent(pageContainer));
         Node[] tabContents = {new VBox(10, personalDetailsPanel.getContainer(), nextButton), loginPanel.getNode() };
         BorderPane accountPane = new BorderPane();
         accountToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
@@ -75,15 +75,11 @@ final class PersonActivity extends BookingProcessActivity {
     }
 
     private void syncUiFromModel() {
-        WorkingDocument workingDocument = getEventActiveWorkingDocument();
-        if (workingDocument != null)
-            personalDetailsPanel.syncUiFromModel(workingDocument.getDocument());
+        personalDetailsPanel.syncUiFromModel();
     }
 
     private void syncModelFromUi() {
-        WorkingDocument workingDocument = getEventActiveWorkingDocument();
-        if (workingDocument != null)
-            personalDetailsPanel.syncModelFromUi(workingDocument.getDocument());
+        personalDetailsPanel.syncModelFromUi();
     }
 
     @Override

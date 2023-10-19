@@ -48,7 +48,7 @@ final class SummaryActivity extends BookingProcessActivity {
         bookingOptionsPanel = new BookingOptionsPanel();
         bookingCalendar = new BookingCalendar(false);
         bookingCalendarSection = SectionPanelFactory.createBookingCalendarSection(bookingCalendar);
-        personalDetailsPanel = new BookingPersonalDetailsPanel(getEvent(), new ButtonSelectorParameters().setButtonFactory(this).setDropParent(pageContainer));
+        personalDetailsPanel = new BookingPersonalDetailsPanel(getEventActiveWorkingDocument().getDocument(), new ButtonSelectorParameters().setButtonFactory(this).setDropParent(pageContainer));
         personalDetailsPanel.setEditable(false);
 
         BorderPane commentPanel = SectionPanelFactory.createSectionPanel("Comment");
