@@ -4,6 +4,5 @@
 ![Scc Comments Count Badge](https://sloc.xyz/github/kadampabookings/kbsx/?category=comments)
 ![Scc Lines Count Badge](https://sloc.xyz/github/kadampabookings/kbsx/?category=lines)
 ![Scc COCOMO Badge](https://sloc.xyz/github/kadampabookings/kbsx/?category=cocomo)
-![Discover Vulnerabilities Using CodeQL](https://github.com/kadampabookings/kbsx/actions/workflows/discover-vulnerabilities.yml/badge.svg)
 
 # kbsx
