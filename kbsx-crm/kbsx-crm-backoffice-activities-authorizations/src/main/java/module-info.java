@@ -7,9 +7,9 @@ module kbsx.crm.backoffice.activities.authorizations {
     requires javafx.controls;
     requires javafx.graphics;
     requires modality.base.backoffice.mainframe.headertabs.fx;
-    requires modality.base.backoffice.tile;
     requires modality.base.client.activity;
     requires modality.base.client.mainframe.dialogarea.fx;
+    requires modality.base.client.tile;
     requires webfx.extras.visual.grid;
     requires webfx.kit.util;
     requires webfx.platform.windowhistory;
