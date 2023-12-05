@@ -242,7 +242,7 @@ final class OptionTreeNode {
                 Node selectNode = childrenOptionSelector.toMaterialButton(null, Labels.translateLabel(option.getChildrenPromptLabel()));
                 optionBodyChildren.add(selectNode);
                 bindToVisibleProperty(selectNode);
-                FXProperties.runOnPropertiesChange(childrenOptionSelector::updateButtonContentOnNewSelectedItem, I18n.languageProperty());
+                FXProperties.runOnPropertiesChange(childrenOptionSelector::updateButtonContentFromSelectedItem, I18n.languageProperty());
                 tree.getValidationSupport().addRequiredInput(childrenOptionSelector.selectedItemProperty(), childrenOptionSelector.getButton());
             } else if (option.isChildrenRadio())
                 childrenToggleGroup = new ToggleGroup();
