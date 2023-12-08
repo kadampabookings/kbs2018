@@ -101,9 +101,7 @@ final class CartActivity extends CartBasedActivity {
 
         bottomButtonBar = createFlexButtonBar(addAnotherBookingAction, showPaymentsAction, makePaymentAction);
 
-        LayoutUtil.setUnmanagedWhenInvisible(optionsPanel).setVisible(false);
-        LayoutUtil.setUnmanagedWhenInvisible(paymentsPanel).setVisible(false);
-        LayoutUtil.setUnmanagedWhenInvisible(bottomButtonBar).setVisible(false);
+        LayoutUtil.setAllUnmanagedWhenInvisible(false, optionsPanel, paymentsPanel, bottomButtonBar);
 
         // Binding the UI with the presentation model for further state changes
         // User inputs: the UI state changes are transferred in the presentation model
