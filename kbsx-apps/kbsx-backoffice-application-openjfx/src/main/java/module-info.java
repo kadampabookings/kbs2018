@@ -4,6 +4,7 @@ module kbsx.backoffice.application.openjfx {
 
     // Direct dependencies modules
     requires javafx.controls;
+    requires javafx.web;
     requires kbsx.backoffice.application;
     requires kbsx.event.backoffice.activities.cloneevent;
     requires kbsx.event.backoffice.activities.cloneevent.routing;

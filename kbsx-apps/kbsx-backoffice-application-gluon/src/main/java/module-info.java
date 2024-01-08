@@ -3,6 +3,7 @@
 module kbsx.backoffice.application.gluon {
 
     // Direct dependencies modules
+    requires javafx.web;
     requires kbsx.backoffice.application;
     requires modality.base.backoffice.gantt.canvas.basic.plugin;
     requires modality.base.client.css;
