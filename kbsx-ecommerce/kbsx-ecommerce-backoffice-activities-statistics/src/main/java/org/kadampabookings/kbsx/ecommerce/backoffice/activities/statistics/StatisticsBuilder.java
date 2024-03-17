@@ -14,7 +14,7 @@ import dev.webfx.stack.orm.reactive.entities.entities_to_grid.EntityColumn;
 import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.ReactiveVisualMapper;
 import dev.webfx.stack.orm.entity.EntityList;
 import dev.webfx.stack.orm.expression.Expression;
-import dev.webfx.platform.util.Dates;
+import dev.webfx.platform.util.time.Times;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -75,7 +75,7 @@ public class StatisticsBuilder {
         VisualColumn[] columns = new VisualColumn[leftColCount + rightColCount];
         System.arraycopy(leftResult.getColumns(), 0, columns, 0, leftColCount);
         for (int col = 0; col < rightColCount; col++)
-            columns[leftColCount + col] = VisualColumn.create(Dates.format(dates.get(col), "dd/MM"), PrimType.INTEGER, VisualStyle.RIGHT_STYLE); //, new DisplayStyleImpl(32d, "right"));
+            columns[leftColCount + col] = VisualColumn.create(Times.format(dates.get(col), "dd/MM"), PrimType.INTEGER, VisualStyle.RIGHT_STYLE); //, new DisplayStyleImpl(32d, "right"));
         VisualResultBuilder rsb = VisualResultBuilder.create(rowCount, columns);
         for (int row = 0; row < rowCount; row++)
             for (int col = 0; col < leftColCount; col++)

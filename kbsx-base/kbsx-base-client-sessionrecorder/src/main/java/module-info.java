@@ -3,7 +3,6 @@
 module kbsx.base.client.sessionrecorder {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.base;
     requires modality.crm.shared.authn;
     requires webfx.platform.boot;

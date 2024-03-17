@@ -9,7 +9,7 @@ module kbsx.frontoffice.application.openjfx {
     requires modality.crm.client.authz.required.plugin;
     requires webfx.extras.visual.grid.peers.openjfx;
     requires webfx.extras.webtext.peers.openjfx;
-    requires webfx.kit.openjfx;
+    requires webfx.kit.javafxgraphics.openjfx;
     requires webfx.kit.platform.visibility.openjfx;
     requires webfx.platform.ast.factory.generic;
     requires webfx.platform.boot.java;

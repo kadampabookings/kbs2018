@@ -1,6 +1,6 @@
 package org.kadampabookings.kbsx.hotel.shared.businessdata.time;
 
-import dev.webfx.platform.util.Dates;
+import dev.webfx.platform.util.time.Times;
 import dev.webfx.platform.util.Numbers;
 
 import java.time.LocalDateTime;
@@ -44,7 +44,7 @@ class TimeConverter {
 
     static String formatTime(long time, TimeUnit timeUnit, boolean excluded, String format) {
         long epochMillis = convertTime(time, timeUnit, TimeUnit.MILLISECONDS);
-        LocalDateTime date = Dates.epochMillisUtcToLocalDateTime(epochMillis);
+        LocalDateTime date = Times.epochMillisUtcToLocalDateTime(epochMillis);
         boolean autoFormat = format == null;
         if (autoFormat)
             format = "dd/MM/yyyy HH:mm";
@@ -57,13 +57,13 @@ class TimeConverter {
             if (excluded)
                 date = date.minusDays(1);
         }
-        return Dates.format(date, format);
+        return Times.format(date, format);
     }
 
     static long parseTime(String text, TimeUnit timeUnit, boolean excluded) {
         // Only accepted format is DMY [DD/MM/YYYY] [hh:mm:ss]
         LocalDateTime dateTime = parseDMYLocalDateTime(text, excluded);
-        long epochMillis = Dates.localDateTimeToEpochMillisUtc(dateTime);
+        long epochMillis = Times.localDateTimeToEpochMillisUtc(dateTime);
         return excluded ?
                 convertExcludedEnd(epochMillis, TimeUnit.MILLISECONDS, timeUnit) :
                 convertTime(epochMillis, TimeUnit.MILLISECONDS, timeUnit);

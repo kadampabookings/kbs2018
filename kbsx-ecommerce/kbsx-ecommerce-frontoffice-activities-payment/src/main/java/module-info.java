@@ -18,6 +18,7 @@ module kbsx.ecommerce.frontoffice.activities.payment {
     requires webfx.platform.console;
     requires webfx.platform.uischeduler;
     requires webfx.platform.util;
+    requires webfx.platform.util.time;
     requires webfx.platform.windowhistory;
     requires webfx.platform.windowlocation;
     requires webfx.stack.i18n;

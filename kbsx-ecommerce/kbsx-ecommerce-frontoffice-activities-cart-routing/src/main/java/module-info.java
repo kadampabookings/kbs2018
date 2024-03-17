@@ -3,7 +3,6 @@
 module kbsx.ecommerce.frontoffice.activities.cart.routing {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.base;
     requires javafx.graphics;
     requires transitive kbsx.base.client.aggregates;

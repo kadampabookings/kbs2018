@@ -3,7 +3,6 @@
 module kbsx.base.shared.entities {
 
     // Direct dependencies modules
-    requires java.base;
     requires kbsx.hotel.shared.time;
     requires modality.base.shared.entities;
     requires webfx.platform.util;

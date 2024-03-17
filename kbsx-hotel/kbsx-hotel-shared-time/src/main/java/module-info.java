@@ -6,6 +6,7 @@ module kbsx.hotel.shared.time {
     requires java.base;
     requires webfx.platform.ast;
     requires webfx.platform.util;
+    requires webfx.platform.util.time;
 
     // Exported packages
     exports org.kadampabookings.kbsx.hotel.shared.businessdata.time;

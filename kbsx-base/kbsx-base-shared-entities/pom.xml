@@ -16,6 +16,13 @@
     <dependencies>
 
         <dependency>
+            <groupId>org.treblereel.gwt.gwtproject.time</groupId>
+            <artifactId>gwt-time</artifactId>
+            <version>202203291</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
             <groupId>org.kadampabookings</groupId>
             <artifactId>kbsx-hotel-shared-time</artifactId>
             <version>1.0.0-SNAPSHOT</version>

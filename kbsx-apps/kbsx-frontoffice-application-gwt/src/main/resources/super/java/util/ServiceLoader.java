@@ -1,16 +1,17 @@
 // File managed by WebFX (DO NOT EDIT MANUALLY)
 package java.util;
 
-import java.util.Iterator;
 import java.util.logging.Logger;
 import dev.webfx.platform.util.function.Factory;
+import dev.webfx.platform.windowhistory.spi.impl.gwtj2cl.GwtJ2clJsWindowHistory;
+import dev.webfx.stack.com.websocket.spi.impl.gwtj2cl.GwtJ2clWebSocketServiceProvider;
 
 public class ServiceLoader<S> implements Iterable<S> {
 
     public static <S> ServiceLoader<S> load(Class<S> serviceClass) {
         switch (serviceClass.getName()) {
-            case "dev.webfx.kit.launcher.spi.WebFxKitLauncherProvider": return new ServiceLoader<S>(dev.webfx.kit.launcher.spi.impl.gwt.GwtWebFxKitLauncherProvider::new);
-            case "dev.webfx.kit.mapper.spi.WebFxKitMapperProvider": return new ServiceLoader<S>(dev.webfx.kit.mapper.spi.impl.gwt.GwtWebFxKitHtmlMapperProvider::new);
+            case "dev.webfx.kit.launcher.spi.WebFxKitLauncherProvider": return new ServiceLoader<S>(dev.webfx.kit.launcher.spi.impl.gwtj2cl.GwtJ2clWebFxKitLauncherProvider::new);
+            case "dev.webfx.kit.mapper.spi.WebFxKitMapperProvider": return new ServiceLoader<S>(dev.webfx.kit.mapper.spi.impl.gwtj2cl.GwtJ2clWebFxKitHtmlMapperProvider::new);
             case "dev.webfx.platform.ast.spi.factory.AstFactoryProvider": return new ServiceLoader<S>(dev.webfx.platform.ast.spi.factory.impl.gwt.GwtAstFactoryProvider::new);
             case "dev.webfx.platform.ast.spi.formatter.AstFormatterProvider": return new ServiceLoader<S>(dev.webfx.platform.ast.json.formatter.JsonFormatterProvider::new);
             case "dev.webfx.platform.ast.spi.parser.AstParserProvider": return new ServiceLoader<S>(dev.webfx.platform.ast.json.parser.JsonParserProvider::new);
@@ -18,27 +19,27 @@ public class ServiceLoader<S> implements Iterable<S> {
             case "dev.webfx.platform.boot.spi.ApplicationJob": return new ServiceLoader<S>(one.modality.base.client.entities.util.functions.ClientFunctionsRegisteringApplicationJob::new);
             case "dev.webfx.platform.boot.spi.ApplicationModuleBooter": return new ServiceLoader<S>(dev.webfx.kit.launcher.WebFxKitLauncherModuleBooter::new, dev.webfx.platform.boot.spi.impl.ApplicationJobsBooter::new, dev.webfx.platform.resource.spi.impl.gwt.GwtResourceModuleBooter::new, dev.webfx.stack.com.bus.call.BusCallModuleBooter::new, dev.webfx.stack.com.bus.spi.impl.json.client.JsonClientBusModuleBooter::new, dev.webfx.stack.com.serial.SerialCodecModuleBooter::new, dev.webfx.stack.db.querypush.client.simple.SimpleQueryPushClientJob::new, dev.webfx.stack.orm.dql.query.interceptor.DqlQueryInterceptorModuleBooter::new, dev.webfx.stack.orm.dql.querypush.interceptor.DqlQueryPushInterceptorModuleBooter::new, dev.webfx.stack.orm.dql.submit.interceptor.DqlSubmitInterceptorModuleBooter::new, dev.webfx.stack.ui.fxraiser.json.JsonFXRaiserModuleBooter::new, one.modality.crm.client.services.authz.ModalityAuthorizationClientModuleBooter::new);
             case "dev.webfx.platform.conf.spi.ConfigLoaderProvider": return new ServiceLoader<S>();
-            case "dev.webfx.platform.console.spi.ConsoleProvider": return new ServiceLoader<S>(dev.webfx.platform.console.spi.impl.gwt.GwtConsoleProvider::new);
-            case "dev.webfx.platform.os.spi.OperatingSystemProvider": return new ServiceLoader<S>(dev.webfx.platform.os.spi.impl.gwt.GwtOperatingSystemProvider::new);
+            case "dev.webfx.platform.console.spi.ConsoleProvider": return new ServiceLoader<S>(dev.webfx.platform.console.spi.impl.gwtj2cl.GwtJ2clConsoleProvider::new);
+            case "dev.webfx.platform.os.spi.OperatingSystemProvider": return new ServiceLoader<S>(dev.webfx.platform.os.spi.impl.gwtj2cl.GwtJ2clOperatingSystemProvider::new);
             case "dev.webfx.platform.resource.spi.ResourceProvider": return new ServiceLoader<S>(dev.webfx.platform.resource.spi.impl.gwt.GwtResourceProvider::new);
             case "dev.webfx.platform.resource.spi.impl.gwt.GwtResourceBundle": return new ServiceLoader<S>(kbsx.frontoffice.application.gwt.embed.EmbedResourcesBundle.ProvidedGwtResourceBundle::new);
-            case "dev.webfx.platform.scheduler.spi.SchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwt.GwtUiSchedulerProvider::new);
-            case "dev.webfx.platform.shutdown.spi.ShutdownProvider": return new ServiceLoader<S>(dev.webfx.platform.shutdown.spi.impl.gwt.GwtShutdownProvider::new);
-            case "dev.webfx.platform.storage.spi.LocalStorageProvider": return new ServiceLoader<S>(dev.webfx.platform.storage.spi.impl.gwt.GwtLocalStorageProvider::new);
-            case "dev.webfx.platform.storage.spi.SessionStorageProvider": return new ServiceLoader<S>(dev.webfx.platform.storage.spi.impl.gwt.GwtSessionStorageProvider::new);
+            case "dev.webfx.platform.scheduler.spi.SchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwtj2cl.GwtJ2clUiSchedulerProvider::new);
+            case "dev.webfx.platform.shutdown.spi.ShutdownProvider": return new ServiceLoader<S>(dev.webfx.platform.shutdown.spi.impl.gwtj2cl.GwtJ2clShutdownProvider::new);
+            case "dev.webfx.platform.storage.spi.LocalStorageProvider": return new ServiceLoader<S>(dev.webfx.platform.storage.spi.impl.gwtj2cl.GwtJ2clLocalStorageProvider::new);
+            case "dev.webfx.platform.storage.spi.SessionStorageProvider": return new ServiceLoader<S>(dev.webfx.platform.storage.spi.impl.gwtj2cl.GwtJ2clSessionStorageProvider::new);
             case "dev.webfx.platform.substitution.spi.SubstitutorProvider": return new ServiceLoader<S>(dev.webfx.platform.substitution.spi.impl.var.VariablesSubstitutorProvider::new);
             case "dev.webfx.platform.substitution.var.spi.VariablesResolver": return new ServiceLoader<S>(dev.webfx.platform.substitution.var.spi.impl.localstorage.LocalStorageVariablesResolver::new, dev.webfx.platform.substitution.var.spi.impl.windowlocation.WindowLocationVariablesResolver::new);
-            case "dev.webfx.platform.uischeduler.spi.UiSchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwt.GwtUiSchedulerProvider::new);
-            case "dev.webfx.platform.useragent.spi.UserAgentProvider": return new ServiceLoader<S>(dev.webfx.platform.useragent.spi.impl.gwt.GwtUserAgentProvider::new);
+            case "dev.webfx.platform.uischeduler.spi.UiSchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwtj2cl.GwtJ2clUiSchedulerProvider::new);
+            case "dev.webfx.platform.useragent.spi.UserAgentProvider": return new ServiceLoader<S>(dev.webfx.platform.useragent.spi.impl.gwtj2cl.GwtJ2clUserAgentProvider::new);
             case "dev.webfx.platform.windowhistory.spi.WindowHistoryProvider": return new ServiceLoader<S>(dev.webfx.platform.windowhistory.spi.impl.web.WebWindowHistoryProvider::new);
-            case "dev.webfx.platform.windowhistory.spi.impl.web.JsWindowHistory": return new ServiceLoader<S>(dev.webfx.platform.windowhistory.spi.impl.gwt.GwtJsWindowHistory::new);
-            case "dev.webfx.platform.windowlocation.spi.WindowLocationProvider": return new ServiceLoader<S>(dev.webfx.platform.windowlocation.spi.impl.gwt.GwtWindowLocationProvider::new);
+            case "dev.webfx.platform.windowhistory.spi.impl.web.JsWindowHistory": return new ServiceLoader<S>(GwtJ2clJsWindowHistory::new);
+            case "dev.webfx.platform.windowlocation.spi.WindowLocationProvider": return new ServiceLoader<S>(dev.webfx.platform.windowlocation.spi.impl.gwtj2cl.GwtJ2clWindowLocationProvider::new);
             case "dev.webfx.stack.authn.spi.AuthenticationServiceProvider": return new ServiceLoader<S>(dev.webfx.stack.authn.spi.impl.remote.RemoteAuthenticationServiceProvider::new);
             case "dev.webfx.stack.authz.client.spi.AuthorizationClientServiceProvider": return new ServiceLoader<S>(one.modality.crm.client.services.authz.ModalityAuthorizationClientServiceProvider::new);
             case "dev.webfx.stack.com.bus.call.spi.BusCallEndpoint": return new ServiceLoader<S>(dev.webfx.stack.authn.buscall.AuthenticateMethodEndpoint::new, dev.webfx.stack.authn.buscall.GetUserClaimsMethodEndpoint::new, dev.webfx.stack.authn.buscall.LogoutMethodEndpoint::new, dev.webfx.stack.db.query.buscall.ExecuteQueryBatchMethodEndpoint::new, dev.webfx.stack.db.query.buscall.ExecuteQueryMethodEndpoint::new, dev.webfx.stack.db.querypush.buscall.ExecuteQueryPushMethodEndpoint::new, dev.webfx.stack.db.submit.buscall.ExecuteSubmitBatchMethodEndpoint::new, dev.webfx.stack.db.submit.buscall.ExecuteSubmitMethodEndpoint::new);
             case "dev.webfx.stack.com.bus.spi.BusServiceProvider": return new ServiceLoader<S>(dev.webfx.stack.com.bus.spi.impl.json.client.websocket.web.WebWebsocketBusServiceProvider::new);
             case "dev.webfx.stack.com.serial.spi.SerialCodec": return new ServiceLoader<S>(dev.webfx.stack.authn.serial.UserClaimsSerialCodec::new, dev.webfx.stack.authn.serial.UsernamePasswordCredentialsSerialCodec::new, dev.webfx.stack.com.bus.call.BusCallArgument.ProvidedSerialCodec::new, dev.webfx.stack.com.bus.call.BusCallResult.ProvidedSerialCodec::new, dev.webfx.stack.com.bus.call.SerializableAsyncResult.ProvidedSerialCodec::new, dev.webfx.stack.com.serial.spi.impl.ProvidedBatchSerialCodec::new, dev.webfx.stack.db.datascope.aggregate.AggregateScope.ProvidedSerialCodec::new, dev.webfx.stack.db.query.buscall.serial.PairSerialCodec::new, dev.webfx.stack.db.query.buscall.serial.QueryArgumentSerialCodec::new, dev.webfx.stack.db.query.buscall.serial.QueryResultSerialCodec::new, dev.webfx.stack.db.querypush.buscall.serial.QueryPushArgumentSerialCodec::new, dev.webfx.stack.db.querypush.buscall.serial.QueryPushResultSerialCodec::new, dev.webfx.stack.db.querypush.buscall.serial.QueryResultTranslationSerialCodec::new, dev.webfx.stack.db.submit.buscall.serial.GeneratedKeyBatchIndexSerialCodec::new, dev.webfx.stack.db.submit.buscall.serial.SubmitArgumentSerialCodec::new, dev.webfx.stack.db.submit.buscall.serial.SubmitResultSerialCodec::new, one.modality.crm.shared.services.authn.serial.ModalityUserPrincipalSerialCodec::new);
-            case "dev.webfx.stack.com.websocket.spi.WebSocketServiceProvider": return new ServiceLoader<S>(dev.webfx.stack.com.websocket.spi.impl.gwt.GwtWebSocketServiceProvider::new);
+            case "dev.webfx.stack.com.websocket.spi.WebSocketServiceProvider": return new ServiceLoader<S>(GwtJ2clWebSocketServiceProvider::new);
             case "dev.webfx.stack.db.query.spi.QueryServiceProvider": return new ServiceLoader<S>(dev.webfx.stack.db.query.spi.impl.remote.RemoteQueryServiceProvider::new);
             case "dev.webfx.stack.db.querypush.spi.QueryPushServiceProvider": return new ServiceLoader<S>(dev.webfx.stack.db.querypush.client.simple.SimpleQueryPushClientServiceProvider::new);
             case "dev.webfx.stack.db.submit.spi.SubmitServiceProvider": return new ServiceLoader<S>(dev.webfx.stack.db.submit.spi.impl.remote.RemoteSubmitServiceProvider::new);

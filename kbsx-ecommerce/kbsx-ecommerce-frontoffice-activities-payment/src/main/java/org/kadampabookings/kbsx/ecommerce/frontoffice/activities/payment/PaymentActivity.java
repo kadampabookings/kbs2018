@@ -5,7 +5,7 @@ import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.webtext.HtmlText;
 import dev.webfx.platform.console.Console;
 import dev.webfx.platform.uischeduler.UiScheduler;
-import dev.webfx.platform.util.Dates;
+import dev.webfx.platform.util.time.Times;
 import dev.webfx.platform.util.Strings;
 import dev.webfx.platform.util.collection.Collections;
 import dev.webfx.platform.windowlocation.WindowLocation;
@@ -329,7 +329,7 @@ final class PaymentActivity extends CartBasedActivity {
         value = Strings.replaceAllSafe(value, "[lang]", I18n.getLanguage().toString());
         value = Strings.replaceAllSafe(value, "[paymentId]", lastPayment.getPrimaryKey().toString());
         value = Strings.replaceAllSafe(value, "[paymentId6]", digits(lastPayment.getPrimaryKey().toString(), 6, false));
-        value = Strings.replaceAllSafe(value, "[date]", Dates.format(lastPayment.getDate(), "yyyyMMddHHmmss"));
+        value = Strings.replaceAllSafe(value, "[date]", Times.format(lastPayment.getDate(), "yyyyMMddHHmmss"));
         return value;
     }
 
