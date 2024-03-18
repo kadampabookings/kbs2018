@@ -3,7 +3,6 @@
 module kbsx.ecommerce.frontoffice.activities.payment {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.controls;
     requires javafx.graphics;
     requires kbsx.ecommerce.frontoffice.activities.cart.routing;

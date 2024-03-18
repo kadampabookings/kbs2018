@@ -3,7 +3,6 @@
 module kbsx.event.client.bookingcalendar {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.base;
     requires javafx.graphics;
     requires kbsx.base.client.aggregates;

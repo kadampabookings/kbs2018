@@ -3,7 +3,6 @@
 module kbsx.base.client.aggregates {
 
     // Direct dependencies modules
-    requires java.base;
     requires kbsx.base.shared.entities;
     requires transitive modality.base.shared.entities;
     requires transitive webfx.platform.async;

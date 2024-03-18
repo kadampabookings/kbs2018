@@ -3,7 +3,6 @@
 module kbsx.hotel.shared.time {
 
     // Direct dependencies modules
-    requires java.base;
     requires webfx.platform.ast;
     requires webfx.platform.util;
     requires webfx.platform.util.time;

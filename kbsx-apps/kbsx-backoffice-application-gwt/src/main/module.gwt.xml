@@ -531,7 +531,7 @@
     <source path="dev/webfx/extras/visual/controls/charts"/>
     <!--=====================< webfx-extras-visual-charts-peers-base >======================-->
     <source path="dev/webfx/extras/visual/controls/charts/peers/base"/>
-    <!--==================< webfx-extras-visual-charts-peers-gwt-charba >===================-->
+    <!--================< webfx-extras-visual-charts-peers-gwt-j2cl-charba >================-->
     <source path="dev/webfx/extras/visual/controls/charts/peers/gwt/charba"/>
     <source path="dev/webfx/extras/visual/controls/charts/registry"/>
     <!--==========================< webfx-extras-visual-controls >==========================-->
@@ -539,11 +539,9 @@
     <!--============================< webfx-extras-visual-grid >============================-->
     <source path="dev/webfx/extras/visual/controls/grid"/>
     <!--====================< webfx-extras-visual-grid-peers-gwt-j2cl >=====================-->
-    <source path="dev/webfx/extras/cell/collator/grid"/>
     <source path="dev/webfx/extras/visual/controls/grid/peers/gwt/html"/>
     <source path="dev/webfx/extras/visual/controls/grid/registry"/>
     <!--======================< webfx-extras-visual-grid-peers-base >=======================-->
-    <source path="dev/webfx/extras/cell/collator/grid"/>
     <source path="dev/webfx/extras/visual/controls/grid/peers/base"/>
     <!--=========================< webfx-extras-visual-peers-base >=========================-->
     <source path="dev/webfx/extras/visual/controls/peers/base"/>
@@ -641,6 +639,50 @@
     <!--=======================< webfx-platform-javabase-emul-j2cl >========================-->
     <source path="dev/webfx/platform/j2cl"/>
     <source path="dev/webfx/platform/javabase/emul/j2cl"/>
+    <!--=======================< webfx-platform-javatime-emul-j2cl >========================-->
+    <source path="javaemul/internal/annotations"/>
+    <source path="org/threeten/bp"/>
+    <source path="org/threeten/bp/chrono"/>
+    <source path="org/threeten/bp/format"/>
+    <source path="org/threeten/bp/jdk8"/>
+    <source path="org/threeten/bp/temporal"/>
+    <source path="org/threeten/bp/zone"/>
+    <source path="walkingkooka"/>
+    <source path="walkingkooka/build"/>
+    <source path="walkingkooka/collect"/>
+    <source path="walkingkooka/collect/iterable"/>
+    <source path="walkingkooka/collect/iterator"/>
+    <source path="walkingkooka/collect/list"/>
+    <source path="walkingkooka/collect/list/j2cl/java/util/concurrent"/>
+    <source path="walkingkooka/collect/map"/>
+    <source path="walkingkooka/collect/set"/>
+    <source path="walkingkooka/collect/stack"/>
+    <source path="walkingkooka/compare"/>
+    <source path="walkingkooka/io"/>
+    <source path="walkingkooka/j2cl/java/io"/>
+    <source path="walkingkooka/j2cl/java/io/string"/>
+    <source path="walkingkooka/j2cl/java/text"/>
+    <source path="walkingkooka/j2cl/java/time"/>
+    <source path="walkingkooka/j2cl/java/util/calendar"/>
+    <source path="walkingkooka/j2cl/java/util/currency"/>
+    <source path="walkingkooka/j2cl/java/util/locale/support"/>
+    <source path="walkingkooka/j2cl/java/util/timezone"/>
+    <source path="walkingkooka/j2cl/java/util/timezone/support"/>
+    <source path="walkingkooka/j2cl/java/util/timezone/zonerulesreader"/>
+    <source path="walkingkooka/j2cl/locale"/>
+    <source path="walkingkooka/locale"/>
+    <source path="walkingkooka/naming"/>
+    <source path="walkingkooka/predicate"/>
+    <source path="walkingkooka/predicate/character"/>
+    <source path="walkingkooka/reflect"/>
+    <source path="walkingkooka/stream"/>
+    <source path="walkingkooka/stream/push"/>
+    <source path="walkingkooka/test"/>
+    <source path="walkingkooka/text"/>
+    <source path="walkingkooka/text/cursor"/>
+    <source path="walkingkooka/text/printer"/>
+    <source path="walkingkooka/util"/>
+    <source path="walkingkooka/visit"/>
     <!--==============================< webfx-platform-meta >===============================-->
     <source path="dev/webfx/platform/meta"/>
     <!--===============================< webfx-platform-os >================================-->
@@ -707,7 +749,7 @@
     <source path="dev/webfx/platform/windowhistory/spi"/>
     <source path="dev/webfx/platform/windowhistory/spi/impl"/>
     <!--=====================< webfx-platform-windowhistory-gwt-j2cl >======================-->
-    <source path="dev/webfx/platform/windowhistory/spi/impl/gwt"/>
+    <source path="dev/webfx/platform/windowhistory/spi/impl/gwtj2cl"/>
     <!--========================< webfx-platform-windowhistory-web >========================-->
     <source path="dev/webfx/platform/windowhistory/spi/impl/web"/>
     <!--=========================< webfx-platform-windowlocation >==========================-->
@@ -795,7 +837,7 @@
     <source path="dev/webfx/stack/com/websocket"/>
     <source path="dev/webfx/stack/com/websocket/spi"/>
     <!--=======================< webfx-stack-com-websocket-gwt-j2cl >=======================-->
-    <source path="dev/webfx/stack/com/websocket/spi/impl/gwt"/>
+    <source path="dev/webfx/stack/com/websocket/spi/impl/gwtj2cl"/>
     <!--============================< webfx-stack-db-datascope >============================-->
     <source path="dev/webfx/stack/db/datascope"/>
     <source path="dev/webfx/stack/db/datascope/aggregate"/>

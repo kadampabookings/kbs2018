@@ -3,7 +3,6 @@
 module kbsx.crm.backoffice.activities.users {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.base;
     requires javafx.graphics;
     requires modality.base.backoffice.masterslave;

@@ -3,7 +3,6 @@
 module kbsx.ecommerce.client.bookingoptionspanel {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.controls;
     requires javafx.graphics;
     requires kbsx.ecommerce.client.businesslogic;

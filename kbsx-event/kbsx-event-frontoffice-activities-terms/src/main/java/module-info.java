@@ -13,7 +13,6 @@ module kbsx.event.frontoffice.activities.terms {
     requires webfx.extras.util.control;
     requires webfx.extras.util.layout;
     requires webfx.extras.visual;
-    requires webfx.extras.visual.grid.peers.base;
     requires webfx.platform.windowhistory;
     requires webfx.stack.i18n;
     requires webfx.stack.orm.domainmodel.activity;

@@ -3,7 +3,6 @@
 module kbsx.event.frontoffice.activities.fees {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.base;
     requires javafx.controls;
     requires javafx.graphics;
@@ -24,7 +23,6 @@ module kbsx.event.frontoffice.activities.fees {
     requires webfx.extras.util.layout;
     requires webfx.extras.visual;
     requires webfx.extras.visual.grid;
-    requires webfx.extras.visual.grid.peers.base;
     requires webfx.kit.util;
     requires webfx.platform.ast;
     requires webfx.platform.ast.json.plugin;

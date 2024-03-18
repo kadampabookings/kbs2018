@@ -3,7 +3,6 @@
 module kbsx.base.backoffice.multilangeditor {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.controls;
     requires javafx.graphics;
     requires kbsx.base.client.icons;

@@ -3,7 +3,6 @@
 module kbsx.base.server.systemmetrics {
 
     // Direct dependencies modules
-    requires java.base;
     requires kbsx.base.shared.entities;
     requires webfx.platform.boot;
     requires webfx.platform.console;
