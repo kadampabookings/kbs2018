@@ -1,6 +1,6 @@
 package org.kadampabookings.kbsx.event.frontoffice.activities.terms;
 
-import dev.webfx.extras.cell.collator.grid.GridCollator;
+//import dev.webfx.extras.cell.collator.grid.GridCollator;
 import dev.webfx.extras.util.control.ControlUtil;
 import dev.webfx.extras.util.layout.LayoutUtil;
 import javafx.scene.Node;
@@ -20,11 +20,11 @@ final class TermsPresentationViewActivity extends BookingProcessPresentationView
     @Override
     protected void createViewNodes(TermsPresentationModel pm) {
         super.createViewNodes(pm);
-        GridCollator termsLetterCollator = new GridCollator("first", "first");
+        //GridCollator termsLetterCollator = new GridCollator("first", "first");
         termsPanel = SectionPanelFactory.createSectionPanel(ModalityIcons.certificateMonoSvg16JsonUrl, "TermsAndConditions");
-        termsPanel.setCenter(ControlUtil.createVerticalScrollPaneWithPadding(termsLetterCollator));
+        //termsPanel.setCenter(ControlUtil.createVerticalScrollPaneWithPadding(termsLetterCollator));
 
-        termsLetterCollator.visualResultProperty().bind(pm.termsLetterVisualResultProperty());
+        //termsLetterCollator.visualResultProperty().bind(pm.termsLetterVisualResultProperty());
     }
 
     @Override

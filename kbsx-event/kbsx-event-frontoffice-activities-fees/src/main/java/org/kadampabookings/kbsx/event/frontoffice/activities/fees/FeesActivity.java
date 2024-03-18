@@ -1,7 +1,7 @@
 package org.kadampabookings.kbsx.event.frontoffice.activities.fees;
 
 import dev.webfx.extras.cell.collator.NodeCollatorRegistry;
-import dev.webfx.extras.cell.collator.grid.GridCollator;
+//import dev.webfx.extras.cell.collator.grid.GridCollator;
 import dev.webfx.extras.cell.renderer.TextRenderer;
 import dev.webfx.extras.cell.renderer.ValueRenderingContext;
 import dev.webfx.extras.imagestore.ImageStore;
@@ -59,15 +59,15 @@ import static dev.webfx.stack.ui.json.JsonImageView.createImageView;
  */
 final class FeesActivity extends BookingProcessActivity {
 
-    private GridCollator feesGroupsCollator;
+    //private GridCollator feesGroupsCollator;
 
     @Override
     protected void createViewNodes() {
         super.createViewNodes();
-        feesGroupsCollator = new GridCollator(this::toFeesGroupPanel, nodes -> new VBox(20, nodes));
-        verticalStack.getChildren().setAll(feesGroupsCollator, LayoutUtil.setMaxWidthToInfinite(backButton));
+        //feesGroupsCollator = new GridCollator(this::toFeesGroupPanel, nodes -> new VBox(20, nodes));
+        //verticalStack.getChildren().setAll(feesGroupsCollator, LayoutUtil.setMaxWidthToInfinite(backButton));
 
-        feesGroupsCollator.visualResultProperty().bind(rsProperty);
+        //feesGroupsCollator.visualResultProperty().bind(rsProperty);
     }
 
     private Node toFeesGroupPanel(Node... nodes) {
