@@ -4,7 +4,6 @@ module kbsx.frontoffice.application.gluon {
 
     // Direct dependencies modules
     requires kbsx.frontoffice.application;
-    requires modality.base.client.css;
     requires modality.base.client.i18n;
     requires modality.crm.client.authz.required.plugin;
     requires webfx.extras.visual.grid.peers.openjfx;

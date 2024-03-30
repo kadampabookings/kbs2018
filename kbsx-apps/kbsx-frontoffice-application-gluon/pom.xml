@@ -25,18 +25,6 @@
 
         <dependency>
             <groupId>one.modality</groupId>
-            <artifactId>modality-base-client-css-java</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>one.modality</groupId>
-            <artifactId>modality-base-client-entities</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>one.modality</groupId>
             <artifactId>modality-base-client-i18n</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
@@ -79,19 +67,7 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-kit-launcher</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-ast-factory-generic</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-boot</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 
@@ -206,12 +182,6 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-stack-com-serial</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
             <artifactId>webfx-stack-com-websocket-java</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
@@ -296,6 +266,7 @@
                         <list>util</list>
                     </attachList>
                     <resourcesList>
+                        <list>dev/webfx/kit/css/fonts/montserrat/[^/]+$</list>
                         <list>dev/webfx/platform/conf/[^/]+$</list>
                         <list>dev/webfx/platform/meta/exe/[^/]+$</list>
                         <list>dev/webfx/stack/i18n/[^/]+$</list>
@@ -324,8 +295,6 @@
                         <list>images/svg/color/[^/]+$</list>
                         <list>images/svg/mono/[^/]+$</list>
                         <list>javafx/scene/control/skin/checkbox/[^/]+$</list>
-                        <list>one/modality/base/client/css/[^/]+$</list>
-                        <list>one/modality/base/client/fonts/[^/]+$</list>
                         <list>one/modality/base/client/images/[^/]+$</list>
                         <list>one/modality/base/shared/domainmodel/[^/]+$</list>
                     </resourcesList>
