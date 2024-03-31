@@ -7,7 +7,7 @@ module kbsx.base.server.systemmetrics {
     requires webfx.platform.boot;
     requires webfx.platform.console;
     requires webfx.platform.scheduler;
-    requires webfx.platform.util;
+    requires webfx.platform.service;
     requires webfx.stack.db.submit;
     requires webfx.stack.orm.datasourcemodel.service;
     requires webfx.stack.orm.domainmodel;

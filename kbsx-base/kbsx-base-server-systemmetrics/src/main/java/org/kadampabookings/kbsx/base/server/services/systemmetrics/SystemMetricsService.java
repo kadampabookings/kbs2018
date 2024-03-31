@@ -2,7 +2,7 @@ package org.kadampabookings.kbsx.base.server.services.systemmetrics;
 
 import org.kadampabookings.kbsx.base.server.services.systemmetrics.spi.SystemMetricsServiceProvider;
 import org.kadampabookings.kbsx.base.shared.services.systemmetrics.SystemMetrics;
-import dev.webfx.platform.util.serviceloader.SingleServiceProvider;
+import dev.webfx.platform.service.SingleServiceProvider;
 
 import java.util.ServiceLoader;
 
