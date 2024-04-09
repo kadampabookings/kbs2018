@@ -9,6 +9,7 @@ import dev.webfx.platform.util.time.Times;
 import dev.webfx.platform.util.Strings;
 import dev.webfx.platform.util.collection.Collections;
 import dev.webfx.platform.windowlocation.WindowLocation;
+import dev.webfx.stack.hash.sha1.Sha1;
 import dev.webfx.stack.i18n.I18n;
 import dev.webfx.stack.orm.entity.EntityList;
 import dev.webfx.stack.orm.entity.EntityStore;

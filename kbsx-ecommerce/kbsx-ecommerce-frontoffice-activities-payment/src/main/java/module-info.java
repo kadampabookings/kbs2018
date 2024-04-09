@@ -20,6 +20,7 @@ module kbsx.ecommerce.frontoffice.activities.payment {
     requires webfx.platform.util.time;
     requires webfx.platform.windowhistory;
     requires webfx.platform.windowlocation;
+    requires webfx.stack.hash.sha1;
     requires webfx.stack.i18n;
     requires webfx.stack.orm.domainmodel.activity;
     requires webfx.stack.orm.entity;
