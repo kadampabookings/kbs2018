@@ -305,7 +305,6 @@
                         <!-- Android -->
                         <appLabel>Kadampa bookings</appLabel>
                     </releaseConfiguration>
-
                 </configuration>
             </plugin>
         </plugins>

@@ -358,7 +358,6 @@
                         <!-- Android -->
                         <appLabel>KBSX</appLabel>
                     </releaseConfiguration>
-
                 </configuration>
             </plugin>
         </plugins>
