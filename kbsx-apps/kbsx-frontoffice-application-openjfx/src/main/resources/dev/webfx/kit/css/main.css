@@ -110,3 +110,17 @@ Text, Label, Button, TextField {
      -fx-background-color: white , white , white;
      -fx-background-insets: 0, 0, 0;
 }
+
+/*===== modality-login-javafx@main.css from modality-crm-client-activity-login-plugin =====*/
+
+
+
+.login {
+    -fx-font-size: 18px;
+}
+
+.login Button {
+    -fx-background-color: #0096D6FF;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+}

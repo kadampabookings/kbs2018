@@ -217,9 +217,9 @@ final class EventAggregateImpl implements EventAggregate {
         if (eventAvailabilitiesFutureBroadcaster == null)
             eventAvailabilitiesFutureBroadcaster = new FutureBroadcaster<>(() -> QueryService.executeQuery(QueryArgument.builder()
                     .setStatement(
-                    "with ra as (select * from resource_availability_by_event_items(?) where max>0)," + // resources with max(=max_online)=0 (like private rooms) are not displayed in the front-office
+                    "with ra as (select * from resource_availability_by_event_items($1) where max>0)," + // resources with max(=max_online)=0 (like private rooms) are not displayed in the front-office
                     // let's see if some options for this event require to have the per day availabilities details
-                    " pda as (select site_id,item_id,item_family_id from option where per_day_availability and event_id=?)" +
+                    " pda as (select site_id,item_id,item_family_id from option where per_day_availability and event_id=$1)" +
                     // for such options we keep all the details: site, item and date (this applies to availabilities having site=option.site and item=option.item if set, item_family=item.family otherwise)
                     " (select row_number,      site_id as site,      item_id as item,      date,         max - current as available,      i.ord as ord      from ra join item i on i.id=item_id where     exists(select * from pda where site_id=ra.site_id and (item_id=ra.item_id or item_id is null and item_family_id=i.family_id)) )" +
                     " union " + // union of both queries
@@ -227,7 +227,7 @@ final class EventAggregateImpl implements EventAggregate {
                     " (select min(row_number), min(site_id) as site, min(item_id) as item, null as date, min(max - current) as available, min(i.ord) as ord from ra join item i on i.id=item_id where not exists(select * from pda where site_id=ra.site_id and (item_id=ra.item_id or item_id is null and item_family_id=i.family_id)) group by site_id,item_id)" +
                     // finally we order this query union by site, item and date
                     " order by site,ord,date")
-                    .setParameters(eventId, eventId)
+                    .setParameters(eventId)
                     .setDataSourceId(getDataSourceId())
                     .build())
                     .map(rs -> eventAvailabilities = rs));

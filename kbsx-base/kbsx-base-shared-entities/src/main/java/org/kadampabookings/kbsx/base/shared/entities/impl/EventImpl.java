@@ -41,11 +41,11 @@ public  final class EventImpl extends DynamicEntity implements Event {
         return parsedMaxDateTimeRange;
     }
 
-    public static final class ProvidedFactory extends EntityFactoryProviderImpl<Event> {
+    public static final class ProvidedFactory extends EntityFactoryProviderImpl<one.modality.base.shared.entities.Event> {
         public ProvidedFactory() {
-            super(Event.class, EventImpl::new);
+            super(one.modality.base.shared.entities.Event.class, EventImpl::new);
             // To make ReactiveDqlStatementAPI.ifInstanceOf() work with Event.class (see BookingsActivity)
-            Objects.registerInstanceOf(Event.class, o -> o instanceof Event);
+            Objects.registerInstanceOf(one.modality.base.shared.entities.Event.class, o -> o instanceof one.modality.base.shared.entities.Event);
         }
     }
 }
