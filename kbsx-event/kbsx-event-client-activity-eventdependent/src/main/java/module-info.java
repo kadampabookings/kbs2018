@@ -6,8 +6,8 @@ module kbsx.event.client.activity.eventdependent {
     requires javafx.base;
     requires kbsx.base.client.aggregates;
     requires kbsx.ecommerce.client.businesslogic;
-    requires modality.event.backoffice.event.fx;
     requires modality.event.client.activity.eventdependent;
+    requires modality.event.client.event.fx;
     requires webfx.platform.async;
     requires webfx.platform.util;
     requires webfx.stack.orm.domainmodel.activity;

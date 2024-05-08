@@ -3,7 +3,7 @@ package org.kadampabookings.kbsx.event.client.activity.eventdependent;
 import dev.webfx.platform.async.Future;
 import dev.webfx.stack.orm.domainmodel.activity.domain.DomainActivityContext;
 import dev.webfx.stack.routing.uirouter.activity.uiroute.UiRouteActivityContext;
-import one.modality.event.backoffice.event.fx.FXEventId;
+import one.modality.event.client.event.fx.FXEventId;
 import org.kadampabookings.kbsx.base.client.aggregates.event.EventAggregate;
 import org.kadampabookings.kbsx.base.client.aggregates.event.EventAggregateMixin;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.feesgroup.FeesGroup;
