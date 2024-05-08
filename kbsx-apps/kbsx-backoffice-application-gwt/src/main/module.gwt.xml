@@ -446,13 +446,12 @@
     <source path="one/modality/ecommerce/payment/custom/buscall/serial"/>
     <!--====================< modality-ecommerce-payment-custom-remote >====================-->
     <source path="one/modality/ecommerce/payment/custom/spi/impl/remote"/>
-    <!--=======================< modality-event-backoffice-event-fx >=======================-->
-    <source path="one/modality/event/backoffice/event/fx"/>
-    <source path="one/modality/event/backoffice/event/fx/impl"/>
     <!--======================< modality-event-backoffice-events-pm >=======================-->
     <source path="one/modality/event/backoffice/events/pm"/>
     <!--=================< modality-event-client-activity-eventdependent >==================-->
     <source path="one/modality/event/client/activity/eventdependent"/>
+    <!--=========================< modality-event-client-event-fx >=========================-->
+    <source path="one/modality/event/client/event/fx"/>
     <!--===========< modality-hotel-backoffice-operations-resourceconfiguration >===========-->
     <source path="one/modality/hotel/backoffice/operations/entities/resourceconfiguration"/>
     <!--==============================< webfx-extras-canvas >===============================-->
@@ -891,7 +890,6 @@
     <source path="dev/webfx/stack/orm/entity/result"/>
     <source path="dev/webfx/stack/orm/entity/result/impl"/>
     <!--========================< webfx-stack-orm-entity-controls >=========================-->
-    <source path="dev/webfx/stack/orm/entity/controls/entity/masterslave"/>
     <source path="dev/webfx/stack/orm/entity/controls/entity/selector"/>
     <source path="dev/webfx/stack/orm/entity/controls/entity/sheet"/>
     <!--===========================< webfx-stack-orm-expression >===========================-->
