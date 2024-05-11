@@ -60,7 +60,7 @@ final class PaymentActivity extends CartBasedActivity {
 
         BorderPane totalSection = SectionPanelFactory.createSectionPanelWithHeaderNodes(newLabel("TotalAmount:"), LayoutUtil.createHGrowable(), totalLabel = new Label());
         VBox vBox = new VBox(20, paymentPrompt, paymentsVBox, totalSection, newLargeGreenButton(makePaymentAction));
-        BorderPane container = new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(vBox));
+        BorderPane container = new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(10, vBox));
 
         displayDocumentPaymentsIfReady();
 

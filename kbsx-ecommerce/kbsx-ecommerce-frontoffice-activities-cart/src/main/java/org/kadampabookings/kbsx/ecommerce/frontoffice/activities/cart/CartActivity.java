@@ -97,7 +97,7 @@ final class CartActivity extends CartBasedActivity {
 
         FlexPane bookingButtonBar = createFlexButtonBar(modifyBookingAction, cancelBookingAction, contactUsAction);
 
-        optionsPanel.setBottom(LayoutUtil.createPadding(bookingButtonBar));
+        optionsPanel.setBottom(LayoutUtil.createPadding(bookingButtonBar, 10));
 
         bottomButtonBar = createFlexButtonBar(addAnotherBookingAction, showPaymentsAction, makePaymentAction);
 
@@ -113,7 +113,7 @@ final class CartActivity extends CartBasedActivity {
         // Applying the css background of the event if provided and if ui is ready
         UiScheduler.scheduleDeferred(this::applyEventCssBackgroundIfProvided);
 
-        return new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(new VBox(20, bookingsPanel, optionsPanel, paymentsPanel, bottomButtonBar)));
+        return new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(10, new VBox(20, bookingsPanel, optionsPanel, paymentsPanel, bottomButtonBar)));
     }
 
     private FlexPane createFlexButtonBar(Action... actions) {

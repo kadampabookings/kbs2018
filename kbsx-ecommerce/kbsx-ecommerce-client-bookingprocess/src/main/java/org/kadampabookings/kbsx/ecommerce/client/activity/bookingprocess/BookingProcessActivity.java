@@ -42,7 +42,7 @@ public abstract class BookingProcessActivity
         backButton.setOnAction(this::onPreviousButtonPressed);
         nextButton.setOnAction(this::onNextButtonPressed);
 
-        pageContainer = new BorderPane(verticalScrollPane = ControlUtil.createVerticalScrollPaneWithPadding(verticalStack = new VBox(10)));
+        pageContainer = new BorderPane(verticalScrollPane = ControlUtil.createVerticalScrollPaneWithPadding(10, verticalStack = new VBox(10)));
         verticalStack.setAlignment(Pos.TOP_CENTER);
     }
 

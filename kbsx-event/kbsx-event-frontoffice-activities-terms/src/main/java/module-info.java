@@ -10,7 +10,6 @@ module kbsx.event.frontoffice.activities.terms {
     requires kbsx.ecommerce.client.bookingprocess;
     requires kbsx.event.client.sectionpanel;
     requires modality.base.client.util;
-    requires webfx.extras.util.control;
     requires webfx.extras.util.layout;
     requires webfx.extras.visual;
     requires webfx.platform.windowhistory;

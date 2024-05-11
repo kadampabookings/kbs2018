@@ -56,7 +56,7 @@ final class ContactUsActivity extends ViewDomainActivityBase
         // Applying the css background of the event if provided and if ui is ready
         UiScheduler.scheduleDeferred(this::applyEventCssBackgroundIfProvided);
 
-        return new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(vBox));
+        return new BorderPane(ControlUtil.createVerticalScrollPaneWithPadding(10, vBox));
     }
 
     private void initValidation() {
