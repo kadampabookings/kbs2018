@@ -17,7 +17,7 @@ final class DiningAreasPresentationModel extends EventDependentGenericTablePrese
     private final ObjectProperty<VisualResult> rulesVisualResultProperty = new SimpleObjectProperty<>();
     public ObjectProperty<VisualResult> rulesVisualResultProperty() { return rulesVisualResultProperty; }
 
-    private final ObjectProperty<VisualSelection> rulesVisualSelectionProperty = new SimpleObjectProperty<>();
+    private final ObjectProperty<VisualSelection> rulesVisualSelectionProperty = VisualSelection.createVisualSelectionProperty();
     public ObjectProperty<VisualSelection> rulesVisualSelectionProperty() { return rulesVisualSelectionProperty; }
 
 }

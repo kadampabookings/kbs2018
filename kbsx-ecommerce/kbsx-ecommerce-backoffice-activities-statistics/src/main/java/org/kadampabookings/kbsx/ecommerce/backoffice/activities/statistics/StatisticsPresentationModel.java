@@ -47,7 +47,7 @@ final class StatisticsPresentationModel extends EventDependentGenericTablePresen
     private final ObjectProperty<VisualResult> groupVisualResultProperty = new SimpleObjectProperty<>();
     @Override public ObjectProperty<VisualResult> groupVisualResultProperty() { return groupVisualResultProperty; }
 
-    private final ObjectProperty<VisualSelection> groupVisualSelectionProperty = new SimpleObjectProperty<>();
+    private final ObjectProperty<VisualSelection> groupVisualSelectionProperty = VisualSelection.createVisualSelectionProperty();
     @Override public ObjectProperty<VisualSelection> groupVisualSelectionProperty() { return groupVisualSelectionProperty; }
 
     private final ObjectProperty<DocumentLine> selectedGroupProperty = new SimpleObjectProperty<>();
@@ -65,12 +65,12 @@ final class StatisticsPresentationModel extends EventDependentGenericTablePresen
     private final ObjectProperty<VisualResult> masterVisualResultProperty = new SimpleObjectProperty<>();
     @Override public ObjectProperty<VisualResult> masterVisualResultProperty() { return masterVisualResultProperty; }
 
-    private final ObjectProperty<VisualSelection> masterVisualSelectionProperty = new SimpleObjectProperty<>();
+    private final ObjectProperty<VisualSelection> masterVisualSelectionProperty = VisualSelection.createVisualSelectionProperty();
     @Override public ObjectProperty<VisualSelection> masterVisualSelectionProperty() { return masterVisualSelectionProperty; }
 
     @Override public ObjectProperty<DocumentLine> selectedMasterProperty() { return selectedDocumentLineProperty; }
 
-    private final ObjectProperty<DocumentLine> selectedDocumentLineProperty = new SimpleObjectProperty<DocumentLine/*GWT*/>() {
+    private final ObjectProperty<DocumentLine> selectedDocumentLineProperty = new SimpleObjectProperty<>() {
         @Override
         protected void invalidated() {
             DocumentLine dl = get();

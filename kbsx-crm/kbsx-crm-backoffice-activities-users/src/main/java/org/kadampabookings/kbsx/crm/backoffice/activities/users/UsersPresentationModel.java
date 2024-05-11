@@ -42,7 +42,7 @@ final class UsersPresentationModel extends EventDependentGenericTablePresentatio
     private final ObjectProperty<VisualResult> groupVisualResultProperty = new SimpleObjectProperty<>();
     @Override public ObjectProperty<VisualResult> groupVisualResultProperty() { return groupVisualResultProperty; }
 
-    private final ObjectProperty<VisualSelection> groupVisualSelectionProperty = new SimpleObjectProperty<>();
+    private final ObjectProperty<VisualSelection> groupVisualSelectionProperty = VisualSelection.createVisualSelectionProperty();
     @Override public ObjectProperty<VisualSelection> groupVisualSelectionProperty() { return groupVisualSelectionProperty; }
 
     private final ObjectProperty<Person> selectedGroupProperty = new SimpleObjectProperty<>();

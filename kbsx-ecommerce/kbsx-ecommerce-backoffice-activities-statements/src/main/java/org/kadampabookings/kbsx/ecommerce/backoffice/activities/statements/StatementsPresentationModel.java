@@ -55,7 +55,7 @@ final class StatementsPresentationModel extends EventDependentGenericTablePresen
     private final ObjectProperty<VisualResult> groupVisualResultProperty = new SimpleObjectProperty<>();
     @Override public ObjectProperty<VisualResult> groupVisualResultProperty() { return groupVisualResultProperty; }
 
-    private final ObjectProperty<VisualSelection> groupVisualSelectionProperty = new SimpleObjectProperty<>();
+    private final ObjectProperty<VisualSelection> groupVisualSelectionProperty = VisualSelection.createVisualSelectionProperty();
     @Override public ObjectProperty<VisualSelection> groupVisualSelectionProperty() { return groupVisualSelectionProperty; }
 
     private final ObjectProperty<MoneyTransfer> selectedGroupProperty = new SimpleObjectProperty<>();
@@ -71,7 +71,7 @@ final class StatementsPresentationModel extends EventDependentGenericTablePresen
     private final ObjectProperty<VisualResult> masterVisualResultProperty = new SimpleObjectProperty<>();
     @Override public ObjectProperty<VisualResult> masterVisualResultProperty() { return masterVisualResultProperty; }
 
-    private final ObjectProperty<VisualSelection> masterVisualSelectionProperty = new SimpleObjectProperty<>();
+    private final ObjectProperty<VisualSelection> masterVisualSelectionProperty = VisualSelection.createVisualSelectionProperty();
     @Override public ObjectProperty<VisualSelection> masterVisualSelectionProperty() { return masterVisualSelectionProperty; }
 
     private final ObjectProperty<MoneyTransfer> selectedMasterProperty = new SimpleObjectProperty<>();
