@@ -26,10 +26,22 @@
 }
 
 
-/*===== webtext-javafx@main.css from webfx-extras-webtext-peers-openjfx =====*/
+/*===== material-javafx@main.css from webfx-extras-materialdesign =====*/
 
-HtmlText, HtmlTextEditor {
+
+.material {
+     -fx-background-color: white , white , white;
+     -fx-background-insets: 0, 0, 0;
+}
+
+/*===== visual-charts-javafx@main.css from webfx-extras-visual-charts-peers-openjfx =====*/
+
+VisualLineChart, VisualPieChart, VisualBarChart, VisualAreaChart {
     -fx-skin: "dev.webfx.kit.mapper.peers.javafxcontrols.openjfx.skin.FxControlPeerSkin";
+}
+
+.chart-series-line {
+    -fx-stroke-width: 1.5px;
 }
 
 /*===== visual-grid-javafx@main.css from webfx-extras-visual-grid-peers-openjfx =====*/
@@ -88,43 +100,10 @@ VisualGrid {
    -fx-text-fill: -fx-text-inner-color;
 }
 
-/*===== visual-charts-javafx@main.css from webfx-extras-visual-charts-peers-openjfx =====*/
+/*===== webtext-javafx@main.css from webfx-extras-webtext-peers-openjfx =====*/
 
-VisualLineChart, VisualPieChart, VisualBarChart, VisualAreaChart {
+HtmlText, HtmlTextEditor {
     -fx-skin: "dev.webfx.kit.mapper.peers.javafxcontrols.openjfx.skin.FxControlPeerSkin";
-}
-
-.chart-series-line {
-    -fx-stroke-width: 1.5px;
-}
-
-/*===== modality-login-javafx@main.css from modality-crm-client-activity-login-plugin =====*/
-
-
-
-.login {
-    -fx-font-size: 18px;
-}
-
-.login Button {
-    -fx-background-color: #0096D6FF;
-    -fx-background-radius: 10px;
-    -fx-text-fill: white;
-}
-
-/*===== modality-javafx@main.css from modality-base-client-application =====*/
-
-Text, Label, Button, TextField {
-    -fx-font-family: 'Montserrat';
-}
-
-.scroll-pane {
-   -fx-background-color: transparent;
-   -fx-padding: 0;
-}
-
-.scroll-pane > .viewport {
-   -fx-background-color: transparent;
 }
 
 /*===== bookings-javafx@main.css from modality-ecommerce-backoffice-activity-bookings-plugin =====*/
@@ -230,10 +209,31 @@ Text, Label, Button, TextField {
     -fx-font-style: italic;
 }
 
-/*===== material-javafx@main.css from webfx-extras-materialdesign =====*/
+/*===== modality-javafx@main.css from modality-base-client-application =====*/
+
+Text, Label, Button, TextField {
+    -fx-font-family: 'Montserrat';
+}
+
+.scroll-pane {
+   -fx-background-color: transparent;
+   -fx-padding: 0;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+/*===== modality-login-javafx@main.css from modality-crm-client-activity-login-plugin =====*/
 
 
-.material {
-     -fx-background-color: white , white , white;
-     -fx-background-insets: 0, 0, 0;
+
+.login {
+    -fx-font-size: 18px;
+}
+
+.login Button {
+    -fx-background-color: #0096D6FF;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
 }

@@ -26,10 +26,12 @@
 }
 
 
-/*===== webtext-javafx@main.css from webfx-extras-webtext-peers-openjfx =====*/
+/*===== material-javafx@main.css from webfx-extras-materialdesign =====*/
 
-HtmlText, HtmlTextEditor {
-    -fx-skin: "dev.webfx.kit.mapper.peers.javafxcontrols.openjfx.skin.FxControlPeerSkin";
+
+.material {
+     -fx-background-color: white , white , white;
+     -fx-background-insets: 0, 0, 0;
 }
 
 /*===== visual-grid-javafx@main.css from webfx-extras-visual-grid-peers-openjfx =====*/
@@ -88,27 +90,10 @@ VisualGrid {
    -fx-text-fill: -fx-text-inner-color;
 }
 
-/*===== modality-javafx@main.css from modality-base-client-application =====*/
+/*===== webtext-javafx@main.css from webfx-extras-webtext-peers-openjfx =====*/
 
-Text, Label, Button, TextField {
-    -fx-font-family: 'Montserrat';
-}
-
-.scroll-pane {
-   -fx-background-color: transparent;
-   -fx-padding: 0;
-}
-
-.scroll-pane > .viewport {
-   -fx-background-color: transparent;
-}
-
-/*===== material-javafx@main.css from webfx-extras-materialdesign =====*/
-
-
-.material {
-     -fx-background-color: white , white , white;
-     -fx-background-insets: 0, 0, 0;
+HtmlText, HtmlTextEditor {
+    -fx-skin: "dev.webfx.kit.mapper.peers.javafxcontrols.openjfx.skin.FxControlPeerSkin";
 }
 
 /*===== modality-login-javafx@main.css from modality-crm-client-activity-login-plugin =====*/
@@ -123,4 +108,19 @@ Text, Label, Button, TextField {
     -fx-background-color: #0096D6FF;
     -fx-background-radius: 10px;
     -fx-text-fill: white;
+}
+
+/*===== modality-javafx@main.css from modality-base-client-application =====*/
+
+Text, Label, Button, TextField {
+    -fx-font-family: 'Montserrat';
+}
+
+.scroll-pane {
+   -fx-background-color: transparent;
+   -fx-padding: 0;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
 }
