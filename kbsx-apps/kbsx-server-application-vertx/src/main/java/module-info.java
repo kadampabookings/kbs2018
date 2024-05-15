@@ -7,6 +7,7 @@ module kbsx.server.application.vertx {
     requires kbsx.base.server.systemmetrics.java;
     requires kbsx.server.application;
     requires modality.crm.server.authz.required.plugin;
+    requires modality.ecommerce.document.service.server;
     requires modality.ecommerce.payment.custom.server;
     requires modality.ecommerce.payment.delegated.server;
     requires modality.ecommerce.payment.direct.server;
