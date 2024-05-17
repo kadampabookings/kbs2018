@@ -299,13 +299,15 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
                     if (documentLines == null) // Otherwise (if nobody is selected),
                         documentLines = peopleVisualMapper.getCurrentEntities(); // taking all people
                     // Exporting the document lines primary keys as a json array
-                    ReadOnlyAstArray astArray = SerialCodecManager.encodePrimitiveArrayToAstArray(documentLines.stream().map(Entity::getPrimaryKey).toArray());
+                    Object[] primaryKeys = documentLines.stream().map(Entity::getPrimaryKey).toArray();
+                    ReadOnlyAstArray astArray = SerialCodecManager.encodeJavaArrayToAstArray(primaryKeys);
                     return Json.formatNode(astArray);
                 }
 
                 private Object[] importDragSelectionFromDragboard(Object dragContent) {
                     // Parsing the expected json array and decoding it as a java array containing all primary keys
-                    return SerialCodecManager.decodePrimitiveArrayFromAstArray(Json.parseArray(dragContent.toString()));
+                    ReadOnlyAstArray astArray = Json.parseArray(dragContent.toString());
+                    return SerialCodecManager.decodeAstArrayToJavaArray(astArray, Object.class);
                 }
             }
         }
