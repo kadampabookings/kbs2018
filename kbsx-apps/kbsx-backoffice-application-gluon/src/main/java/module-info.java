@@ -6,8 +6,8 @@ module kbsx.backoffice.application.gluon {
     requires javafx.web;
     requires kbsx.backoffice.application;
     requires modality.base.backoffice.gantt.canvas.basic.plugin;
-    requires modality.ecommerce.payment.custom.buscall;
-    requires modality.ecommerce.payment.custom.remote;
+    requires modality.ecommerce.payment.embedded.buscall;
+    requires modality.ecommerce.payment.embedded.remote;
     requires webfx.extras.visual.charts.peers.openjfx;
     requires webfx.extras.visual.grid.peers.openjfx;
     requires webfx.extras.webtext.peers.openjfx;
