@@ -10,8 +10,8 @@ module kbsx.backoffice.application.openjfx {
     requires kbsx.event.backoffice.activities.cloneevent.routing;
     requires modality.base.backoffice.gantt.canvas.basic.plugin;
     requires modality.base.shared.domainmodel;
-    requires modality.ecommerce.payment.embedded.buscall;
-    requires modality.ecommerce.payment.embedded.remote;
+    requires modality.ecommerce.payment.buscall;
+    requires modality.ecommerce.payment.remote;
     requires webfx.extras.visual.charts.peers.openjfx;
     requires webfx.extras.visual.grid.peers.openjfx;
     requires webfx.extras.webtext.peers.openjfx;
