@@ -6,6 +6,7 @@ module kbsx.backoffice.application.gluon {
     requires javafx.web;
     requires kbsx.backoffice.application;
     requires modality.base.backoffice.gantt.canvas.basic.plugin;
+    requires modality.base.client.activity.console.plugin;
     requires modality.ecommerce.payment.buscall;
     requires modality.ecommerce.payment.remote;
     requires webfx.extras.visual.charts.peers.openjfx;
@@ -14,13 +15,13 @@ module kbsx.backoffice.application.gluon {
     requires webfx.kit.javafxgraphics.openjfx;
     requires webfx.platform.ast.factory.generic;
     requires webfx.platform.boot.java;
-    requires webfx.platform.console.java;
     requires webfx.platform.os.gluon;
     requires webfx.platform.resource.gluon;
     requires webfx.platform.scheduler.java;
     requires webfx.platform.shutdown.gluon;
     requires webfx.platform.storage.java;
     requires webfx.platform.storagelocation.gluon;
+    requires webfx.platform.useragent.gluon;
     requires webfx.platform.visibility.gluon;
     requires webfx.platform.windowhistory.java;
     requires webfx.platform.windowlocation.java;

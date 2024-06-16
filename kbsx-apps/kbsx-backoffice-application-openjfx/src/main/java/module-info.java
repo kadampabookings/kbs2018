@@ -9,6 +9,7 @@ module kbsx.backoffice.application.openjfx {
     requires kbsx.event.backoffice.activities.cloneevent;
     requires kbsx.event.backoffice.activities.cloneevent.routing;
     requires modality.base.backoffice.gantt.canvas.basic.plugin;
+    requires modality.base.client.activity.console.plugin;
     requires modality.base.shared.domainmodel;
     requires modality.ecommerce.payment.buscall;
     requires modality.ecommerce.payment.remote;
@@ -19,13 +20,13 @@ module kbsx.backoffice.application.openjfx {
     requires webfx.kit.platform.visibility.openjfx;
     requires webfx.platform.ast.factory.generic;
     requires webfx.platform.boot.java;
-    requires webfx.platform.console.java;
     requires webfx.platform.os.java;
     requires webfx.platform.resource.java;
     requires webfx.platform.scheduler.java;
     requires webfx.platform.shutdown.java;
     requires webfx.platform.storage.java;
     requires webfx.platform.storagelocation.java;
+    requires webfx.platform.useragent.java.client;
     requires webfx.platform.windowhistory.java;
     requires webfx.platform.windowlocation.java;
     requires webfx.stack.authn.buscall;
