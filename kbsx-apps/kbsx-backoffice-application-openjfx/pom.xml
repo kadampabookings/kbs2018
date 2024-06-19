@@ -45,18 +45,6 @@
 
         <dependency>
             <groupId>one.modality</groupId>
-            <artifactId>modality-base-backoffice-gantt-canvas-basic-plugin</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>one.modality</groupId>
-            <artifactId>modality-base-client-activity-console-plugin</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>one.modality</groupId>
             <artifactId>modality-base-client-navigationarrows-java-plugin</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>runtime</scope>
@@ -148,6 +136,12 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
+            <artifactId>webfx-platform-console-java</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-os-java</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
@@ -187,12 +181,6 @@
             <artifactId>webfx-platform-substitution-var-env-plugin</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-useragent-java-client</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>

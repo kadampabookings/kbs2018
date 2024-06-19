@@ -6,7 +6,6 @@ module kbsx.server.application.vertx {
     requires javafx.base;
     requires kbsx.base.server.systemmetrics.java;
     requires kbsx.server.application;
-    requires modality.crm.server.authz.required.plugin;
     requires modality.ecommerce.document.service.server;
     requires modality.ecommerce.payment.server;
     requires webfx.platform.ast.factory.vertx;

@@ -277,8 +277,6 @@
     <source path="one/modality/base/backoffice/ganttcanvas/spi"/>
     <resource path="one/modality/base/backoffice/ganttcanvas/images/s32"/>
     <public includes="one/modality/base/backoffice/ganttcanvas/images/s32/" path=""/>
-    <!--===============< modality-base-backoffice-gantt-canvas-basic-plugin >===============-->
-    <source path="one/modality/base/backoffice/ganttcanvas/spi/impl/basic"/>
     <!--==================< modality-base-backoffice-mainframe-activity >===================-->
     <source path="one/modality/base/backoffice/activities/mainframe"/>
     <resource path="one/modality/base/backoffice/activities/mainframe"/>

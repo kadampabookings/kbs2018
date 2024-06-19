@@ -338,13 +338,6 @@
 
         <dependency>
             <groupId>one.modality</groupId>
-            <artifactId>modality-base-backoffice-gantt-canvas-basic-plugin</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <classifier>sources</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>one.modality</groupId>
             <artifactId>modality-base-backoffice-mainframe-activity</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <classifier>sources</classifier>

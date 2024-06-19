@@ -4,19 +4,18 @@ module kbsx.frontoffice.application.gluon {
 
     // Direct dependencies modules
     requires kbsx.frontoffice.application;
-    requires modality.base.client.activity.console.plugin;
     requires webfx.extras.visual.grid.peers.openjfx;
     requires webfx.extras.webtext.peers.openjfx;
     requires webfx.kit.javafxgraphics.openjfx;
     requires webfx.platform.ast.factory.generic;
     requires webfx.platform.boot.java;
+    requires webfx.platform.console.java;
     requires webfx.platform.os.gluon;
     requires webfx.platform.resource.gluon;
     requires webfx.platform.scheduler.java;
     requires webfx.platform.shutdown.gluon;
     requires webfx.platform.storage.java;
     requires webfx.platform.storagelocation.gluon;
-    requires webfx.platform.useragent.gluon;
     requires webfx.platform.visibility.gluon;
     requires webfx.platform.windowhistory.java;
     requires webfx.platform.windowlocation.java;
