@@ -10,6 +10,7 @@
         <plugin-module>kbsx-event-backoffice-activities-cloneevent</plugin-module>
         <plugin-module>kbsx-event-backoffice-activities-events</plugin-module>
         <plugin-module>kbsx-event-backoffice-activities-options</plugin-module>
+        <plugin-module>modality-event-backoffice-events-ganttcanvas-plugin</plugin-module>
     </dependencies>
 
 </project>

@@ -447,12 +447,17 @@
     <source path="one/modality/ecommerce/payment/buscall/serial"/>
     <!--=======================< modality-ecommerce-payment-remote >========================-->
     <source path="one/modality/ecommerce/payment/spi/impl/remote"/>
+    <!--==============< modality-event-backoffice-events-ganttcanvas-plugin >===============-->
+    <source path="one/modality/event/backoffice/events/ganttcanvas"/>
+    <source path="one/modality/event/backoffice/events/ganttcanvas/spi/impl/event"/>
     <!--======================< modality-event-backoffice-events-pm >=======================-->
     <source path="one/modality/event/backoffice/events/pm"/>
     <!--=================< modality-event-client-activity-eventdependent >==================-->
     <source path="one/modality/event/client/activity/eventdependent"/>
     <!--=========================< modality-event-client-event-fx >=========================-->
     <source path="one/modality/event/client/event/fx"/>
+    <!--==========================< modality-event-client-theme >===========================-->
+    <source path="one/modality/event/client/theme"/>
     <!--===========< modality-hotel-backoffice-operations-resourceconfiguration >===========-->
     <source path="one/modality/hotel/backoffice/operations/entities/resourceconfiguration"/>
     <!--==============================< webfx-extras-canvas >===============================-->
