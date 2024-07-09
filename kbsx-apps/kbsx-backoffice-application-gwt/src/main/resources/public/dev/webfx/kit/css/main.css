@@ -193,6 +193,12 @@ tr.selected, .grid-row.selected {
     background: var(--grid-selection-color)
 }
 
+/*===== web@main.css from modality-crm-backoffice-bookingdetailspanel =====*/
+
+fx-titledpane .title {
+    font-size: 14px;
+}
+
 /*===== modality-backoffice-bookings-web@main.css from modality-ecommerce-backoffice-activity-bookings-plugin =====*/
 
 /***** Declaring table row color variables with default values *****/
@@ -355,6 +361,7 @@ fx-homepane fx-tile * {
 .primary-button {
     color: white;
 }
+
 .primary-button > fx-background {
     background: var(--blue-color);
 }
@@ -374,6 +381,7 @@ fx-homepane fx-tile * {
 .danger-button > fx-background {
     background: var(--red-color);
 }
+
 .danger-button:hover > fx-background {
     background: var(--red-color-hover);
 }
@@ -381,9 +389,11 @@ fx-homepane fx-tile * {
 .success-button {
     color: white;
 }
+
 .success-button > fx-background {
     background: var(--green-color);
 }
+
 .success-button:hover > fx-background   {
     background: var(--green-color-hover);
 }
@@ -391,9 +401,11 @@ fx-homepane fx-tile * {
 .secondary-button {
     color: white;
 }
+
 .secondary-button > fx-background {
     background: var(--grey-color);
 }
+
 .secondary-button:hover > fx-background {
     background: var(--grey-color-hover);
 }
@@ -434,10 +446,6 @@ fx-homepane fx-tile * {
 
 .small-text {
     font-size: 9px;
-}
-
-.table-row-cell:selected .font-blue {
-
 }
 
 .table-row-cell:selected > fx-background {
