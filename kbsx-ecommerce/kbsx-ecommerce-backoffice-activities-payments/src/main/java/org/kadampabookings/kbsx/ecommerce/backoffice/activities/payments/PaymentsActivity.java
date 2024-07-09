@@ -50,8 +50,8 @@ final class PaymentsActivity extends EventDependentViewDomainActivity implements
         Pane container = ui.buildUi();
         setUpContextMenu(ControlUtil.lookupChild(container, node -> node instanceof VisualGrid), () -> newActionGroup(
                 newSeparatorActionGroup(
-                        newOperationAction(() -> new EditPaymentRequest(pm.getSelectedPayment(), container)),
-                        newOperationAction(() -> new DeletePaymentRequest(pm.getSelectedPayment(), container))
+                        newOperationAction(() -> new EditPaymentRequest(pm.getSelectedPayment())),
+                        newOperationAction(() -> new DeletePaymentRequest(pm.getSelectedPayment()))
                 ),
                 newSeparatorActionGroup(
                         newOperationAction(() -> new CopySelectionRequest(masterVisualMapper.getSelectedEntities(), masterVisualMapper.getEntityColumns())),

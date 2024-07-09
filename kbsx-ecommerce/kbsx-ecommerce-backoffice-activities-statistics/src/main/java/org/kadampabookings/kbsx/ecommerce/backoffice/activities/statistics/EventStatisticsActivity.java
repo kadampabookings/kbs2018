@@ -47,11 +47,11 @@ final class EventStatisticsActivity extends EventDependentViewDomainActivity imp
         Pane container = ui.buildUi();
 
         setUpContextMenu(ControlUtil.lookupChild(ui.getGroupMasterSlaveView().getMasterView(), n -> n instanceof VisualGrid), () -> newActionGroup(
-                newOperationAction(() -> new SendLetterRequest(pm.getSelectedDocument(), container)),
+                newOperationAction(() -> new SendLetterRequest(pm.getSelectedDocument())),
                 newSeparatorActionGroup(
-                        newOperationAction(() -> new EditDocumentLineRequest(pm.getSelectedDocumentLine(), container)),
-                        newOperationAction(() -> new ToggleCancelDocumentLineRequest(pm.getSelectedDocumentLine(), container)),
-                        newOperationAction(() -> new DeleteDocumentLineRequest(pm.getSelectedDocumentLine(), container))
+                        newOperationAction(() -> new EditDocumentLineRequest(pm.getSelectedDocumentLine())),
+                        newOperationAction(() -> new ToggleCancelDocumentLineRequest(pm.getSelectedDocumentLine())),
+                        newOperationAction(() -> new DeleteDocumentLineRequest(pm.getSelectedDocumentLine()))
                 ),
                 newSeparatorActionGroup(
                         newOperationAction(() -> new CopySelectionRequest(masterVisualMapper.getSelectedEntities(), masterVisualMapper.getEntityColumns())),
