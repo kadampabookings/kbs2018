@@ -5,6 +5,8 @@ module kbsx.backoffice.application.gluon {
     // Direct dependencies modules
     requires javafx.web;
     requires kbsx.backoffice.application;
+    requires modality.ecommerce.document.service.buscall;
+    requires modality.ecommerce.document.service.remote;
     requires modality.ecommerce.payment.buscall;
     requires modality.ecommerce.payment.remote;
     requires webfx.extras.visual.charts.peers.openjfx;
