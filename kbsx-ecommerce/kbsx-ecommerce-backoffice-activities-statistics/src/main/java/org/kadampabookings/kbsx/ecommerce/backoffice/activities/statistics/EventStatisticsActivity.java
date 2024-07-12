@@ -17,7 +17,7 @@ import one.modality.base.client.gantt.fx.visibility.GanttVisibility;
 import one.modality.base.shared.entities.Attendance;
 import one.modality.base.shared.entities.DocumentLine;
 import one.modality.crm.backoffice.controls.bookingdetailspanel.BookingDetailsPanel;
-import one.modality.ecommerce.backoffice.operations.entities.document.SendLetterRequest;
+import one.modality.ecommerce.backoffice.operations.entities.document.registration.SendLetterRequest;
 import one.modality.ecommerce.backoffice.operations.entities.documentline.DeleteDocumentLineRequest;
 import one.modality.ecommerce.backoffice.operations.entities.documentline.EditDocumentLineRequest;
 import one.modality.ecommerce.backoffice.operations.entities.documentline.ToggleCancelDocumentLineRequest;

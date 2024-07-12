@@ -21,7 +21,7 @@ import one.modality.base.backoffice.controls.masterslave.ConventionalUiBuilderMi
 import one.modality.base.client.activity.organizationdependent.OrganizationDependentViewDomainActivity;
 import one.modality.base.shared.domainmodel.functions.AbcNames;
 import one.modality.base.shared.entities.Person;
-import one.modality.ecommerce.backoffice.operations.entities.document.EditUsersPersonalDetailsRequest;
+import one.modality.ecommerce.backoffice.operations.entities.document.registration.EditUsersPersonalDetailsRequest;
 
 import java.util.Arrays;
 import java.util.Collection;
