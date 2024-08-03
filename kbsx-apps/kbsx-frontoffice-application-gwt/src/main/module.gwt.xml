@@ -283,6 +283,7 @@
     <source path="one/modality/base/shared/entities/formatters"/>
     <source path="one/modality/base/shared/entities/impl"/>
     <source path="one/modality/base/shared/entities/markers"/>
+    <source path="one/modality/base/shared/entities/triggers"/>
     <!--====================< modality-crm-backoffice-organization-fx >=====================-->
     <source path="one/modality/crm/backoffice/organization/fx"/>
     <source path="one/modality/crm/backoffice/organization/fx/impl"/>
