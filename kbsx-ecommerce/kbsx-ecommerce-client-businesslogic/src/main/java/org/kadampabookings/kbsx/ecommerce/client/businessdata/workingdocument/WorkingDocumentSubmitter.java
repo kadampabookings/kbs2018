@@ -1,16 +1,16 @@
 package org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument;
 
-import org.kadampabookings.kbsx.hotel.shared.businessdata.time.DaysArray;
-import org.kadampabookings.kbsx.base.client.aggregates.event.EventAggregate;
+import dev.webfx.platform.async.Future;
+import dev.webfx.platform.util.collection.Collections;
+import dev.webfx.platform.util.uuid.Uuid;
+import dev.webfx.stack.orm.entity.UpdateStore;
 import one.modality.base.shared.entities.Attendance;
 import one.modality.base.shared.entities.Cart;
 import one.modality.base.shared.entities.Document;
 import one.modality.base.shared.entities.DocumentLine;
-import dev.webfx.stack.orm.entity.UpdateStore;
-import dev.webfx.stack.db.submit.SubmitArgument;
-import dev.webfx.platform.async.Future;
-import dev.webfx.platform.util.collection.Collections;
-import dev.webfx.platform.util.uuid.Uuid;
+import one.modality.base.shared.entities.triggers.Triggers;
+import org.kadampabookings.kbsx.base.client.aggregates.event.EventAggregate;
+import org.kadampabookings.kbsx.hotel.shared.businessdata.time.DaysArray;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -82,10 +82,7 @@ public final class WorkingDocumentSubmitter {
                 if (wd.findSameWorkingDocumentLine(lastWdl) == null)
                     removeLine(wd, lastWdl.getDocumentLine());
             }
-        return store.submitChanges(SubmitArgument.builder()
-                .setStatement("select set_transaction_parameters(false)")
-                .setDataSourceId(store.getDataSourceId())
-                .build())
+        return store.submitChanges(Triggers.frontOfficeTransaction(store))
                 .map(batch -> du);
     }
 

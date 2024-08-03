@@ -15,7 +15,6 @@ module kbsx.ecommerce.client.businesslogic {
     requires transitive webfx.platform.async;
     requires webfx.platform.util;
     requires webfx.stack.db.query;
-    requires webfx.stack.db.submit;
     requires webfx.stack.orm.entity;
 
     // Exported packages
