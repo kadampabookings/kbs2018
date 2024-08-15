@@ -31,7 +31,7 @@ import javafx.scene.effect.Effect;
 import javafx.scene.input.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import one.modality.base.client.mainframe.dialogarea.fx.FXMainFrameDialogArea;
+import one.modality.base.client.mainframe.fx.FXMainFrameDialogArea;
 import one.modality.base.backoffice.controls.masterslave.MasterSlaveView;
 import one.modality.base.client.gantt.fx.interstice.FXGanttInterstice;
 import one.modality.base.client.gantt.fx.visibility.FXGanttVisibility;

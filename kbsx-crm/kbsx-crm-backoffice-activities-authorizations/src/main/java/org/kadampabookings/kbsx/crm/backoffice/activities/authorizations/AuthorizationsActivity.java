@@ -13,10 +13,10 @@ import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.BorderPane;
-import one.modality.base.client.mainframe.dialogarea.fx.FXMainFrameDialogArea;
+import one.modality.base.client.mainframe.fx.FXMainFrameDialogArea;
 import one.modality.base.client.tile.TabsBar;
 import one.modality.base.client.activity.ModalityButtonFactoryMixin;
-import one.modality.base.backoffice.mainframe.headertabs.fx.FXMainFrameHeaderTabs;
+import one.modality.base.backoffice.mainframe.fx.FXMainFrameHeaderTabs;
 
 import static dev.webfx.stack.orm.dql.DqlStatement.where;
 
