@@ -15,7 +15,9 @@
         <plugin-module executable-target="gwt">webfx-platform-substitution-var-windowlocation-plugin</plugin-module>
 
         <plugin-module>modality-base-frontoffice-min-plugin</plugin-module>
+<!--
         <plugin-module>modality-crm-client-activity-login-plugin</plugin-module>
+-->
 
         <!-- Event activities -->
         <plugin-module>kbsx-event-frontoffice-activities-all</plugin-module>
