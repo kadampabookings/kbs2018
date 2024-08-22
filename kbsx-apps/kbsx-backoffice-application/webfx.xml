@@ -15,6 +15,8 @@
         <plugin-module executable-target="gwt">webfx-platform-substitution-var-windowlocation-plugin</plugin-module>
 
         <plugin-module>modality-base-backoffice-application</plugin-module>
+        <!-- mainly for login UI -->
+        <plugin-module>modality-crm-client-min-plugin</plugin-module>
 
         <!-- Base activities -->
         <plugin-module>modality-base-backoffice-max-plugin</plugin-module>
