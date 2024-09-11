@@ -68,6 +68,8 @@
     <source path="javafx/scene/text"/>
     <source path="javafx/scene/transform"/>
     <source path="javafx/stage"/>
+    <!--============================< webfx-kit-javafxweb-emul >============================-->
+    <source path="javafx/scene/web"/>
     <!--================================< elemental2-core >=================================-->
     <inherits name="elemental2.core.Core"/>
     <!--=================================< elemental2-dom >=================================-->
@@ -267,6 +269,7 @@
     <!--=====================< modality-base-frontoffice-mainframe-fx >=====================-->
     <source path="one/modality/base/frontoffice/mainframe/fx"/>
     <!--=======================< modality-base-frontoffice-utility >========================-->
+    <source path="one/modality/base/frontoffice/browser"/>
     <source path="one/modality/base/frontoffice/entities"/>
     <source path="one/modality/base/frontoffice/fx"/>
     <source path="one/modality/base/frontoffice/states"/>
@@ -394,6 +397,14 @@
     <source path="dev/webfx/kit/mapper/peers/javafxgraphics/gwtj2cl/util"/>
     <!--===================< webfx-kit-javafxgraphics-registry-gwt-j2cl >===================-->
     <source path="dev/webfx/kit/registry/javafxgraphics"/>
+    <!--=========================< webfx-kit-javafxweb-enginepeer >=========================-->
+    <source path="dev/webfx/kit/mapper/peers/javafxweb/engine"/>
+    <!--=========================< webfx-kit-javafxweb-peers-base >=========================-->
+    <source path="dev/webfx/kit/mapper/peers/javafxweb/base"/>
+    <!--=======================< webfx-kit-javafxweb-peers-gwt-j2cl >=======================-->
+    <source path="dev/webfx/kit/mapper/peers/javafxweb/spi/gwt"/>
+    <!--=====================< webfx-kit-javafxweb-registry-gwt-j2cl >======================-->
+    <source path="dev/webfx/kit/registry/javafxweb"/>
     <!--===============================< webfx-kit-launcher >===============================-->
     <source path="dev/webfx/kit/launcher"/>
     <source path="dev/webfx/kit/launcher/spi"/>
@@ -427,6 +438,11 @@
     <source path="dev/webfx/platform/boot"/>
     <source path="dev/webfx/platform/boot/spi"/>
     <source path="dev/webfx/platform/boot/spi/impl"/>
+    <!--=============================< webfx-platform-browser >=============================-->
+    <source path="dev/webfx/platform/browser"/>
+    <source path="dev/webfx/platform/browser/spi"/>
+    <!--========================< webfx-platform-browser-gwt-j2cl >=========================-->
+    <source path="dev/webfx/platform/browser/spi/impl/gwtj2cl"/>
     <!--==============================< webfx-platform-conf >===============================-->
     <source path="dev/webfx/platform/conf"/>
     <source path="dev/webfx/platform/conf/impl"/>

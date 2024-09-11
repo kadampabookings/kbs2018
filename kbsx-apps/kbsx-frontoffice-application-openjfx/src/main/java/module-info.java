@@ -3,10 +3,12 @@
 module kbsx.frontoffice.application.openjfx {
 
     // Direct dependencies modules
+    requires javafx.web;
     requires kbsx.frontoffice.application;
     requires webfx.extras.visual.grid.peers.openjfx;
     requires webfx.extras.webtext.peers.openjfx;
     requires webfx.kit.javafxgraphics.openjfx;
+    requires webfx.kit.platform.browser.openjfx;
     requires webfx.kit.platform.visibility.openjfx;
     requires webfx.platform.ast.factory.generic;
     requires webfx.platform.boot.java;
