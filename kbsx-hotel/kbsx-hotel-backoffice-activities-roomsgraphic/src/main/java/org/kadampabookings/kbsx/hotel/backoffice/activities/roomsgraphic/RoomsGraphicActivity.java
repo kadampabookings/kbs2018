@@ -87,13 +87,14 @@ final class RoomsGraphicActivity extends EventDependentViewDomainActivity implem
     public void onResume() {
         super.onResume();
         FXGanttVisibility.setGanttVisibility(GanttVisibility.EVENTS);
-        FXGanttInterstice.setGanttIntersticeRequired(true);
+        FXGanttInterstice.setGanttIntersticeVisible(true);
+
     }
 
     @Override
     public void onPause() {
-        FXGanttVisibility.setGanttVisibility(GanttVisibility.HIDDEN);
-        FXGanttInterstice.setGanttIntersticeRequired(false);
+        FXGanttVisibility.resetToDefault();
+        FXGanttInterstice.resetToDefault();
         super.onPause();
     }
 

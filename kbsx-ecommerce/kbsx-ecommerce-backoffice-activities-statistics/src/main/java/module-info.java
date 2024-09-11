@@ -6,6 +6,7 @@ module kbsx.ecommerce.backoffice.activities.statistics {
     requires javafx.base;
     requires javafx.controls;
     requires javafx.graphics;
+    requires modality.base.backoffice.mainframe.fx;
     requires modality.base.backoffice.masterslave;
     requires modality.base.backoffice.operations.generic;
     requires modality.base.client.gantt.fx;

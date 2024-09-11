@@ -10,10 +10,10 @@ import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import one.modality.base.backoffice.controls.masterslave.ConventionalUiBuilder;
 import one.modality.base.backoffice.controls.masterslave.ConventionalUiBuilderMixin;
+import one.modality.base.backoffice.mainframe.fx.FXEventSelector;
 import one.modality.base.backoffice.operations.entities.generic.CopyAllRequest;
 import one.modality.base.backoffice.operations.entities.generic.CopySelectionRequest;
 import one.modality.base.client.gantt.fx.visibility.FXGanttVisibility;
-import one.modality.base.client.gantt.fx.visibility.GanttVisibility;
 import one.modality.base.shared.entities.Attendance;
 import one.modality.base.shared.entities.DocumentLine;
 import one.modality.crm.backoffice.controls.bookingdetailspanel.BookingDetailsPanel;
@@ -65,12 +65,14 @@ final class EventStatisticsActivity extends EventDependentViewDomainActivity imp
     @Override
     public void onResume() {
         super.onResume();
-        FXGanttVisibility.setGanttVisibility(GanttVisibility.EVENTS);
+        FXGanttVisibility.showEvents();
+        FXEventSelector.showEventSelector();
     }
 
     @Override
     public void onPause() {
-        FXGanttVisibility.setGanttVisibility(GanttVisibility.HIDDEN);
+        FXGanttVisibility.resetToDefault();
+        FXEventSelector.resetToDefault();
         super.onPause();
     }
 
