@@ -382,6 +382,7 @@
     <!--===========================< modality-base-client-util >============================-->
     <source path="one/modality/base/client/util/functions"/>
     <source path="one/modality/base/client/util/log"/>
+    <source path="one/modality/base/client/util/masterslave"/>
     <source path="one/modality/base/client/util/routing"/>
     <!--========================< modality-base-client-validation >=========================-->
     <source path="one/modality/base/client/validation"/>
@@ -431,6 +432,7 @@
     <source path="one/modality/ecommerce/backoffice/activities/bookings/routing"/>
     <source path="one/modality/ecommerce/backoffice/operations/routes/bookings"/>
     <!--===============< modality-ecommerce-backoffice-operations-document >================-->
+    <source path="one/modality/ecommerce/backoffice/operations/entities/document"/>
     <source path="one/modality/ecommerce/backoffice/operations/entities/document/cart"/>
     <source path="one/modality/ecommerce/backoffice/operations/entities/document/multiplebookings"/>
     <source path="one/modality/ecommerce/backoffice/operations/entities/document/registration"/>
@@ -562,6 +564,8 @@
     <source path="dev/webfx/extras/util/control"/>
     <!--============================< webfx-extras-util-layout >============================-->
     <source path="dev/webfx/extras/util/layout"/>
+    <!--=========================< webfx-extras-util-masterslave >==========================-->
+    <source path="dev/webfx/extras/util/masterslave"/>
     <!--============================< webfx-extras-util-paint >=============================-->
     <source path="dev/webfx/extras/util/paint"/>
     <!--============================< webfx-extras-util-scene >=============================-->
