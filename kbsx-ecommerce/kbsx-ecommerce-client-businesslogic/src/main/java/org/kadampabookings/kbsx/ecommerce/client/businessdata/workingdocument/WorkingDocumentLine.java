@@ -236,7 +236,7 @@ public final class WorkingDocumentLine implements HasItemFamilyType {
     }
 
     @Override
-    public ItemFamilyType getItemFamilyType() {
+    public KnownItemFamily getItemFamilyType() {
         return (item != null ? item : option).getItemFamilyType();
     }
 }
