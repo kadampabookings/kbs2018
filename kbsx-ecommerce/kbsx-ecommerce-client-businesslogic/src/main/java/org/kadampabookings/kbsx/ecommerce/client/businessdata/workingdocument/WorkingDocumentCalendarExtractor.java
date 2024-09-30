@@ -11,7 +11,7 @@ import org.kadampabookings.kbsx.event.client.businessdata.calendar.Calendar;
 import org.kadampabookings.kbsx.event.client.businessdata.calendar.CalendarTimeline;
 import org.kadampabookings.kbsx.event.client.businessdata.calendar.impl.CalendarImpl;
 import org.kadampabookings.kbsx.event.client.businessdata.calendar.impl.CalendarTimelineImpl;
-import one.modality.base.shared.entities.ItemFamilyType;
+import one.modality.base.shared.entities.KnownItemFamily;
 import one.modality.base.shared.entities.Label;
 import org.kadampabookings.kbsx.base.shared.entities.Option;
 import one.modality.base.shared.entities.markers.HasItemFamilyType;
@@ -70,8 +70,8 @@ public final class WorkingDocumentCalendarExtractor {
         return getItemFamilyFillColor(hasItemFamilyType.getItemFamilyType());
     }
 
-    private static Paint getItemFamilyFillColor(ItemFamilyType itemFamilyType) {
-        switch (itemFamilyType) {
+    private static Paint getItemFamilyFillColor(KnownItemFamily knownItemFamily) {
+        switch (knownItemFamily) {
             case TEACHING: return TEACHING_FILL;
             case ACCOMMODATION: return ACCOMMODATION_FILL;
             case MEALS: return MEALS_FILL;

@@ -4,7 +4,7 @@ import dev.webfx.stack.orm.entity.Entity;
 import dev.webfx.stack.orm.entity.EntityId;
 import one.modality.base.shared.entities.Item;
 import one.modality.base.shared.entities.ItemFamily;
-import one.modality.base.shared.entities.ItemFamilyType;
+import one.modality.base.shared.entities.KnownItemFamily;
 import one.modality.base.shared.entities.Label;
 import one.modality.base.shared.entities.markers.*;
 import org.kadampabookings.kbsx.base.shared.entities.markers.EntityHasDateTimeRange;
@@ -141,9 +141,9 @@ public interface Option extends Entity,
     }
 
     @Override
-    default ItemFamilyType getItemFamilyType() {
+    default KnownItemFamily getItemFamilyType() {
         ItemFamily itemFamily = findItemFamily();
-        return itemFamily == null ? ItemFamilyType.UNKNOWN : itemFamily.getItemFamilyType();
+        return itemFamily == null ? KnownItemFamily.UNKNOWN : itemFamily.getItemFamilyType();
     }
 
     default boolean isConcrete() {
