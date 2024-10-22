@@ -6,8 +6,8 @@
     </exported-packages>
 
     <providers>
-        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.event.backoffice.activities.events.EventsUiRoute</provider>
-        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbsx.event.backoffice.activities.events.RouteToEventsRequestEmitter</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.event.backoffice.activities.events.EventsRouting$EventsUiRoute</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbsx.event.backoffice.activities.events.EventsRouting$RouteToEventsRequestEmitter</provider>
     </providers>
 
     <dependencies>

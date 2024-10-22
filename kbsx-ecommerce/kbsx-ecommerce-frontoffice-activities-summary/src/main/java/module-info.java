@@ -27,10 +27,8 @@ module kbsx.ecommerce.frontoffice.activities.summary {
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.summary;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.summary.routing;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.operations.summary;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.frontoffice.activities.summary.SummaryUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.frontoffice.activities.summary.SummaryRouting.SummaryUiRoute;
 
 }

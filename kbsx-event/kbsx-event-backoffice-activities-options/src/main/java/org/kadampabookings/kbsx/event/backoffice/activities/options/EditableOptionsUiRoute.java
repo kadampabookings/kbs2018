@@ -1,6 +1,6 @@
 package org.kadampabookings.kbsx.event.backoffice.activities.options;
 
-import org.kadampabookings.kbsx.event.frontoffice.activities.options.routing.OptionsRouting;
+import org.kadampabookings.kbsx.event.frontoffice.activities.options.OptionsRouting;
 import dev.webfx.stack.orm.domainmodel.activity.viewdomain.impl.ViewDomainActivityContextFinal;
 import dev.webfx.stack.routing.uirouter.UiRoute;
 import dev.webfx.stack.routing.uirouter.impl.UiRouteImpl;

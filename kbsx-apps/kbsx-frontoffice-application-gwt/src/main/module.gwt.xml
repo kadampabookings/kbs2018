@@ -113,24 +113,14 @@
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/cart"/>
     <!--===============< kbsx-ecommerce-frontoffice-activities-cart-routing >===============-->
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/cart/base"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/cart/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/cart"/>
     <!--================< kbsx-ecommerce-frontoffice-activities-contactus >=================-->
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/contactus"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/contactus/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/contactus"/>
     <!--=================< kbsx-ecommerce-frontoffice-activities-payment >==================-->
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/payment"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/payment/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/payment"/>
     <!--==================< kbsx-ecommerce-frontoffice-activities-person >==================-->
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/person"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/person/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/person"/>
     <!--=================< kbsx-ecommerce-frontoffice-activities-summary >==================-->
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/summary"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/summary/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/summary"/>
     <!--===================< kbsx-event-client-activity-eventdependent >====================-->
     <source path="org/kadampabookings/kbsx/event/client/activity/eventdependent"/>
     <!--=======================< kbsx-event-client-bookingcalendar >========================-->
@@ -144,24 +134,14 @@
     <source path="org/kadampabookings/kbsx/event/client/controls/sectionpanel"/>
     <!--=====================< kbsx-event-frontoffice-activities-fees >=====================-->
     <source path="org/kadampabookings/kbsx/event/frontoffice/activities/fees"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/fees/routing"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/fees"/>
     <!--===================< kbsx-event-frontoffice-activities-options >====================-->
     <source path="org/kadampabookings/kbsx/event/frontoffice/activities/options"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/options/routing"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/options"/>
     <!--===================< kbsx-event-frontoffice-activities-program >====================-->
     <source path="org/kadampabookings/kbsx/event/frontoffice/activities/program"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/program/routing"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/program"/>
     <!--=================< kbsx-event-frontoffice-activities-startbooking >=================-->
     <source path="org/kadampabookings/kbsx/event/frontoffice/activities/startbooking"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/startbooking/routing"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/startbooking"/>
     <!--====================< kbsx-event-frontoffice-activities-terms >=====================-->
     <source path="org/kadampabookings/kbsx/event/frontoffice/activities/terms"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/terms/routing"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/terms"/>
     <!--=============================< kbsx-hotel-shared-time >=============================-->
     <source path="org/kadampabookings/kbsx/hotel/shared/businessdata/time"/>
     <!--=================< modality-base-backoffice-mainframe-headernode >==================-->
@@ -243,6 +223,7 @@
     <!--========================< modality-base-client-profile-fx >=========================-->
     <source path="one/modality/base/client/profile/fx"/>
     <!--===========================< modality-base-client-util >============================-->
+    <source path="one/modality/base/client/util/dialog"/>
     <source path="one/modality/base/client/util/functions"/>
     <source path="one/modality/base/client/util/log"/>
     <source path="one/modality/base/client/util/masterslave"/>
@@ -261,8 +242,6 @@
     <public path="" includes="one/modality/base/frontoffice/activities/account/images/"/>
     <!--================< modality-base-frontoffice-activity-alerts-plugin >================-->
     <source path="one/modality/base/frontoffice/activities/alerts"/>
-    <source path="one/modality/base/frontoffice/activities/alerts/routing"/>
-    <source path="one/modality/base/frontoffice/operations/routes/alerts"/>
     <!--=====================< modality-base-frontoffice-application >======================-->
     <source path="one/modality/base/frontoffice/application"/>
     <!--==================< modality-base-frontoffice-mainframe-activity >==================-->
@@ -295,8 +274,14 @@
     <!--====================< modality-crm-backoffice-organization-fx >=====================-->
     <source path="one/modality/crm/backoffice/organization/fx"/>
     <source path="one/modality/crm/backoffice/organization/fx/impl"/>
+    <!--===================< modality-crm-client-activity-login-plugin >====================-->
+    <source path="one/modality/crm/client/activities/login"/>
+    <!--================< modality-crm-client-activity-unauthorized-plugin >================-->
+    <source path="one/modality/crm/client/activities/unauthorized"/>
     <!--==========================< modality-crm-client-authn-fx >==========================-->
     <source path="one/modality/crm/shared/services/authn/fx"/>
+    <!--===================< modality-crm-client-authz-required-plugin >====================-->
+    <source path="one/modality/crm/client/services/authz"/>
     <!--======================< modality-crm-client-personaldetails >=======================-->
     <source path="one/modality/crm/client/controls/personaldetails"/>
     <!--===========================< modality-crm-shared-authn >============================-->
@@ -552,6 +537,8 @@
     <source path="dev/webfx/stack/authn/login/ui/spi"/>
     <!--=======================< webfx-stack-authn-login-ui-gateway >=======================-->
     <source path="dev/webfx/stack/authn/login/ui/spi/impl/gateway"/>
+    <!--===============< webfx-stack-authn-login-ui-gateway-password-plugin >===============-->
+    <source path="dev/webfx/stack/authn/login/ui/spi/impl/gateway/password"/>
     <!--=======================< webfx-stack-authn-login-ui-portal >========================-->
     <source path="dev/webfx/stack/authn/login/ui/spi/impl/portal"/>
     <resource path="dev/webfx/kit/css/fonts/password"/>

@@ -21,11 +21,9 @@ module kbsx.base.backoffice.activities.monitor {
 
     // Exported packages
     exports org.kadampabookings.kbsx.base.backoffice.activities.monitor;
-    exports org.kadampabookings.kbsx.base.backoffice.activities.monitor.routing;
-    exports org.kadampabookings.kbsx.base.backoffice.operations.routes.monitor;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.base.backoffice.activities.monitor.MonitorUiRoute;
-    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.base.backoffice.activities.monitor.RouteToMonitorRequestEmitter;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.base.backoffice.activities.monitor.MonitorRouting.MonitorUiRoute;
+    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.base.backoffice.activities.monitor.MonitorRouting.RouteToMonitorRequestEmitter;
 
 }

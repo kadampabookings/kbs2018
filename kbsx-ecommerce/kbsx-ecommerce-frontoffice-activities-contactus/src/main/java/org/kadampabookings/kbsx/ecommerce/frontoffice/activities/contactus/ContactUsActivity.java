@@ -23,8 +23,7 @@ import one.modality.base.shared.entities.Document;
 import one.modality.base.shared.entities.Event;
 import one.modality.base.shared.entities.History;
 import one.modality.base.shared.entities.Mail;
-import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.routing.CartRouting;
-import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.contactus.routing.ContactUsRouting;
+import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.base.CartRouting;
 
 /**
  * @author Bruno Salmon

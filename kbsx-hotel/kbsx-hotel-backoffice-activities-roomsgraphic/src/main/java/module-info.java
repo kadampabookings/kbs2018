@@ -39,11 +39,9 @@ module kbsx.hotel.backoffice.activities.roomsgraphic {
 
     // Exported packages
     exports org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic;
-    exports org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.routing;
-    exports org.kadampabookings.kbsx.hotel.backoffice.operations.routes.roomsgraphic;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.RoomsGraphicUiRoute;
-    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.RouteToRoomsGraphicRequestEmitter;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.RoomsGraphicRouting.RoomsGraphicUiRoute;
+    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.RoomsGraphicRouting.RouteToRoomsGraphicRequestEmitter;
 
 }

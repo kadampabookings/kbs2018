@@ -27,11 +27,9 @@ module kbsx.crm.backoffice.activities.users {
 
     // Exported packages
     exports org.kadampabookings.kbsx.crm.backoffice.activities.users;
-    exports org.kadampabookings.kbsx.crm.backoffice.activities.users.routing;
-    exports org.kadampabookings.kbsx.crm.backoffice.operations.routes.users;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.crm.backoffice.activities.users.UsersUiRoute;
-    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.crm.backoffice.activities.users.RouteToUsersRequestEmitter;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.crm.backoffice.activities.users.UsersRouting.UsersUiRoute;
+    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.crm.backoffice.activities.users.UsersRouting.RouteToUsersRequestEmitter;
 
 }

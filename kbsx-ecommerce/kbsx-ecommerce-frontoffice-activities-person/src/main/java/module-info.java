@@ -29,10 +29,8 @@ module kbsx.ecommerce.frontoffice.activities.person {
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.person;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.person.routing;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.operations.person;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.frontoffice.activities.person.PersonUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.frontoffice.activities.person.PersonRouting.PersonUiRoute;
 
 }

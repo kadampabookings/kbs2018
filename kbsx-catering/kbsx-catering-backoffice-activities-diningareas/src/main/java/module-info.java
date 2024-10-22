@@ -29,11 +29,9 @@ module kbsx.catering.backoffice.activities.diningareas {
 
     // Exported packages
     exports org.kadampabookings.kbsx.catering.backoffice.activities.diningareas;
-    exports org.kadampabookings.kbsx.catering.backoffice.activities.diningareas.routing;
-    exports org.kadampabookings.kbsx.catering.backoffice.operations.routes.diningareas;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.catering.backoffice.activities.diningareas.DiningAreasUiRoute;
-    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.catering.backoffice.activities.diningareas.RouteToDiningAreasRequestEmitter;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.catering.backoffice.activities.diningareas.DiningAreasRouting.DiningAreasUiRoute;
+    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.catering.backoffice.activities.diningareas.DiningAreasRouting.RouteToDiningAreasRequestEmitter;
 
 }

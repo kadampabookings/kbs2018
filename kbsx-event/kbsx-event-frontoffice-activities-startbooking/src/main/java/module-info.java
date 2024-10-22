@@ -28,10 +28,8 @@ module kbsx.event.frontoffice.activities.startbooking {
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.frontoffice.activities.startbooking;
-    exports org.kadampabookings.kbsx.event.frontoffice.activities.startbooking.routing;
-    exports org.kadampabookings.kbsx.event.frontoffice.operations.startbooking;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.startbooking.StartBookingUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.startbooking.StartBookingRouting.StartBookingUiRoute;
 
 }

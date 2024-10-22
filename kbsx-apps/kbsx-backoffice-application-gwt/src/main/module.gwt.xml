@@ -167,40 +167,22 @@
     <source path="org/kadampabookings/kbsx/base/shared/services/systemmetrics"/>
     <!--=================< kbsx-crm-backoffice-activities-authorizations >==================-->
     <source path="org/kadampabookings/kbsx/crm/backoffice/activities/authorizations"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/activities/authorizations/routing"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/activities/operations/authorizations"/>
     <!--=====================< kbsx-crm-backoffice-activities-letter >======================-->
     <source path="org/kadampabookings/kbsx/crm/backoffice/activities/letter"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/activities/letter/routing"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/operations/routes/letter"/>
     <!--=====================< kbsx-crm-backoffice-activities-letters >=====================-->
     <source path="org/kadampabookings/kbsx/crm/backoffice/activities/letters"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/activities/letters/routing"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/operations/routes/letters"/>
     <!--==================< kbsx-crm-backoffice-activities-organizations >==================-->
     <source path="org/kadampabookings/kbsx/crm/backoffice/activities/organizations"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/activities/organizations/routing"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/operations/routes/organizations"/>
     <!--======================< kbsx-crm-backoffice-activities-users >======================-->
     <source path="org/kadampabookings/kbsx/crm/backoffice/activities/users"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/activities/users/routing"/>
-    <source path="org/kadampabookings/kbsx/crm/backoffice/operations/routes/users"/>
     <!--==================< kbsx-ecommerce-backoffice-activities-income >===================-->
     <source path="org/kadampabookings/kbsx/ecommerce/backoffice/activities/income"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/backoffice/activities/income/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/backoffice/operations/routes/income"/>
     <!--=================< kbsx-ecommerce-backoffice-activities-payments >==================-->
     <source path="org/kadampabookings/kbsx/ecommerce/backoffice/activities/payments"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/backoffice/activities/payments/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/backoffice/operations/routes/payments"/>
     <!--================< kbsx-ecommerce-backoffice-activities-statements >=================-->
     <source path="org/kadampabookings/kbsx/ecommerce/backoffice/activities/statements"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/backoffice/activities/statements/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/backoffice/operations/routes/statements"/>
     <!--================< kbsx-ecommerce-backoffice-activities-statistics >=================-->
     <source path="org/kadampabookings/kbsx/ecommerce/backoffice/activities/statistics"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/backoffice/activities/statistics/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/backoffice/operations/routes/statistics"/>
     <!--===================< kbsx-ecommerce-client-bookingoptionspanel >====================-->
     <source path="org/kadampabookings/kbsx/ecommerce/client/controls/bookingoptionspanel"/>
     <!--======================< kbsx-ecommerce-client-bookingprocess >======================-->
@@ -216,16 +198,10 @@
     <source path="org/kadampabookings/kbsx/ecommerce/client/businesslogic/workingdocument"/>
     <!--===============< kbsx-ecommerce-frontoffice-activities-cart-routing >===============-->
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/cart/base"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/cart/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/cart"/>
     <!--==================< kbsx-ecommerce-frontoffice-activities-person >==================-->
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/person"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/person/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/person"/>
     <!--=================< kbsx-ecommerce-frontoffice-activities-summary >==================-->
     <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/summary"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/activities/summary/routing"/>
-    <source path="org/kadampabookings/kbsx/ecommerce/frontoffice/operations/summary"/>
     <!--==================< kbsx-event-backoffice-activities-cloneevent >===================-->
     <source path="org/kadampabookings/kbsx/event/backoffice/activities/cloneevent"/>
     <!--==============< kbsx-event-backoffice-activities-cloneevent-routing >===============-->
@@ -233,8 +209,6 @@
     <source path="org/kadampabookings/kbsx/event/backoffice/operations/routes/cloneevent"/>
     <!--====================< kbsx-event-backoffice-activities-events >=====================-->
     <source path="org/kadampabookings/kbsx/event/backoffice/activities/events"/>
-    <source path="org/kadampabookings/kbsx/event/backoffice/activities/events/routing"/>
-    <source path="org/kadampabookings/kbsx/event/backoffice/operations/routes/events"/>
     <!--====================< kbsx-event-backoffice-activities-options >====================-->
     <source path="org/kadampabookings/kbsx/event/backoffice/activities/options"/>
     <!--===================< kbsx-event-client-activity-eventdependent >====================-->
@@ -250,26 +224,16 @@
     <source path="org/kadampabookings/kbsx/event/client/controls/sectionpanel"/>
     <!--===================< kbsx-event-frontoffice-activities-options >====================-->
     <source path="org/kadampabookings/kbsx/event/frontoffice/activities/options"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/activities/options/routing"/>
-    <source path="org/kadampabookings/kbsx/event/frontoffice/operations/options"/>
     <!--=================< kbsx-hotel-backoffice-activities-roomsgraphic >==================-->
     <source path="org/kadampabookings/kbsx/hotel/backoffice/activities/roomsgraphic"/>
-    <source path="org/kadampabookings/kbsx/hotel/backoffice/activities/roomsgraphic/routing"/>
-    <source path="org/kadampabookings/kbsx/hotel/backoffice/operations/routes/roomsgraphic"/>
     <!--=============================< kbsx-hotel-shared-time >=============================-->
     <source path="org/kadampabookings/kbsx/hotel/shared/businessdata/time"/>
     <!--================< modality-base-backoffice-activity-filters-plugin >================-->
     <source path="one/modality/base/backoffice/activities/filters"/>
-    <source path="one/modality/base/backoffice/activities/filters/routing"/>
-    <source path="one/modality/base/backoffice/operations/routes/filters"/>
     <!--=================< modality-base-backoffice-activity-home-plugin >==================-->
     <source path="one/modality/base/backoffice/activities/home"/>
-    <source path="one/modality/base/backoffice/activities/home/routing"/>
-    <source path="one/modality/base/backoffice/operations/routes/home"/>
     <!--==============< modality-base-backoffice-activity-operations-plugin >===============-->
     <source path="one/modality/base/backoffice/activities/operations"/>
-    <source path="one/modality/base/backoffice/activities/operations/routing"/>
-    <source path="one/modality/base/backoffice/operations/routes/operations"/>
     <!--======================< modality-base-backoffice-application >======================-->
     <source path="one/modality/base/backoffice/application"/>
     <!--=====================< modality-base-backoffice-gantt-canvas >======================-->
@@ -380,6 +344,7 @@
     <!--========================< modality-base-client-time-theme >=========================-->
     <source path="one/modality/base/client/time/theme"/>
     <!--===========================< modality-base-client-util >============================-->
+    <source path="one/modality/base/client/util/dialog"/>
     <source path="one/modality/base/client/util/functions"/>
     <source path="one/modality/base/client/util/log"/>
     <source path="one/modality/base/client/util/masterslave"/>
@@ -405,8 +370,6 @@
     <source path="one/modality/base/shared/entities/triggers"/>
     <!--==============< modality-catering-backoffice-activity-kitchen-plugin >==============-->
     <source path="one/modality/catering/backoffice/activities/kitchen"/>
-    <source path="one/modality/catering/backoffice/activities/kitchen/routing"/>
-    <source path="one/modality/catering/backoffice/operations/routes/kitchen"/>
     <!--==================< modality-crm-backoffice-bookingdetailspanel >===================-->
     <source path="one/modality/crm/backoffice/controls/bookingdetailspanel"/>
     <!--====================< modality-crm-backoffice-operations-mail >=====================-->
@@ -429,8 +392,6 @@
     <source path="one/modality/crm/shared/services/authn/serial"/>
     <!--=============< modality-ecommerce-backoffice-activity-bookings-plugin >=============-->
     <source path="one/modality/ecommerce/backoffice/activities/bookings"/>
-    <source path="one/modality/ecommerce/backoffice/activities/bookings/routing"/>
-    <source path="one/modality/ecommerce/backoffice/operations/routes/bookings"/>
     <!--===============< modality-ecommerce-backoffice-operations-document >================-->
     <source path="one/modality/ecommerce/backoffice/operations/entities/document"/>
     <source path="one/modality/ecommerce/backoffice/operations/entities/document/cart"/>

@@ -6,7 +6,7 @@
     </exported-packages>
 
     <providers>
-        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment.PaymentUiRoute</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment.PaymentRouting$PaymentUiRoute</provider>
     </providers>
 
     <dependencies>

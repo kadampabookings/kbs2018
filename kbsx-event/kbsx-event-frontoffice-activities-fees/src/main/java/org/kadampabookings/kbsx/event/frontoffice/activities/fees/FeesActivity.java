@@ -7,7 +7,6 @@ import dev.webfx.extras.cell.renderer.ValueRenderingContext;
 import dev.webfx.extras.imagestore.ImageStore;
 import dev.webfx.extras.type.PrimType;
 import dev.webfx.extras.type.SpecializedTextType;
-import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.visual.*;
 import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
 import dev.webfx.extras.visual.controls.grid.VisualGrid;
@@ -37,7 +36,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import one.modality.base.client.activity.ModalityButtonFactoryMixin;
 import one.modality.base.client.entities.util.Labels;
 import one.modality.base.shared.entities.Person;
@@ -48,7 +46,7 @@ import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.Booking
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.feesgroup.FeesGroup;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.preselection.OptionsPreselection;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
-import org.kadampabookings.kbsx.event.frontoffice.operations.options.RouteToOptionsRequest;
+import org.kadampabookings.kbsx.event.frontoffice.activities.options.OptionsRouting;
 
 import java.util.function.Consumer;
 
@@ -256,6 +254,6 @@ final class FeesActivity extends BookingProcessActivity {
     }
 
     private void onBookButtonPressed(OptionsPreselection optionsPreselection) {
-        new RouteToOptionsRequest(optionsPreselection, getHistory()).execute();
+        new OptionsRouting.RouteToOptionsRequest(optionsPreselection, getHistory()).execute();
     }
 }

@@ -6,8 +6,8 @@
     </exported-packages>
 
     <providers>
-        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.IncomeUiRoute</provider>
-        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.RouteToIncomeRequestEmitter</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.IncomeRouting$IncomeUiRoute</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.IncomeRouting$RouteToIncomeRequestEmitter</provider>
     </providers>
 
     <dependencies>

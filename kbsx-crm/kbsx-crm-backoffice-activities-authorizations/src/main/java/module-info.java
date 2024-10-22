@@ -24,11 +24,9 @@ module kbsx.crm.backoffice.activities.authorizations {
 
     // Exported packages
     exports org.kadampabookings.kbsx.crm.backoffice.activities.authorizations;
-    exports org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.routing;
-    exports org.kadampabookings.kbsx.crm.backoffice.activities.operations.authorizations;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.AuthorizationsUiRoute;
-    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.RouteToAuthorizationsRequestEmitter;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.AuthorizationsRouting.AuthorizationsUiRoute;
+    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.AuthorizationsRouting.RouteToAuthorizationsRequestEmitter;
 
 }

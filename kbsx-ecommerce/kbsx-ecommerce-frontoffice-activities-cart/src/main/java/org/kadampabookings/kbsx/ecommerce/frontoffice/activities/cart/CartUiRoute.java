@@ -1,6 +1,6 @@
 package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart;
 
-import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.routing.CartRouting;
+import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.base.CartRouting;
 import dev.webfx.stack.orm.domainmodel.activity.viewdomain.impl.ViewDomainActivityContextFinal;
 import dev.webfx.stack.routing.uirouter.UiRoute;
 import dev.webfx.stack.routing.uirouter.impl.UiRouteImpl;

@@ -20,7 +20,6 @@ module kbsx.event.frontoffice.activities.fees {
     requires webfx.extras.cell;
     requires webfx.extras.imagestore;
     requires webfx.extras.type;
-    requires webfx.extras.util.layout;
     requires webfx.extras.visual;
     requires webfx.extras.visual.grid;
     requires webfx.kit.util;
@@ -39,10 +38,8 @@ module kbsx.event.frontoffice.activities.fees {
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.frontoffice.activities.fees;
-    exports org.kadampabookings.kbsx.event.frontoffice.activities.fees.routing;
-    exports org.kadampabookings.kbsx.event.frontoffice.operations.fees;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.fees.FeesUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.fees.FeesRouting.FeesUiRoute;
 
 }

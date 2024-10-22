@@ -19,10 +19,8 @@ module kbsx.event.frontoffice.activities.program {
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.frontoffice.activities.program;
-    exports org.kadampabookings.kbsx.event.frontoffice.activities.program.routing;
-    exports org.kadampabookings.kbsx.event.frontoffice.operations.program;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.program.ProgramUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.program.ProgramRouting.ProgramUiRoute;
 
 }

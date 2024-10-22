@@ -22,10 +22,10 @@ import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.Booking
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocumentSubmitter;
 import org.kadampabookings.kbsx.ecommerce.client.controls.bookingoptionspanel.BookingOptionsPanel;
+import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.base.CartRouting;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
 import one.modality.base.client.validation.ModalityValidationSupport;
 import one.modality.base.shared.entities.Cart;
-import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.cart.RouteToCartRequest;
 import org.kadampabookings.kbsx.event.client.controls.bookingcalendar.BookingCalendar;
 
 /**
@@ -142,7 +142,7 @@ final class SummaryActivity extends BookingProcessActivity {
                             document = workingDocument.getDocument();
                             cart = document.getCart();
                         }
-                        new RouteToCartRequest(cart.getUuid(), getHistory()).execute();
+                        new CartRouting.RouteToCartRequest(cart.getUuid(), getHistory()).execute();
                     });
     }
 }

@@ -15,10 +15,8 @@ module kbsx.crm.backoffice.activities.letter {
 
     // Exported packages
     exports org.kadampabookings.kbsx.crm.backoffice.activities.letter;
-    exports org.kadampabookings.kbsx.crm.backoffice.activities.letter.routing;
-    exports org.kadampabookings.kbsx.crm.backoffice.operations.routes.letter;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.crm.backoffice.activities.letter.LetterUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.crm.backoffice.activities.letter.LetterRouting.LetterUiRoute;
 
 }

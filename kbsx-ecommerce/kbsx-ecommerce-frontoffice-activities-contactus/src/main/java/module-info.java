@@ -24,10 +24,8 @@ module kbsx.ecommerce.frontoffice.activities.contactus {
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.contactus;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.contactus.routing;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.operations.contactus;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.frontoffice.activities.contactus.ContactUsUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.frontoffice.activities.contactus.ContactUsRouting.ContactUsUiRoute;
 
 }

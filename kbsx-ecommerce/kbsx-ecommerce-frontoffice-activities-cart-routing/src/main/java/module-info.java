@@ -20,7 +20,5 @@ module kbsx.ecommerce.frontoffice.activities.cart.routing {
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.base;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.routing;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.operations.cart;
 
 }

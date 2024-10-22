@@ -20,11 +20,9 @@ module kbsx.event.backoffice.activities.events {
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.backoffice.activities.events;
-    exports org.kadampabookings.kbsx.event.backoffice.activities.events.routing;
-    exports org.kadampabookings.kbsx.event.backoffice.operations.routes.events;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.backoffice.activities.events.EventsUiRoute;
-    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.event.backoffice.activities.events.RouteToEventsRequestEmitter;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.backoffice.activities.events.EventsRouting.EventsUiRoute;
+    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.event.backoffice.activities.events.EventsRouting.RouteToEventsRequestEmitter;
 
 }

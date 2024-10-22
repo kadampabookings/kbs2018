@@ -31,10 +31,8 @@ module kbsx.ecommerce.frontoffice.activities.payment {
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment.routing;
-    exports org.kadampabookings.kbsx.ecommerce.frontoffice.operations.payment;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment.PaymentUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment.PaymentRouting.PaymentUiRoute;
 
 }

@@ -34,10 +34,8 @@ module kbsx.event.frontoffice.activities.options {
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.frontoffice.activities.options;
-    exports org.kadampabookings.kbsx.event.frontoffice.activities.options.routing;
-    exports org.kadampabookings.kbsx.event.frontoffice.operations.options;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.options.OptionsUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.options.OptionsRouting.OptionsUiRoute;
 
 }

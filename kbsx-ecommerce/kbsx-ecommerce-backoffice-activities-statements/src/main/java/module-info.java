@@ -28,11 +28,9 @@ module kbsx.ecommerce.backoffice.activities.statements {
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.backoffice.activities.statements;
-    exports org.kadampabookings.kbsx.ecommerce.backoffice.activities.statements.routing;
-    exports org.kadampabookings.kbsx.ecommerce.backoffice.operations.routes.statements;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.backoffice.activities.statements.StatementsUiRoute;
-    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.ecommerce.backoffice.activities.statements.RouteToStatementsRequestEmitter;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.backoffice.activities.statements.StatementsRouting.StatementsUiRoute;
+    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.ecommerce.backoffice.activities.statements.StatementsRouting.RouteToStatementsRequestEmitter;
 
 }

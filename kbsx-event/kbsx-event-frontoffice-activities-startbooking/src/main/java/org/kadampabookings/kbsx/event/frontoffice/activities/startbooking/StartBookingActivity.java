@@ -23,10 +23,10 @@ import one.modality.base.client.entities.util.Labels;
 import org.kadampabookings.kbsx.base.client.actions.ModalityActions;
 import org.kadampabookings.kbsx.base.shared.entities.Event;
 import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.BookingProcessActivity;
-import org.kadampabookings.kbsx.event.frontoffice.operations.fees.RouteToFeesRequest;
-import org.kadampabookings.kbsx.event.frontoffice.operations.options.RouteToOptionsRequest;
-import org.kadampabookings.kbsx.event.frontoffice.operations.program.RouteToProgramRequest;
-import org.kadampabookings.kbsx.event.frontoffice.operations.terms.RouteToTermsRequest;
+import org.kadampabookings.kbsx.event.frontoffice.activities.fees.FeesRouting;
+import org.kadampabookings.kbsx.event.frontoffice.activities.options.OptionsRouting;
+import org.kadampabookings.kbsx.event.frontoffice.activities.program.ProgramRouting;
+import org.kadampabookings.kbsx.event.frontoffice.activities.terms.TermsRouting;
 
 /**
  * @author Bruno Salmon
@@ -110,18 +110,18 @@ final class StartBookingActivity extends BookingProcessActivity {
     }
 
     private void onProgramButtonPressed() {
-        new RouteToProgramRequest(getEventId(), getHistory()).execute();
+        new ProgramRouting.RouteToProgramRequest(getEventId(), getHistory()).execute();
     }
 
     private void onTermsButtonPressed() {
-        new RouteToTermsRequest(getEventId(), getHistory()).execute();
+        new TermsRouting.RouteToTermsRequest(getEventId(), getHistory()).execute();
     }
 
     private void onFeesButtonPressed() {
-        new RouteToFeesRequest(getEventId(), getHistory()).execute();
+        new FeesRouting.RouteToFeesRequest(getEventId(), getHistory()).execute();
     }
 
     private void onBookButtonPressed() {
-        new RouteToOptionsRequest(getEventId(), getHistory()).execute();
+        new OptionsRouting.RouteToOptionsRequest(getEventId(), getHistory()).execute();
     }
 }

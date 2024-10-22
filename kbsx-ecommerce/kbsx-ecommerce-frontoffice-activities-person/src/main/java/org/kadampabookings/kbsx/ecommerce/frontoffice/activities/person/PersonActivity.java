@@ -17,7 +17,7 @@ import javafx.scene.layout.VBox;
 import one.modality.crm.client.controls.personaldetails.BookingPersonalDetailsPanel;
 import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.BookingProcessActivity;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
-import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.summary.RouteToSummaryRequest;
+import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.summary.SummaryRouting;
 
 /**
  * @author Bruno Salmon
@@ -85,7 +85,7 @@ final class PersonActivity extends BookingProcessActivity {
     @Override
     protected void onNextButtonPressed(ActionEvent event) {
         if (personalDetailsPanel.isValid())
-            new RouteToSummaryRequest(getEventId(), getHistory()).execute();
+            new SummaryRouting.RouteToSummaryRequest(getEventId(), getHistory()).execute();
     }
 
     @Override

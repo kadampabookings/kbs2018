@@ -6,8 +6,8 @@
     </exported-packages>
 
     <providers>
-        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.AuthorizationsUiRoute</provider>
-        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.RouteToAuthorizationsRequestEmitter</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.AuthorizationsRouting$AuthorizationsUiRoute</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbsx.crm.backoffice.activities.authorizations.AuthorizationsRouting$RouteToAuthorizationsRequestEmitter</provider>
     </providers>
 
     <dependencies>

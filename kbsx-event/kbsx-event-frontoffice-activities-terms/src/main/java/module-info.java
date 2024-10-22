@@ -21,10 +21,8 @@ module kbsx.event.frontoffice.activities.terms {
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.frontoffice.activities.terms;
-    exports org.kadampabookings.kbsx.event.frontoffice.activities.terms.routing;
-    exports org.kadampabookings.kbsx.event.frontoffice.operations.terms;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.terms.TermsUiRoute;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.event.frontoffice.activities.terms.TermsRouting.TermsUiRoute;
 
 }

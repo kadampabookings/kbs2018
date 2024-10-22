@@ -26,11 +26,9 @@ module kbsx.ecommerce.backoffice.activities.income {
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.backoffice.activities.income;
-    exports org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.routing;
-    exports org.kadampabookings.kbsx.ecommerce.backoffice.operations.routes.income;
 
     // Provided services
-    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.IncomeUiRoute;
-    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.RouteToIncomeRequestEmitter;
+    provides dev.webfx.stack.routing.uirouter.UiRoute with org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.IncomeRouting.IncomeUiRoute;
+    provides dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter with org.kadampabookings.kbsx.ecommerce.backoffice.activities.income.IncomeRouting.RouteToIncomeRequestEmitter;
 
 }

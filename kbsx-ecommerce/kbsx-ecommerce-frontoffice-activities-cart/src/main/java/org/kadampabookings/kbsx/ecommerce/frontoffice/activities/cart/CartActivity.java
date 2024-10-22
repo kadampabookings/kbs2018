@@ -44,11 +44,11 @@ import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.Wo
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocumentsByCartStore;
 import org.kadampabookings.kbsx.ecommerce.client.controls.bookingoptionspanel.BookingOptionsPanel;
 import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.base.CartBasedActivity;
-import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.contactus.RouteToContactUsRequest;
-import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.payment.RouteToPaymentRequest;
+import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.contactus.ContactUsRouting;
+import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment.PaymentRouting;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
-import org.kadampabookings.kbsx.event.frontoffice.operations.options.RouteToOptionsRequest;
-import org.kadampabookings.kbsx.event.frontoffice.operations.startbooking.RouteToStartBookingRequest;
+import org.kadampabookings.kbsx.event.frontoffice.activities.options.OptionsRouting;
+import org.kadampabookings.kbsx.event.frontoffice.activities.startbooking.StartBookingRouting;
 
 import java.util.List;
 
@@ -303,7 +303,7 @@ final class CartActivity extends CartBasedActivity {
     }
 
     private void modifyBooking() {
-        new RouteToOptionsRequest(selectedWorkingDocument, getHistory()).execute();
+        new OptionsRouting.RouteToOptionsRequest(selectedWorkingDocument, getHistory()).execute();
         setSelectedWorkingDocument(null);
     }
 
@@ -327,7 +327,7 @@ final class CartActivity extends CartBasedActivity {
     }
 
     private void contactUs() {
-        new RouteToContactUsRequest(selectedWorkingDocument.getDocument(), getHistory()).execute();
+        new ContactUsRouting.RouteToContactUsRequest(selectedWorkingDocument.getDocument(), getHistory()).execute();
     }
 
 /*
@@ -338,7 +338,7 @@ final class CartActivity extends CartBasedActivity {
 */
 
     private void addAnotherBooking() {
-        new RouteToStartBookingRequest(getEventId(), getHistory()).execute();
+        new StartBookingRouting.RouteToStartBookingRequest(getEventId(), getHistory()).execute();
     }
 
     @Override
@@ -348,7 +348,7 @@ final class CartActivity extends CartBasedActivity {
     }
 
     private void makePayment() {
-        new RouteToPaymentRequest(getCartUuid(), getHistory()).execute();
+        new PaymentRouting.RouteToPaymentRequest(getCartUuid(), getHistory()).execute();
     }
 
     private void showPayments() {

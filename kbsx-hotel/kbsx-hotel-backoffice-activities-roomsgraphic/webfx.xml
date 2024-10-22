@@ -6,8 +6,8 @@
     </exported-packages>
 
     <providers>
-        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.RoomsGraphicUiRoute</provider>
-        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.RouteToRoomsGraphicRequestEmitter</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.UiRoute">org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.RoomsGraphicRouting$RoomsGraphicUiRoute</provider>
+        <provider interface="dev.webfx.stack.routing.uirouter.operations.RouteRequestEmitter">org.kadampabookings.kbsx.hotel.backoffice.activities.roomsgraphic.RoomsGraphicRouting$RouteToRoomsGraphicRequestEmitter</provider>
     </providers>
 
     <dependencies>

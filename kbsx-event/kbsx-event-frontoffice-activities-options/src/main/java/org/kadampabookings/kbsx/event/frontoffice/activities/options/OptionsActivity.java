@@ -13,9 +13,9 @@ import org.kadampabookings.kbsx.ecommerce.client.activity.bookingprocess.Booking
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.feesgroup.FeesGroup;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.preselection.OptionsPreselection;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
+import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.person.PersonRouting;
 import org.kadampabookings.kbsx.event.client.controls.bookingcalendar.BookingCalendar;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
-import org.kadampabookings.kbsx.ecommerce.frontoffice.operations.person.RouteToPersonRequest;
 import dev.webfx.extras.panes.FlexPane;
 import dev.webfx.platform.uischeduler.UiScheduler;
 import dev.webfx.platform.console.Console;
@@ -152,6 +152,6 @@ public class OptionsActivity extends BookingProcessActivity {
     @Override
     protected void onNextButtonPressed(ActionEvent event) {
         if (optionTree.getValidationSupport().isValid())
-            new RouteToPersonRequest(getEventId(), getHistory()).execute();
+            new PersonRouting.RouteToPersonRequest(getEventId(), getHistory()).execute();
     }
 }
