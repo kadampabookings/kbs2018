@@ -282,11 +282,15 @@
     <source path="one/modality/crm/shared/services/authn/fx"/>
     <!--===================< modality-crm-client-authz-required-plugin >====================-->
     <source path="one/modality/crm/client/services/authz"/>
+    <!--============================< modality-crm-client-i18n >============================-->
+    <source path="one/modality/crm/client/i18n"/>
     <!--======================< modality-crm-client-personaldetails >=======================-->
     <source path="one/modality/crm/client/controls/personaldetails"/>
     <!--===========================< modality-crm-shared-authn >============================-->
     <source path="one/modality/crm/shared/services/authn"/>
     <source path="one/modality/crm/shared/services/authn/serial"/>
+    <!--=========================< modality-ecommerce-client-i18n >=========================-->
+    <source path="one/modality/ecommerce/client/i18n"/>
     <!--=================< modality-event-client-activity-eventdependent >==================-->
     <source path="one/modality/event/client/activity/eventdependent"/>
     <!--=========================< modality-event-client-event-fx >=========================-->

@@ -30,6 +30,7 @@ import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelF
  * @author Bruno Salmon
  */
 public final class LoginPanel implements ModalityButtonFactoryMixin {
+
     private final Node node;
     private final TextField usernameField;
     private final PasswordField passwordField;
@@ -38,33 +39,33 @@ public final class LoginPanel implements ModalityButtonFactoryMixin {
     private final ModalityValidationSupport validationSupport = new ModalityValidationSupport();
 
     public LoginPanel() {
-        BorderPane loginWindow = SectionPanelFactory.createSectionPanel("SignInWindowTitle");
+        BorderPane loginWindow = SectionPanelFactory.createSectionPanel("SignInWindowTitle"); // ???
         Hyperlink hyperLink = newHyperlink("ForgotPassword?", e -> signInMode.setValue(!signInMode.getValue()));
         GridPane gridPane;
         loginWindow.setCenter(
-                gridPane = new GridPaneBuilder()
-                        .addNodeFillingRow(usernameField = newMaterialTextField("Email"))
-                        .addNodeFillingRow(passwordField = newMaterialPasswordField("Password"))
-                        .addNewRow(hyperLink)
-                        .addNodeFillingRow(button = newLargeGreenButton(null))
-                        .build()
+            gridPane = new GridPaneBuilder()
+                .addNodeFillingRow(usernameField = newMaterialTextField("Email")) // ???
+                .addNodeFillingRow(passwordField = newMaterialPasswordField("Password")) // ???
+                .addNewRow(hyperLink)
+                .addNodeFillingRow(button = newLargeGreenButton(null))
+                .build()
         );
         gridPane.setPadding(new Insets(20));
         GridPane.setHalignment(hyperLink, HPos.CENTER);
         hyperLink.setOnAction(e -> signInMode.setValue(!signInMode.getValue()));
         LayoutUtil.setUnmanagedWhenInvisible(passwordField, signInMode);
         FXProperties.runNowAndOnPropertiesChange(() ->
-                        I18nControls.bindI18nProperties(button, signInMode.getValue() ? "SignIn>>" : "SendPassword>>")
-                , signInMode);
+                I18nControls.bindI18nProperties(button, signInMode.getValue() ? "SignIn>>" : "SendPassword>>") // ???
+            , signInMode);
         node = LayoutUtil.createGoldLayout(loginWindow);
         initValidation();
         button.setOnAction(event -> {
             if (validationSupport.isValid())
                 new AuthenticationRequest()
-                        .setUserCredentials(new UsernamePasswordCredentials(usernameField.getText(), passwordField.getText()))
-                        .executeAsync()
-                        .onFailure(cause -> Animations.shake(loginWindow))
-                        .onSuccess(FXUserPrincipal::setUserPrincipal);
+                    .setUserCredentials(new UsernamePasswordCredentials(usernameField.getText(), passwordField.getText()))
+                    .executeAsync()
+                    .onFailure(cause -> Animations.shake(loginWindow))
+                    .onSuccess(FXUserPrincipal::setUserPrincipal);
         });
         prepareShowing();
     }
