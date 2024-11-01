@@ -1,5 +1,8 @@
 package org.kadampabookings.kbsx.event.client.controls.sectionpanel;
 
+import dev.webfx.extras.cell.collator.NodeCollatorRegistry;
+import dev.webfx.extras.util.background.BackgroundFactory;
+import dev.webfx.extras.util.border.BorderFactory;
 import dev.webfx.stack.i18n.controls.I18nControls;
 import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
@@ -8,11 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
-import org.kadampabookings.kbsx.event.client.controls.bookingcalendar.BookingCalendar;
 import org.kadampabookings.kbsx.base.client.icons.ModalityIcons;
-import dev.webfx.extras.util.background.BackgroundFactory;
-import dev.webfx.extras.util.border.BorderFactory;
-import dev.webfx.extras.cell.collator.NodeCollatorRegistry;
+import org.kadampabookings.kbsx.event.client.controls.bookingcalendar.BookingCalendar;
 
 import static dev.webfx.stack.ui.json.JsonImageView.createImageView;
 
@@ -48,7 +48,8 @@ public final class SectionPanelFactory {
     }
 
     public static BorderPane createSectionPanel(String iconImageUrl, Object i18nKey) {
-        return createSectionPanelWithHeaderNodes(createImageView(iconImageUrl), I18nControls.bindI18nProperties(new Label(), i18nKey));
+        Label label = I18nControls.newLabel(i18nKey);
+        return createSectionPanelWithHeaderNodes(createImageView(iconImageUrl), label);
     }
 
     public static BorderPane createSectionPanelWithHeaderNodes(Node... headerNodes) {
