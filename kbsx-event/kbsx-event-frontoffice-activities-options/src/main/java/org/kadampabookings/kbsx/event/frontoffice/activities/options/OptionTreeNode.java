@@ -1,5 +1,13 @@
 package org.kadampabookings.kbsx.event.frontoffice.activities.options;
 
+import dev.webfx.extras.imagestore.ImageStore;
+import dev.webfx.extras.util.layout.LayoutUtil;
+import dev.webfx.kit.util.properties.FXProperties;
+import dev.webfx.platform.util.Booleans;
+import dev.webfx.platform.util.Objects;
+import dev.webfx.platform.util.collection.Collections;
+import dev.webfx.stack.i18n.I18n;
+import dev.webfx.stack.orm.entity.controls.entity.selector.EntityButtonSelector;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -17,22 +25,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import one.modality.base.client.entities.util.Labels;
-import org.kadampabookings.kbsx.base.client.icons.ModalityIcons;
 import one.modality.base.shared.entities.Label;
+import org.kadampabookings.kbsx.base.client.icons.ModalityIcons;
 import org.kadampabookings.kbsx.base.shared.entities.Option;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocumentLine;
 import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocumentTransaction;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
 import org.kadampabookings.kbsx.hotel.shared.businessdata.time.DateTimeRange;
-import dev.webfx.stack.i18n.I18n;
-import dev.webfx.stack.orm.entity.controls.entity.selector.EntityButtonSelector;
-import dev.webfx.extras.util.layout.LayoutUtil;
-import dev.webfx.kit.util.properties.FXProperties;
-import dev.webfx.extras.imagestore.ImageStore;
-import dev.webfx.platform.util.Booleans;
-import dev.webfx.platform.util.Objects;
-import dev.webfx.platform.util.collection.Collections;
 
 import java.io.Closeable;
 import java.util.ArrayList;
@@ -173,7 +173,7 @@ final class OptionTreeNode {
         checkBoxView.setFitWidth(16d);
         checkBoxView.setFitHeight(16d);
         checkBoxView.imageProperty().bind(FXProperties.compute(optionButtonSelectedProperty, selected ->
-                ImageStore.getOrCreateImage(selected ? ModalityIcons.checkedIcon16Url : ModalityIcons.uncheckedIcon16Url)));
+            ImageStore.getOrCreateImage(selected ? ModalityIcons.checkedIcon16Url : ModalityIcons.uncheckedIcon16Url)));
         ObservableList<Node> hBoxChildren = ((HBox) topLevelOptionButton.getTop()).getChildren();
         // Adding the checkbox before the already present icon and text
         hBoxChildren.add(0, checkBoxView);
@@ -194,8 +194,8 @@ final class OptionTreeNode {
 
     private BorderPane createTopLevelOptionSection(boolean detailed) {
         BorderPane sectionPanel = SectionPanelFactory.createSectionPanelWithHeaderNodes(Collections.toArray(
-                createOptionPanelHeaderNodes(Labels.translateLabel(Labels.bestLabelOrName(option)))
-                , Node[]::new));
+            createOptionPanelHeaderNodes(Labels.translateLabel(Labels.bestLabelOrName(option)))
+            , Node[]::new));
         createOptionButtonAndSelectedProperty();
         if (detailed) {
             createOptionBodyPane();
@@ -233,11 +233,11 @@ final class OptionTreeNode {
             if ("select".equals(option.getLayout())) {
                 OptionsActivity activity = tree.getActivity();
                 childrenOptionSelector = new EntityButtonSelector<>(
-                        // Note: translationOption() expression function has been registered in OptionTree constructor
-                        "{class: 'Option', fields: 'site,item', columns: ['translateOption(this)'], where: 'parent=" + option.getPrimaryKey() + " and online and site!=null', orderBy: 'ord'}",
-                        activity,
-                        () -> (Pane) activity.getNode(), // passing the parent getter for a future access because it is not immediately available (since we haven't yet finished building the activity UI)
-                        activity.getDataSourceModel());
+                    // Note: translationOption() expression function has been registered in OptionTree constructor
+                    "{class: 'Option', fields: 'site,item', columns: ['translateOption(this)'], where: 'parent=" + option.getPrimaryKey() + " and online and site!=null', orderBy: 'ord'}",
+                    activity,
+                    () -> (Pane) activity.getNode(), // passing the parent getter for a future access because it is not immediately available (since we haven't yet finished building the activity UI)
+                    activity.getDataSourceModel());
                 childrenOptionSelector.setRestrictedFilterList(new ArrayList<>());
                 Node selectNode = childrenOptionSelector.toMaterialButton(null, Labels.translateLabel(option.getChildrenPromptLabel()));
                 optionBodyChildren.add(selectNode);
@@ -282,14 +282,10 @@ final class OptionTreeNode {
                 }
             } else if (optionSelector != null) {
                 optionSelector.getRestrictedFilterList().add(option);
-                optionButtonSelectedProperty = new SimpleBooleanProperty(false) {
-                    @Override
-                    protected void invalidated() {
-                        if (get())
-                            optionSelector.setSelectedItem(option);
-                        //Logger.log(bestTranslationOrName(option) + ": " + getValue());
-                    }
-                };
+                optionButtonSelectedProperty = FXProperties.newBooleanProperty(selected -> {
+                    if (selected)
+                        optionSelector.setSelectedItem(option);
+                });
                 FXProperties.runOnPropertiesChange(p -> setOptionButtonSelected(p.getValue() == option), optionSelector.selectedItemProperty());
                 optionButton = null;
             } else {
@@ -361,7 +357,7 @@ final class OptionTreeNode {
                     childAdded = lastSelectedChildOptionTreeNode.syncModel(true);
             }
             if (multipleSelection || !childAdded && option.getParsedTimeRangeOrParent() != null)
-                for (OptionTreeNode childTreeNode: childrenOptionTreeNodes) {
+                for (OptionTreeNode childTreeNode : childrenOptionTreeNodes) {
                     childAdded = childTreeNode.syncModel(true);
                     if (childAdded && singleSelection)
                         break;
@@ -437,7 +433,7 @@ final class OptionTreeNode {
 
     private boolean hasVisibleOptionBody() {
         return hasPaneVisibleContent(optionBodyPane)
-            || Collections.anyMatch(childrenOptionTreeNodes, OptionTreeNode::isVisibleAndHasVisibleOptionBody);
+               || Collections.anyMatch(childrenOptionTreeNodes, OptionTreeNode::isVisibleAndHasVisibleOptionBody);
     }
 
     private boolean isVisibleAndHasVisibleOptionBody() {
@@ -450,7 +446,7 @@ final class OptionTreeNode {
 
     private boolean isNodeVisibleAndHasVisibleContent(Node node) {
         return (node.isVisible() || node.getProperties().get("visiblePropertyOptionTreeNode") == this)
-                && (!(node instanceof Pane) || hasPaneVisibleContent((Pane) node));
+               && (!(node instanceof Pane) || hasPaneVisibleContent((Pane) node));
     }
 
     /*******************************************************************************************************************

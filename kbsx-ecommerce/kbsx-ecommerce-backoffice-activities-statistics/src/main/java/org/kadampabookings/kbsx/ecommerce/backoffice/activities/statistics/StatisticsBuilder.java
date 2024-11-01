@@ -1,20 +1,20 @@
 package org.kadampabookings.kbsx.ecommerce.backoffice.activities.statistics;
 
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.Property;
-import javafx.beans.property.SimpleObjectProperty;
-import one.modality.base.shared.entities.Attendance;
-import one.modality.base.shared.entities.DocumentLine;
 import dev.webfx.extras.type.PrimType;
 import dev.webfx.extras.visual.VisualColumn;
 import dev.webfx.extras.visual.VisualResult;
 import dev.webfx.extras.visual.VisualResultBuilder;
 import dev.webfx.extras.visual.VisualStyle;
-import dev.webfx.stack.orm.reactive.entities.entities_to_grid.EntityColumn;
-import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.ReactiveVisualMapper;
+import dev.webfx.kit.util.properties.FXProperties;
+import dev.webfx.platform.util.time.Times;
 import dev.webfx.stack.orm.entity.EntityList;
 import dev.webfx.stack.orm.expression.Expression;
-import dev.webfx.platform.util.time.Times;
+import dev.webfx.stack.orm.reactive.entities.entities_to_grid.EntityColumn;
+import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.ReactiveVisualMapper;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.Property;
+import one.modality.base.shared.entities.Attendance;
+import one.modality.base.shared.entities.DocumentLine;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -27,18 +27,8 @@ public class StatisticsBuilder {
     private final ReactiveVisualMapper<Attendance> rightAttendanceVisualMapper;
     private final Property<VisualResult> finalVisualResultProperty;
 
-    private final ObjectProperty<VisualResult> leftVisualResultProperty = new SimpleObjectProperty<VisualResult/*GWT*/>() {
-        @Override
-        protected void invalidated() {
-            buildFinalVisualResultIfReady();
-        }
-    };
-    private final ObjectProperty<VisualResult> rightVisualResultProperty = new SimpleObjectProperty<VisualResult/*GWT*/>() {
-        @Override
-        protected void invalidated() {
-            buildFinalVisualResultIfReady();
-        }
-    };
+    private final ObjectProperty<VisualResult> leftVisualResultProperty = FXProperties.newObjectProperty(this::buildFinalVisualResultIfReady);
+    private final ObjectProperty<VisualResult> rightVisualResultProperty = FXProperties.newObjectProperty(this::buildFinalVisualResultIfReady);
 
     private VisualResult lastLeftResult, lastRightResult;
     private boolean settingFinalResult;

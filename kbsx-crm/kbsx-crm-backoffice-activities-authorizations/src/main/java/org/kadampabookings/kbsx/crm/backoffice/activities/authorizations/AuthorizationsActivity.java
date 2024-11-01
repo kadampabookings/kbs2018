@@ -35,11 +35,10 @@ final class AuthorizationsActivity extends ViewDomainActivityBase implements Mod
 
     enum AuthorizationTab { ROLES, ROUTES, OPERATIONS, RULES, STATES }
 
-    private final ObjectProperty<AuthorizationTab> selectedTabProperty = new SimpleObjectProperty<>() {
-        @Override
-        protected void invalidated() {
+    private ReactiveVisualMapper<Entity> assignmentVisualMapper;
+    private final ObjectProperty<AuthorizationTab> selectedTabProperty = FXProperties.newObjectProperty(selectedTab -> {
             String columns = null;
-            switch (get()) {
+            switch (selectedTab) {
                 case ROLES: columns = rolesAssignmentColumns; break;
                 case ROUTES: columns = routesAssignmentColumns; break;
                 case OPERATIONS: columns = operationsAssignmentColumns; break;
@@ -48,8 +47,7 @@ final class AuthorizationsActivity extends ViewDomainActivityBase implements Mod
             }
             assignmentVisualMapper.setEntityColumns(columns); // Note: this change only doesn't trigger a new server call (TODO: fix this)
             // But assignmentVisualMapper is reacting to selectedTabProperty, so it will call the server in the end.
-        }
-    };
+        });
 
     private final TabsBar<AuthorizationTab> headerTabsBar = new TabsBar<>(this, selectedTabProperty::set);
     private final VisualGrid manageesGrid = new VisualGrid();
@@ -93,8 +91,6 @@ final class AuthorizationsActivity extends ViewDomainActivityBase implements Mod
         super.onPause();
     }
 
-
-    private ReactiveVisualMapper<Entity> assignmentVisualMapper;
 
     protected void startLogic() {
 
