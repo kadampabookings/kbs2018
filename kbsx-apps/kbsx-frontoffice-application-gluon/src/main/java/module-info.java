@@ -3,12 +3,14 @@
 module kbsx.frontoffice.application.gluon {
 
     // Direct dependencies modules
+    requires javafx.media;
     requires javafx.web;
     requires kbsx.frontoffice.application;
     requires webfx.extras.visual.grid.peers.openjfx;
     requires webfx.extras.webtext.peers.openjfx;
     requires webfx.kit.javafxgraphics.openjfx;
     requires webfx.platform.ast.factory.generic;
+    requires webfx.platform.audio.gluon;
     requires webfx.platform.boot.java;
     requires webfx.platform.browser.gluon;
     requires webfx.platform.console.java;

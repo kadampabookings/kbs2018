@@ -3,6 +3,7 @@
 module kbsx.frontoffice.application.openjfx {
 
     // Direct dependencies modules
+    requires javafx.media;
     requires javafx.web;
     requires kbsx.frontoffice.application;
     requires webfx.extras.visual.grid.peers.openjfx;

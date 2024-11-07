@@ -68,12 +68,18 @@
     <source path="javafx/scene/text"/>
     <source path="javafx/scene/transform"/>
     <source path="javafx/stage"/>
+    <!--===========================< webfx-kit-javafxmedia-emul >===========================-->
+    <source path="dev/webfx/kit/mapper/peers/javafxmedia"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxmedia/spi"/>
+    <source path="javafx/scene/media"/>
     <!--============================< webfx-kit-javafxweb-emul >============================-->
     <source path="javafx/scene/web"/>
     <!--================================< elemental2-core >=================================-->
     <inherits name="elemental2.core.Core"/>
     <!--=================================< elemental2-dom >=================================-->
     <inherits name="elemental2.dom.Dom"/>
+    <!--================================< elemental2-media >================================-->
+    <inherits name="elemental2.media.Media"/>
     <!--===============================< elemental2-promise >===============================-->
     <inherits name="elemental2.promise.Promise"/>
     <!--=================================< elemental2-svg >=================================-->
@@ -296,6 +302,8 @@
     <source path="one/modality/event/client/activity/eventdependent"/>
     <!--=========================< modality-event-client-event-fx >=========================-->
     <source path="one/modality/event/client/event/fx"/>
+    <!--========================< modality-event-client-mediaview >=========================-->
+    <source path="one/modality/event/client/mediaview"/>
     <!--===============================< webfx-extras-cell >================================-->
     <source path="dev/webfx/extras/cell/collator"/>
     <source path="dev/webfx/extras/cell/renderer"/>
@@ -307,6 +315,25 @@
     <!--===============================< webfx-extras-panes >===============================-->
     <source path="dev/webfx/extras/panes"/>
     <source path="dev/webfx/extras/panes/transitions"/>
+    <!--==============================< webfx-extras-player >===============================-->
+    <source path="dev/webfx/extras/player"/>
+    <source path="dev/webfx/extras/player/impl"/>
+    <source path="dev/webfx/extras/player/multi"/>
+    <!--=====================< webfx-extras-player-audio-javafxmedia >======================-->
+    <source path="dev/webfx/extras/player/audio/javafxmedia"/>
+    <!--=========================< webfx-extras-player-multi-all >==========================-->
+    <source path="dev/webfx/extras/player/multi/all"/>
+    <!--===========================< webfx-extras-player-video >============================-->
+    <source path="dev/webfx/extras/player/video"/>
+    <source path="dev/webfx/extras/player/video/impl"/>
+    <!--=========================< webfx-extras-player-video-web >==========================-->
+    <source path="dev/webfx/extras/player/video/web"/>
+    <!--======================< webfx-extras-player-video-web-castr >=======================-->
+    <source path="dev/webfx/extras/player/video/web/castr"/>
+    <!--======================< webfx-extras-player-video-web-wistia >======================-->
+    <source path="dev/webfx/extras/player/video/web/wistia"/>
+    <!--=====================< webfx-extras-player-video-web-youtube >======================-->
+    <source path="dev/webfx/extras/player/video/web/youtube"/>
     <!--=========================< webfx-extras-styles-bootstrap >==========================-->
     <source path="dev/webfx/extras/styles/bootstrap"/>
     <!--=======================< webfx-extras-styles-materialdesign >=======================-->
@@ -368,6 +395,10 @@
     <source path="dev/webfx/extras/webtext/registry"/>
     <!--===========================< webfx-extras-webtext-util >============================-->
     <source path="dev/webfx/extras/webtext/util"/>
+    <!--===========================< webfx-extras-webview-pane >============================-->
+    <source path="dev/webfx/extras/webview/pane"/>
+    <resource path="dev/webfx/extras/webview/pane"/>
+    <public path="" includes="dev/webfx/extras/webview/pane/"/>
     <!--======================< webfx-kit-javafxcontrols-peers-base >=======================-->
     <source path="dev/webfx/kit/mapper/peers/javafxcontrols/base"/>
     <!--====================< webfx-kit-javafxcontrols-peers-gwt-j2cl >=====================-->
@@ -390,6 +421,10 @@
     <source path="dev/webfx/kit/mapper/peers/javafxgraphics/gwtj2cl/util"/>
     <!--===================< webfx-kit-javafxgraphics-registry-gwt-j2cl >===================-->
     <source path="dev/webfx/kit/registry/javafxgraphics"/>
+    <!--======================< webfx-kit-javafxmedia-peers-gwt-j2cl >======================-->
+    <source path="dev/webfx/kit/mapper/peers/javafxmedia/spi/gwtj2cl"/>
+    <!--====================< webfx-kit-javafxmedia-registry-gwt-j2cl >=====================-->
+    <source path="dev/webfx/kit/registry/javafxmedia"/>
     <!--=========================< webfx-kit-javafxweb-enginepeer >=========================-->
     <source path="dev/webfx/kit/mapper/peers/javafxweb/engine"/>
     <!--=========================< webfx-kit-javafxweb-peers-base >=========================-->
