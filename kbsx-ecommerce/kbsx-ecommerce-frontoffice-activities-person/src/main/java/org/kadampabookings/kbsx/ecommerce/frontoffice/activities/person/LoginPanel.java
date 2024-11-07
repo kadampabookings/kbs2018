@@ -35,12 +35,12 @@ public final class LoginPanel implements ModalityButtonFactoryMixin {
     private final TextField usernameField;
     private final PasswordField passwordField;
     private final Button button;
-    private final Property<Boolean> signInMode = new SimpleObjectProperty<>(true);
+    private final Property<Boolean> signInModeProperty = new SimpleObjectProperty<>(true);
     private final ModalityValidationSupport validationSupport = new ModalityValidationSupport();
 
     public LoginPanel() {
         BorderPane loginWindow = SectionPanelFactory.createSectionPanel("SignInWindowTitle"); // ???
-        Hyperlink hyperLink = newHyperlink("ForgotPassword?", e -> signInMode.setValue(!signInMode.getValue()));
+        Hyperlink hyperLink = newHyperlink("ForgotPassword?", e -> signInModeProperty.setValue(!signInModeProperty.getValue()));
         GridPane gridPane;
         loginWindow.setCenter(
             gridPane = new GridPaneBuilder()
@@ -52,11 +52,11 @@ public final class LoginPanel implements ModalityButtonFactoryMixin {
         );
         gridPane.setPadding(new Insets(20));
         GridPane.setHalignment(hyperLink, HPos.CENTER);
-        hyperLink.setOnAction(e -> signInMode.setValue(!signInMode.getValue()));
-        LayoutUtil.setUnmanagedWhenInvisible(passwordField, signInMode);
-        FXProperties.runNowAndOnPropertiesChange(() ->
-                I18nControls.bindI18nProperties(button, signInMode.getValue() ? "SignIn>>" : "SendPassword>>") // ???
-            , signInMode);
+        hyperLink.setOnAction(e -> signInModeProperty.setValue(!signInModeProperty.getValue()));
+        LayoutUtil.setUnmanagedWhenInvisible(passwordField, signInModeProperty);
+        FXProperties.runNowAndOnPropertyChange(signIn ->
+                I18nControls.bindI18nProperties(button, signIn ? "SignIn>>" : "SendPassword>>"), signInModeProperty  // ???
+            );
         node = LayoutUtil.createGoldLayout(loginWindow);
         initValidation();
         button.setOnAction(event -> {

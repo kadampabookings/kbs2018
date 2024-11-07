@@ -8,6 +8,7 @@ import dev.webfx.extras.visual.VisualResult;
 import dev.webfx.extras.visual.VisualSelection;
 import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
 import dev.webfx.extras.visual.controls.grid.VisualGrid;
+import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.platform.async.Future;
 import dev.webfx.platform.console.Console;
 import dev.webfx.platform.uischeduler.UiScheduler;
@@ -137,7 +138,7 @@ final class CartActivity extends CartBasedActivity {
                 return I18n.getI18nText(getDocumentStatus(document));
             }
         }.register();
-        documentVisualSelectionProperty.addListener((observable, oldValue, selection) -> {
+        FXProperties.runOnPropertyChange(selection -> {
             int selectedRow = selection == null ? -1 : selection.getSelectedRow();
             if (selectedRow != -1) {
                 onCartWorkingDocuments().onComplete(ar -> UiScheduler.runInUiThread(() -> {
@@ -145,7 +146,7 @@ final class CartActivity extends CartBasedActivity {
                     displayBookingOptions();
                 }));
             }
-        });
+        }, documentVisualSelectionProperty);
     }
 
     private Future<List<WorkingDocument>> onCartWorkingDocuments() {

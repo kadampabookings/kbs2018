@@ -1,5 +1,6 @@
 package org.kadampabookings.kbsx.base.client.jobs.sessionrecorder;
 
+import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.platform.boot.spi.ApplicationJob;
 import dev.webfx.platform.console.Console;
 import dev.webfx.platform.storage.LocalStorage;
@@ -67,10 +68,10 @@ public final class ClientSessionRecorderJob implements ApplicationJob {
         });
         if (bus.isOpen())
             onConnectionOpened();
-        FXUserPrincipal.userPrincipalProperty().addListener((observable, oldValue, userPrincipal) -> {
+        FXProperties.runOnPropertyChange(userPrincipal -> {
             if (userPrincipal instanceof ModalityUserPrincipal && INSTANCE != null)
                 INSTANCE.recordNewSessionUser(((ModalityUserPrincipal) userPrincipal).getUserPersonId());
-        });
+        }, FXUserPrincipal.userPrincipalProperty());
     }
 
     @Override

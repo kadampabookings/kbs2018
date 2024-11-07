@@ -38,8 +38,8 @@ public abstract class CartBasedActivity
     }
 
     protected void startLogic() {
-        FXProperties.runOnPropertiesChange(this::onCartUuidChange, cartUuidProperty);
-        FXProperties.runOnPropertiesChange(this::onDictionaryChange, I18n.dictionaryProperty());
+        FXProperties.runOnPropertyChange(this::onCartUuidChange, cartUuidProperty);
+        FXProperties.runOnPropertyChange(this::onDictionaryChange, I18n.dictionaryProperty());
     }
 
     protected void onCartUuidChange() {

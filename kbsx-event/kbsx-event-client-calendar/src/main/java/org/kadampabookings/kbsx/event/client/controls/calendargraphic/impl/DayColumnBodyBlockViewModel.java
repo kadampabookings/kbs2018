@@ -1,5 +1,6 @@
 package org.kadampabookings.kbsx.event.client.controls.calendargraphic.impl;
 
+import dev.webfx.kit.util.properties.FXProperties;
 import javafx.beans.property.Property;
 import javafx.collections.ObservableList;
 import javafx.geometry.VPos;
@@ -45,8 +46,8 @@ public final class DayColumnBodyBlockViewModel implements HorizontalDayPositione
         blockText.setTextOrigin(VPos.CENTER);
         blockText.setMouseTransparent(true);
         rootPane.getTransforms().setAll(translate);
-        rootPane.widthProperty().addListener((observable, oldValue, width) -> onWidthChanged());
-        rootPane.heightProperty().addListener((observable, oldValue, height) -> onHeightChanged());
+        FXProperties.runOnPropertyChange(this::onWidthChanged, rootPane.widthProperty());
+        FXProperties.runOnPropertyChange(this::onHeightChanged, rootPane.heightProperty());
     }
 
     public DayColumnBodyBlockViewModel(CalendarGraphic calendarGraphic, long epochDay, TimeInterval dayTimeMinuteInterval, CalendarTimeline timeline, Boolean displayTimes) {

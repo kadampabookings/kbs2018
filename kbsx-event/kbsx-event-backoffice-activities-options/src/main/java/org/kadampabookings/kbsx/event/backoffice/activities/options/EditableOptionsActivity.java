@@ -47,7 +47,7 @@ final class EditableOptionsActivity extends OptionsActivity {
     protected void createViewNodes() {
         CheckBox editModeCheckBox = newCheckBox("EditMode");
         editModeProperty = editModeCheckBox.selectedProperty();
-        FXProperties.runOnPropertiesChange(() -> ((EditableBookingCalendar) bookingCalendar).setEditMode(editModeProperty.getValue()), editModeProperty);
+        FXProperties.runOnPropertyChange(editMode -> ((EditableBookingCalendar) bookingCalendar).setEditMode(editMode), editModeProperty);
         Button addOptionButton = newButton(ModalityActions.newAddOptionAction(this::showAddOptionDialog));
         addOptionButton.visibleProperty().bind(editModeProperty);
         super.createViewNodes();

@@ -22,7 +22,7 @@ public final class CloneEventPresentationLogicActivity extends EventDependentPre
     @Override
     protected void startLogic(CloneEventPresentationModel pm) {
         // Load and display fees groups now but also on event change
-        FXProperties.runNowAndOnPropertiesChange(() -> {
+        FXProperties.runNowAndOnPropertyChange(() -> {
             pm.setName(null);
             pm.setDate(null);
             onEventOptions().onSuccess(options -> {

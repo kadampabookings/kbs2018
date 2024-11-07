@@ -55,15 +55,15 @@ final class PersonActivity extends BookingProcessActivity {
         personalDetailsPanel = new BookingPersonalDetailsPanel(getEventActiveWorkingDocument().getDocument(), new ButtonSelectorParameters().setButtonFactory(this).setDropParent(pageContainer));
         Node[] tabContents = {new VBox(10, personalDetailsPanel.getContainer(), nextButton), loginPanel.getNode() };
         BorderPane accountPane = new BorderPane();
-        accountToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+        FXProperties.runOnPropertyChange(newValue -> {
             Node displayedNode = tabContents[accountToggleGroup.getToggles().indexOf(newValue)];
             accountPane.setCenter(displayedNode);
             if (displayedNode == loginPanel.getNode())
                 loginPanel.prepareShowing();
-        } );
+        }, accountToggleGroup.selectedToggleProperty());
         accountToggleGroup.selectToggle(accountToggleGroup.getToggles().get(0));
-        FXProperties.runNowAndOnPropertiesChange(() -> {
-            if (loggedInProperty.getValue())
+        FXProperties.runNowAndOnPropertyChange(loggedIn -> {
+            if (loggedIn)
                 Platform.runLater(() -> accountToggleGroup.selectToggle(accountToggleGroup.getToggles().get(0)));
         }, loggedInProperty);
         verticalStack.getChildren().setAll(

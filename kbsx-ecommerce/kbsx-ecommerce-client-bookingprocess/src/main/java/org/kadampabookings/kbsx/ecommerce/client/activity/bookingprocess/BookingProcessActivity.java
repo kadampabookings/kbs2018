@@ -52,7 +52,7 @@ public abstract class BookingProcessActivity
 
     protected Node styleUi(Node uiNode) {
         if (uiNode instanceof Region)
-            FXProperties.runNowAndOnPropertiesChange(() -> onEvent().onComplete(ar -> {
+            FXProperties.runNowAndOnPropertyChange(() -> onEvent().onComplete(ar -> {
                 Event event = ar.result();
                 if (event != null) {
                     String css = event.getStringFieldValue("cssClass");

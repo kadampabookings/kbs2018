@@ -242,7 +242,7 @@ final class OptionTreeNode {
                 Node selectNode = childrenOptionSelector.toMaterialButton(null, Labels.translateLabel(option.getChildrenPromptLabel()));
                 optionBodyChildren.add(selectNode);
                 bindToVisibleProperty(selectNode);
-                FXProperties.runOnPropertiesChange(childrenOptionSelector::updateButtonContentFromSelectedItem, I18n.languageProperty());
+                FXProperties.runOnPropertyChange(childrenOptionSelector::updateButtonContentFromSelectedItem, I18n.languageProperty());
                 tree.getValidationSupport().addRequiredInput(childrenOptionSelector.selectedItemProperty(), childrenOptionSelector.getButton());
             } else if (option.isChildrenRadio())
                 childrenToggleGroup = new ToggleGroup();
@@ -286,7 +286,7 @@ final class OptionTreeNode {
                     if (selected)
                         optionSelector.setSelectedItem(option);
                 });
-                FXProperties.runOnPropertiesChange(p -> setOptionButtonSelected(p.getValue() == option), optionSelector.selectedItemProperty());
+                FXProperties.runOnPropertyChange(selectedItem -> setOptionButtonSelected(selectedItem == option), optionSelector.selectedItemProperty());
                 optionButton = null;
             } else {
                 CheckBox checkBox = new CheckBox();
@@ -301,7 +301,7 @@ final class OptionTreeNode {
                 Labels.translateLabel(optionButton, buttonLabel);
             }
         }
-        FXProperties.runOnPropertiesChange(this::onUiOptionButtonChanged, optionButtonSelectedProperty);
+        FXProperties.runOnPropertyChange(this::onUiOptionButtonChanged, optionButtonSelectedProperty);
     }
 
 

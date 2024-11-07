@@ -89,7 +89,7 @@ final class FeesActivity extends BookingProcessActivity {
     @Override
     protected void startLogic() {
         // Load and display fees groups now but also on event change
-        FXProperties.runNowAndOnPropertiesChange(this::loadAndDisplayFeesGroups, eventIdProperty());
+        FXProperties.runNowAndOnPropertyChange(this::loadAndDisplayFeesGroups, eventIdProperty());
 
         lastDictionary = I18n.getDictionary();
         FXProperties.consume(FXProperties.filter(FXProperties.combine(I18n.dictionaryProperty(), activeProperty(),
@@ -211,31 +211,31 @@ final class FeesActivity extends BookingProcessActivity {
         Person person = getPersonAggregate().getPreselectionProfilePerson();
         if (unemployedRadio != null) {
             unemployedRadio.setSelected(Booleans.isTrue(person.isUnemployed()));
-            unemployedRadio.selectedProperty().addListener((observable, oldValue, unemployed) -> {
+            FXProperties.runOnPropertyChange(unemployed -> {
                 person.setUnemployed(unemployed);
                 if (unemployed)
                     person.setFacilityFee(false);
                 displayFeesGroups();
-            });
+            }, unemployedRadio.selectedProperty());
         }
         if (facilityFeeRadio != null) {
             facilityFeeRadio.setSelected(Booleans.isTrue(person.isFacilityFee()));
-            facilityFeeRadio.selectedProperty().addListener((observable, oldValue, facilityFee) -> {
+            FXProperties.runOnPropertyChange(facilityFee -> {
                 person.setFacilityFee(facilityFee);
                 if (facilityFee)
                     person.setUnemployed(false);
                 displayFeesGroups();
-            });
+            }, facilityFeeRadio.selectedProperty());
         }
         if (noDiscountRadio != null) {
             noDiscountRadio.setSelected(Booleans.isNotTrue(person.isUnemployed()) && Booleans.isNotTrue(person.isFacilityFee()));
-            noDiscountRadio.selectedProperty().addListener((observable, oldValue, noDiscount) -> {
+            FXProperties.runOnPropertyChange(noDiscount -> {
                 if (noDiscount) {
                     person.setUnemployed(false);
                     person.setFacilityFee(false);
                 }
                 displayFeesGroups();
-            });
+            }, noDiscountRadio.selectedProperty());
         }
         Label feesGroupLabel = new Label(pair.get2());
         Node[] nodes = {createImageView(pair.get1()), feesGroupLabel, noDiscountRadio, unemployedRadio, facilityFeeRadio};

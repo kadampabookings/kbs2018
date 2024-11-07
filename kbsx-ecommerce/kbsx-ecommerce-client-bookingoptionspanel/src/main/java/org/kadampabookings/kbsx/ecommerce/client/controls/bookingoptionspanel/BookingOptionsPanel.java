@@ -1,30 +1,30 @@
 package org.kadampabookings.kbsx.ecommerce.client.controls.bookingoptionspanel;
 
-import javafx.scene.layout.BorderPane;
-import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
-import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
-import org.kadampabookings.kbsx.hotel.shared.businessdata.time.DaysArray;
-import org.kadampabookings.kbsx.hotel.shared.businessdata.time.DaysArrayBuilder;
-import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocumentLine;
-import one.modality.base.client.util.functions.TranslateFunction;
-import one.modality.base.shared.entities.formatters.EventPriceFormatter;
-import one.modality.base.shared.entities.DocumentLine;
-import one.modality.base.shared.entities.Item;
-import dev.webfx.stack.i18n.I18n;
-import dev.webfx.stack.orm.expression.Expression;
-import dev.webfx.stack.orm.expression.lci.DomainReader;
-import dev.webfx.stack.orm.expression.terms.function.AggregateFunction;
-import dev.webfx.stack.orm.entity.EntityList;
-import dev.webfx.stack.orm.entity.EntityStore;
-import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.EntitiesToVisualResultMapper;
-import dev.webfx.extras.visual.controls.grid.VisualGrid;
-import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
-import dev.webfx.extras.visual.VisualResult;
-import dev.webfx.extras.visual.SelectionMode;
 import dev.webfx.extras.type.PrimType;
+import dev.webfx.extras.visual.SelectionMode;
+import dev.webfx.extras.visual.VisualResult;
+import dev.webfx.extras.visual.controls.grid.SkinnedVisualGrid;
+import dev.webfx.extras.visual.controls.grid.VisualGrid;
 import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.platform.util.Objects;
 import dev.webfx.platform.util.collection.Collections;
+import dev.webfx.stack.i18n.I18n;
+import dev.webfx.stack.orm.entity.EntityList;
+import dev.webfx.stack.orm.entity.EntityStore;
+import dev.webfx.stack.orm.expression.Expression;
+import dev.webfx.stack.orm.expression.lci.DomainReader;
+import dev.webfx.stack.orm.expression.terms.function.AggregateFunction;
+import dev.webfx.stack.orm.reactive.mapping.entities_to_visual.EntitiesToVisualResultMapper;
+import javafx.scene.layout.BorderPane;
+import one.modality.base.client.util.functions.TranslateFunction;
+import one.modality.base.shared.entities.DocumentLine;
+import one.modality.base.shared.entities.Item;
+import one.modality.base.shared.entities.formatters.EventPriceFormatter;
+import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocument;
+import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.WorkingDocumentLine;
+import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
+import org.kadampabookings.kbsx.hotel.shared.businessdata.time.DaysArray;
+import org.kadampabookings.kbsx.hotel.shared.businessdata.time.DaysArrayBuilder;
 
 import java.util.List;
 
@@ -56,7 +56,7 @@ public final class BookingOptionsPanel {
             }
         }.register();
         new TranslateFunction().register();
-        FXProperties.runOnPropertiesChange(this::updateGrid, I18n.dictionaryProperty());
+        FXProperties.runOnPropertyChange(this::updateGrid, I18n.dictionaryProperty());
     }
 
     public void syncUiFromModel(WorkingDocument workingDocument) {

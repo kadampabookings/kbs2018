@@ -43,7 +43,7 @@ public abstract class BookingProcessPresentationViewActivity<PM extends BookingP
     @Override
     protected Node styleUi(Node uiNode, PM pm) {
         if (uiNode instanceof Region)
-            FXProperties.runNowAndOnPropertiesChange(() -> EventAggregate.getOrCreate(pm.getEventId(), DataSourceModelService.getDefaultDataSourceModel()).onEvent()
+            FXProperties.runNowAndOnPropertyChange(() -> EventAggregate.getOrCreate(pm.getEventId(), DataSourceModelService.getDefaultDataSourceModel()).onEvent()
                     .onComplete(ar -> {
                         Event event = ar.result();
                         if (event != null) {

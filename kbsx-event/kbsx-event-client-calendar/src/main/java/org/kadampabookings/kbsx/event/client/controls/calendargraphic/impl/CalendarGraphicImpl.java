@@ -80,7 +80,7 @@ public final class CalendarGraphicImpl implements CalendarGraphic {
 
     private void createRootNode() {
         rootNode = setMinSizeToZeroAndPrefSizeToInfinite(new Pane());
-        rootNode.widthProperty().addListener((observable, oldValue, newWidth) -> updateTotalWidth(newWidth.doubleValue()));
+        FXProperties.runOnDoublePropertyChange(this::updateTotalWidth, rootNode.widthProperty());
         createOrUpdateRootNodeCalendar();
     }
 

@@ -3,6 +3,7 @@ package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment;
 import dev.webfx.extras.util.control.ControlUtil;
 import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.webtext.HtmlText;
+import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.platform.console.Console;
 import dev.webfx.platform.uischeduler.UiScheduler;
 import dev.webfx.platform.util.time.Times;
@@ -144,17 +145,17 @@ final class PaymentActivity extends CartBasedActivity {
                 radioGroup = new ToggleGroup();
                 amountTextField = newTextField();
                 amountTextField.setAlignment(Pos.BASELINE_RIGHT);
-                amountTextField.textProperty().addListener((observable, oldValue, text) -> {
+                FXProperties.runOnPropertyChange(text -> {
                     try {
                         updateAmount((int) (Float.parseFloat(text) * 100), true);
                     } catch (NumberFormatException e) {
                     }
-                });
+                }, amountTextField.textProperty());
                 amountTextField.setPrefWidth(100d);
                 //LayoutUtil.setPrefMaxWidthToMin(amountTextField);
-                amountTextField.focusedProperty().addListener((observable, oldValue, focused) -> updateAmount(amount, false));
+                FXProperties.runOnPropertyChange(focused -> updateAmount(amount, false), amountTextField.focusedProperty());
                 slider = new Slider(minAmount, maxAmount, maxAmount);
-                slider.valueProperty().addListener((observable, oldValue, newValue) -> updateAmount(newValue.intValue(), true));
+                FXProperties.runOnIntegerPropertyChange(newValue -> updateAmount(newValue, true), slider.valueProperty());
                 if (notPaidFullCount > 1)
                     zeroRadioButton = addRadioButton(0, "notNow");
                 if (minAmount > 0 && minAmount < maxAmount)

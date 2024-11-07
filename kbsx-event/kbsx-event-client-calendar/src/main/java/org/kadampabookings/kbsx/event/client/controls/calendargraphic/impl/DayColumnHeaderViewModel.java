@@ -1,5 +1,6 @@
 package org.kadampabookings.kbsx.event.client.controls.calendargraphic.impl;
 
+import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.stack.i18n.I18n;
 import javafx.geometry.VPos;
 import javafx.scene.layout.Pane;
@@ -53,10 +54,10 @@ public final class DayColumnHeaderViewModel implements HorizontalDayPositioned {
         rootPane.setBackground(BackgroundFactory.newBackground(dayColumnHeaderFill));
         rootPane.getChildren().setAll(dayOfWeekText, dayOfMonthText, monthText);
         rootPane.getTransforms().setAll(translate);
-        rootPane.heightProperty().addListener((observable, oldValue, height) -> {
-            dayOfMonthText.setY((double) height / 2);
-            monthText.setY((double) height - 3d);
-        });
+        FXProperties.runOnDoublePropertyChange(height -> {
+            dayOfMonthText.setY(height / 2);
+            monthText.setY(height - 3d);
+        }, rootPane.heightProperty());
     }
 
     public DayColumnHeaderViewModel(long epochDay) {

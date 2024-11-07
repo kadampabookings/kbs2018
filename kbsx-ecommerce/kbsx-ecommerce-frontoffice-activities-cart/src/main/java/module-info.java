@@ -23,6 +23,7 @@ module kbsx.ecommerce.frontoffice.activities.cart {
     requires webfx.extras.util.layout;
     requires webfx.extras.visual;
     requires webfx.extras.visual.grid;
+    requires webfx.kit.util;
     requires webfx.platform.async;
     requires webfx.platform.console;
     requires webfx.platform.uischeduler;

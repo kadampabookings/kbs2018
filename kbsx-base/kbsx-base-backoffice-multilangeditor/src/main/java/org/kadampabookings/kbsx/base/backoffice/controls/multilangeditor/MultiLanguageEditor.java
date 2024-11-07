@@ -91,7 +91,7 @@ public final class MultiLanguageEditor {
 
     public BorderPane getUiNode() {
         if (toggleGroup.getSelectedToggle() == null) {
-            FXProperties.runOnPropertiesChange(this::onEntityChanged, toggleGroup.selectedToggleProperty());
+            FXProperties.runOnPropertyChange(this::onEntityChanged, toggleGroup.selectedToggleProperty());
             toggleGroup.selectToggle(languageButtons.get(I18n.getLanguage()));
         }
         return borderPane;
