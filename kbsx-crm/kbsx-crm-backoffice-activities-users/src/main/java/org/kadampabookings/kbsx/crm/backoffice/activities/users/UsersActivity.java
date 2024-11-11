@@ -10,8 +10,8 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableBooleanValue;
-import javafx.beans.value.ObservableObjectValue;
 import javafx.beans.value.ObservableStringValue;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -25,6 +25,7 @@ import one.modality.ecommerce.backoffice.operations.entities.document.registrati
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.function.Supplier;
 
 import static dev.webfx.stack.orm.dql.DqlStatement.where;
 
@@ -56,7 +57,7 @@ final class UsersActivity extends OrganizationDependentViewDomainActivity implem
 
     private ActionGroup createContextMenuActionGroup() {
         ObservableStringValue textProperty = new SimpleStringProperty("Edit...");
-        ObservableObjectValue<Node> graphicProperty = new SimpleObjectProperty<>();
+        ObservableValue<Supplier<Node>> graphicProperty = new SimpleObjectProperty<>();
         ObservableBooleanValue disabledProperty = new SimpleBooleanProperty(false);
         ObservableBooleanValue visibleProperty = new SimpleBooleanProperty(true);
         EventHandler<ActionEvent> actionHandler = e -> new EditUsersPersonalDetailsRequest(getPerson(), new ButtonSelectorParameters().setButtonFactory(this).setDialogParent(pane));

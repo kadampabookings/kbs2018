@@ -14,7 +14,10 @@ module kbsx.ecommerce.frontoffice.activities.payment {
     requires webfx.extras.util.control;
     requires webfx.extras.util.layout;
     requires webfx.extras.webtext;
+    requires webfx.kit.util;
     requires webfx.platform.console;
+    requires webfx.platform.uischeduler;
+    requires webfx.platform.util;
     requires webfx.platform.util.time;
     requires webfx.platform.windowhistory;
     requires webfx.platform.windowlocation;
@@ -26,7 +29,6 @@ module kbsx.ecommerce.frontoffice.activities.payment {
     requires webfx.stack.session.state.client.fx;
     requires webfx.stack.ui.action;
     requires webfx.stack.ui.dialog;
-    requires webfx.kit.util;
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.payment;
