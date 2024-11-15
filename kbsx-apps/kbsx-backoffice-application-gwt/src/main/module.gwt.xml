@@ -397,8 +397,6 @@
     <source path="one/modality/crm/client/services/authz"/>
     <!--============================< modality-crm-client-i18n >============================-->
     <source path="one/modality/crm/client/i18n"/>
-    <!--===================< modality-crm-client-magiclink-application >====================-->
-    <source path="one/modality/crm/magiclink/application"/>
     <!--======================< modality-crm-client-personaldetails >=======================-->
     <source path="one/modality/crm/client/controls/personaldetails"/>
     <!--===========================< modality-crm-shared-authn >============================-->
@@ -744,12 +742,16 @@
     <source path="dev/webfx/stack/authn/login/ui/spi"/>
     <!--=======================< webfx-stack-authn-login-ui-gateway >=======================-->
     <source path="dev/webfx/stack/authn/login/ui/spi/impl/gateway"/>
+    <!--==============< webfx-stack-authn-login-ui-gateway-magiclink-plugin >===============-->
+    <source path="dev/webfx/stack/authn/login/ui/spi/impl/gateway/magiclink"/>
     <!--===============< webfx-stack-authn-login-ui-gateway-password-plugin >===============-->
     <source path="dev/webfx/stack/authn/login/ui/spi/impl/gateway/password"/>
     <!--=======================< webfx-stack-authn-login-ui-portal >========================-->
     <source path="dev/webfx/stack/authn/login/ui/spi/impl/portal"/>
     <resource path="dev/webfx/kit/css/fonts/password"/>
     <public path="" includes="dev/webfx/kit/css/fonts/password/"/>
+    <resource path="dev/webfx/kit/css/loginportal/images"/>
+    <public path="" includes="dev/webfx/kit/css/loginportal/images/"/>
     <!--========================< webfx-stack-authn-logout-client >=========================-->
     <source path="dev/webfx/stack/authn/logout/client/operation"/>
     <!--============================< webfx-stack-authn-remote >============================-->
@@ -971,6 +973,9 @@
     <!--=============================< webfx-stack-ui-action >==============================-->
     <source path="dev/webfx/stack/ui/action"/>
     <source path="dev/webfx/stack/ui/action/impl"/>
+    <!--==========================< webfx-stack-ui-action-tuner >===========================-->
+    <source path="dev/webfx/stack/ui/action/tuner"/>
+    <source path="dev/webfx/stack/ui/action/tuner/logout"/>
     <!--============================< webfx-stack-ui-controls >=============================-->
     <source path="dev/webfx/stack/ui/controls"/>
     <source path="dev/webfx/stack/ui/controls/alert"/>
