@@ -1,12 +1,15 @@
 package org.kadampabookings.kbsx.catering.backoffice.operations.entities.allocationrule;
 
+import dev.webfx.stack.i18n.HasI18nKey;
+import dev.webfx.stack.i18n.I18nKeys;
 import javafx.scene.layout.Pane;
+import one.modality.base.client.i18n.ModalityI18nKeys;
 import one.modality.base.shared.entities.Event;
 import dev.webfx.stack.ui.operation.HasOperationCode;
 import dev.webfx.stack.ui.operation.HasOperationExecutor;
 import dev.webfx.platform.async.AsyncFunction;
 
-public final class AddNewAllocationRuleRequest implements HasOperationCode,
+public final class AddNewAllocationRuleRequest implements HasOperationCode, HasI18nKey,
         HasOperationExecutor<AddNewAllocationRuleRequest, Void> {
 
     private final static String OPERATION_CODE = "AddNewAllocationRule";
@@ -30,6 +33,11 @@ public final class AddNewAllocationRuleRequest implements HasOperationCode,
     @Override
     public Object getOperationCode() {
         return OPERATION_CODE;
+    }
+
+    @Override
+    public Object getI18nKey() {
+        return I18nKeys.appendEllipsis(ModalityI18nKeys.Add);
     }
 
     @Override
