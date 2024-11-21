@@ -1,6 +1,30 @@
 /* @font-face rules listed first, otherwise they are ignored (OpenJFX bug) */
 
 @font-face {
+    font-family: 'Roboto';
+    font-weight: bold;
+    src: url('webfx-css:fonts/roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    src: url('webfx-css:fonts/roboto/Roboto-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: light;
+    src: url('webfx-css:fonts/roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-style: italic;
+    src: url('webfx-css:fonts/roboto/Roboto-BoldItalic.ttf');
+}
+@font-face {
     font-family: 'Montserrat';
     font-style: normal;
     src: url('webfx-css:fonts/montserrat/Montserrat-Regular.ttf');
@@ -27,6 +51,12 @@
 
 @font-face {
     font-family: 'Poppins';
+    font-style: normal;
+    src: url('webfx-css:fonts/poppins/Poppins-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Poppins';
     font-weight: bold;
     src: url('webfx-css:fonts/poppins/Poppins-Bold.otf');
 }
@@ -43,32 +73,6 @@
     font-style: italic;
     src: url('webfx-css:fonts/poppins/Poppins-BoldItalic.otf');
 }
-
-@font-face {
-    font-family: 'Roboto';
-    font-weight: bold;
-    src: url('webfx-css:fonts/roboto/Roboto-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-style: italic;
-    src: url('webfx-css:fonts/roboto/Roboto-Italic.ttf');
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-style: light;
-    src: url('webfx-css:fonts/roboto/Roboto-Light.ttf');
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-style: italic;
-    src: url('webfx-css:fonts/roboto/Roboto-BoldItalic.ttf');
-}
-
 
 
 /*===== webfx-extras-bootstrap-javafx@main.css from webfx-extras-styles-bootstrap =====*/
@@ -526,27 +530,24 @@ HtmlText, HtmlTextEditor {
 
 /*===== webfx-stack-authn-login-ui-portal-javafx@main.css from webfx-stack-authn-login-ui-portal =====*/
 
+* {
+    -webfx-login-portal-background-image: none; /* Specify the path to your image */
+}
+
 .login {
-     -fx-background-image: url("webfx-css:/loginportal/images/login-background-image.png"); /* Specify the path to your image */
-     -fx-background-repeat: no-repeat;               /* Prevents the image from repeating */
-     -fx-background-size: cover;                     /* Scales the image to cover the area */
-     -fx-background-position: center;
+    -fx-background-image: none; /*-webfx-login-portal-background-image; not working*/
+    -fx-background-repeat: no-repeat; /* Prevents the image from repeating */
+    -fx-background-size: cover; /* Scales the image to cover the area */
+    -fx-background-position: center;
 }
 
 .login .background {
-     -fx-background-image: none;
-     -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-image: none;
+    -fx-background-color: rgba(255, 255, 255, 0.7);
     -fx-background-radius: 20px;
     -fx-border-color: lightgray;
     -fx-border-radius: 20px;
     -fx-effect: dropshadow(gaussian, lightgray, 10, 0, 0, 0);
-}
-
-.login-child {
-    -fx-min-width: 586px;
-    -fx-max-width: 586px;
-    -fx-min-height: 506px;
-    -fx-max-height: 506px;
 }
 
 /*===== modality-event-client-recurringevents-javafx@main.css from modality-event-client-recurringevents =====*/
@@ -608,7 +609,7 @@ HtmlText, HtmlTextEditor {
 .event-date-cell.date-selected,
 .event-date-cell.date-already-booked {
     -fx-border-color: none;
-    -fx-background-color: #F5761A;
+    -fx-background-color: -brand-main-color;
 }
 
 .event-date-cell.date-selected Text {
@@ -631,21 +632,6 @@ HtmlText, HtmlTextEditor {
 
 .titled-pane .title {
     -fx-font-size: 14px;
-}
-
-/*===== modality-client-javafx@main.css from modality-base-client-application =====*/
-
-Text, Label, Button, TextField {
-    -fx-font-family: 'Montserrat';
-}
-
-.scroll-pane {
-   -fx-background-color: transparent;
-   -fx-padding: 0;
-}
-
-.scroll-pane > .viewport {
-   -fx-background-color: transparent;
 }
 
 /*===== modality-backoffice-bookings-javafx@main.css from modality-ecommerce-backoffice-activity-bookings-plugin =====*/
@@ -751,6 +737,12 @@ Text, Label, Button, TextField {
     -fx-font-style: italic;
 }
 
+/*===== modality-client-brand-javafx@main.css from modality-base-client-brand =====*/
+
+* {
+    -brand-main-color: #0096D6;
+    -brand-main-background-color: #0096D6;
+}
 /*===== modality-backoffice-mainframe-javafx@main.css from modality-base-backoffice-mainframe-activity =====*/
 
 .button.main-frame-header-button {
@@ -760,21 +752,46 @@ Text, Label, Button, TextField {
 .button.main-frame-header-button:hover {
     -fx-background-color: radial-gradient(center 50% 50%, radius 50%, #BBB 99%, transparent 100%);
 }
-/*===== modality-client-javafx@main.css from modality-base-client-css =====*/
+/*===== modality-client-css-import-font-roboto-javafx@main.css from modality-base-client-css =====*/
+
+/*===== modality-client-css-import-font-monserrat-javafx@main.css from modality-base-client-css =====*/
+
+/*===== modality-client-css-javafx@main.css from modality-base-client-css =====*/
 
 * {
-    -webfx-switch-selected-background-color: #0096D6;
+    -montserrat-font-family: "Montserrat";
+    -roboto-font-family: "Roboto";
+    -poppins-font-family: "Poppins";
+    -vollkorn-font-family: "Roboto"; /* for now */
+
+    /* Overriding some WebFX Extras CSS variables  */
+    -webfx-switch-selected-background-color: -brand-main-background-color;
     -webfx-visualgrid-selection-color: #BBBBBB;
 }
 
+Text, Label, Button, TextField {
+    -fx-font-family: -montserrat-font-family;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Not sure if it's the right place for this CSS rules */
 .event-button Button {
     -fx-background-radius: 4;
     -fx-pref-height:36px;
     -fx-max-height:36px;
     -fx-alignment: center;
- /*  -fx-font-family: "Google Sans", Roboto, Arial;*/
     -fx-font-weight: bolder;
 }
+
+/*===== modality-client-css-import-font-poppins-javafx@main.css from modality-base-client-css =====*/
 
 /*===== modality-client-bootstrap-javafx@main.css from modality-base-client-bootstrap =====*/
 
@@ -816,7 +833,7 @@ Text, Label, Button, TextField {
     -bootstrap-orange5: #985f0d ;
     -bootstrap-orange6: #8a6d3b ;
 
-    -bootstrap-red1: #d9534f ;
+    -bootstrap-red1: #FF0404 ;
     -bootstrap-red2: #d43f3a ;
     -bootstrap-red3: #c9302c ;
     -bootstrap-red4: #ac2925 ;
@@ -825,7 +842,7 @@ Text, Label, Button, TextField {
 }
 
 .h1 {
-    -fx-font-family: "Roboto";
+    -fx-font-family: -roboto-font-family;
     -fx-font-size: 34px;
     -fx-font-weight: normal;
     -fx-line-spacing: 6px; /* Line height in JavaFX is set through line-spacing */
@@ -833,9 +850,23 @@ Text, Label, Button, TextField {
 }
 
 .h2 {
-    -fx-font-family: "Poppins";
+    -fx-font-family: -poppins-font-family;
     -fx-font-size: 40px;
     -fx-font-weight: bold;         /* 'bold' is equivalent to 700 weight */
     -fx-line-spacing: 20px;
     -fx-text-alignment: center;    /* Aligns text within its container */
     }
+
+.btn-black {
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-background-color: black;
+    -fx-border-color: black;
+}
+
+.btn-black:hover {
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-background-color: -bootstrap-grey7;
+    -fx-border-color: -bootstrap-grey7;
+}

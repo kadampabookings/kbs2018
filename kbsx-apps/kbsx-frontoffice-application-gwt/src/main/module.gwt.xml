@@ -172,8 +172,14 @@
     <public path="" includes="one/modality/base/client/images/"/>
     <!--=========================< modality-base-client-bootstrap >=========================-->
     <source path="one/modality/base/client/bootstrap"/>
+    <!--===========================< modality-base-client-brand >===========================-->
+    <source path="one/modality/base/client/brand"/>
+    <resource path="one/modality/base/client/brand"/>
+    <public path="" includes="one/modality/base/client/brand/"/>
     <!--===========================< modality-base-client-conf >============================-->
     <source path="one/modality/base/client/conf"/>
+    <!--============================< modality-base-client-css >============================-->
+    <source path="one/modality/base/client/css"/>
     <!--=========================< modality-base-client-entities >==========================-->
     <source path="one/modality/base/client/entities/util"/>
     <source path="one/modality/base/client/entities/util/filters"/>
@@ -261,8 +267,8 @@
     <!--=====================< modality-base-frontoffice-mainframe-fx >=====================-->
     <source path="one/modality/base/frontoffice/mainframe/fx"/>
     <!--=======================< modality-base-frontoffice-utility >========================-->
-    <source path="one/modality/base/frontoffice/utility/activity"/>
     <source path="one/modality/base/frontoffice/utility/browser"/>
+    <source path="one/modality/base/frontoffice/utility/page"/>
     <source path="one/modality/base/frontoffice/utility/tyler"/>
     <source path="one/modality/base/frontoffice/utility/tyler/entities"/>
     <source path="one/modality/base/frontoffice/utility/tyler/fx"/>
@@ -595,8 +601,6 @@
     <source path="dev/webfx/stack/authn/login/ui/spi/impl/portal"/>
     <resource path="dev/webfx/kit/css/fonts/password"/>
     <public path="" includes="dev/webfx/kit/css/fonts/password/"/>
-    <resource path="dev/webfx/kit/css/loginportal/images"/>
-    <public path="" includes="dev/webfx/kit/css/loginportal/images/"/>
     <!--========================< webfx-stack-authn-logout-client >=========================-->
     <source path="dev/webfx/stack/authn/logout/client/operation"/>
     <!--============================< webfx-stack-authn-remote >============================-->
