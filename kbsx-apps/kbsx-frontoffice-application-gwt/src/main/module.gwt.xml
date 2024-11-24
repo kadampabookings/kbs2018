@@ -172,8 +172,14 @@
     <public path="" includes="one/modality/base/client/images/"/>
     <!--=========================< modality-base-client-bootstrap >=========================-->
     <source path="one/modality/base/client/bootstrap"/>
+    <!--===========================< modality-base-client-brand >===========================-->
+    <source path="one/modality/base/client/brand"/>
+    <resource path="one/modality/base/client/brand"/>
+    <public path="" includes="one/modality/base/client/brand/"/>
     <!--===========================< modality-base-client-conf >============================-->
     <source path="one/modality/base/client/conf"/>
+    <!--============================< modality-base-client-css >============================-->
+    <source path="one/modality/base/client/css"/>
     <!--=========================< modality-base-client-entities >==========================-->
     <source path="one/modality/base/client/entities/util"/>
     <source path="one/modality/base/client/entities/util/filters"/>
@@ -261,8 +267,8 @@
     <!--=====================< modality-base-frontoffice-mainframe-fx >=====================-->
     <source path="one/modality/base/frontoffice/mainframe/fx"/>
     <!--=======================< modality-base-frontoffice-utility >========================-->
-    <source path="one/modality/base/frontoffice/utility/activity"/>
     <source path="one/modality/base/frontoffice/utility/browser"/>
+    <source path="one/modality/base/frontoffice/utility/page"/>
     <source path="one/modality/base/frontoffice/utility/tyler"/>
     <source path="one/modality/base/frontoffice/utility/tyler/entities"/>
     <source path="one/modality/base/frontoffice/utility/tyler/fx"/>
@@ -320,6 +326,8 @@
     <source path="dev/webfx/extras/imagestore"/>
     <!--===============================< webfx-extras-label >===============================-->
     <source path="dev/webfx/extras/label"/>
+    <!--==========================< webfx-extras-media-metadata >===========================-->
+    <source path="dev/webfx/extras/media/metadata"/>
     <!--===============================< webfx-extras-panes >===============================-->
     <source path="dev/webfx/extras/panes"/>
     <source path="dev/webfx/extras/panes/transitions"/>
@@ -818,6 +826,9 @@
     <!--=============================< webfx-stack-ui-action >==============================-->
     <source path="dev/webfx/stack/ui/action"/>
     <source path="dev/webfx/stack/ui/action/impl"/>
+    <!--==========================< webfx-stack-ui-action-tuner >===========================-->
+    <source path="dev/webfx/stack/ui/action/tuner"/>
+    <source path="dev/webfx/stack/ui/action/tuner/logout"/>
     <!--============================< webfx-stack-ui-controls >=============================-->
     <source path="dev/webfx/stack/ui/controls"/>
     <source path="dev/webfx/stack/ui/controls/alert"/>
