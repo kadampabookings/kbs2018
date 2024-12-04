@@ -10,7 +10,7 @@ module kbsx.event.backoffice.activities.cloneevent {
     requires kbsx.event.backoffice.activities.cloneevent.routing;
     requires kbsx.event.client.activity.eventdependent;
     requires modality.base.client.activity;
-    requires modality.base.shared.domainmodel;
+    requires modality.base.client.util;
     requires modality.base.shared.entities;
     requires modality.ecommerce.backoffice.activity.bookings.plugin;
     requires modality.event.client.activity.eventdependent;

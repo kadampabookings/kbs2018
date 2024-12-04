@@ -3,7 +3,6 @@
 module kbsx.server.application.vertx {
 
     // Direct dependencies modules
-    requires javafx.base;
     requires kbsx.base.server.systemmetrics.java;
     requires kbsx.server.application;
     requires modality.ecommerce.document.service.server;
