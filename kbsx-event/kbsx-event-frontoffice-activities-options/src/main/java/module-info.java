@@ -16,7 +16,6 @@ module kbsx.event.frontoffice.activities.options {
     requires kbsx.hotel.shared.time;
     requires modality.base.client.entities;
     requires modality.base.client.util;
-    requires modality.base.client.validation;
     requires modality.base.shared.entities;
     requires webfx.extras.imagestore;
     requires webfx.extras.panes;
@@ -31,6 +30,7 @@ module kbsx.event.frontoffice.activities.options {
     requires webfx.stack.orm.entity;
     requires webfx.stack.orm.entity.controls;
     requires webfx.stack.routing.uirouter;
+    requires webfx.stack.ui.validation;
 
     // Exported packages
     exports org.kadampabookings.kbsx.event.frontoffice.activities.options;

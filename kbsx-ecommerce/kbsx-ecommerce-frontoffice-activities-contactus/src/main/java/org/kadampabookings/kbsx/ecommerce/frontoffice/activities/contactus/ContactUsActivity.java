@@ -18,7 +18,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import one.modality.base.client.activity.ModalityButtonFactoryMixin;
-import one.modality.base.client.validation.ModalityValidationSupport;
+import dev.webfx.stack.ui.validation.ValidationSupport;
 import one.modality.base.shared.entities.Document;
 import one.modality.base.shared.entities.Event;
 import one.modality.base.shared.entities.History;
@@ -37,7 +37,7 @@ final class ContactUsActivity extends ViewDomainActivityBase
     private TextArea bodyTextArea;
 
     private Object documentId;
-    private final ModalityValidationSupport validationSupport = new ModalityValidationSupport();
+    private final ValidationSupport validationSupport = new ValidationSupport();
 
     @Override
     protected void updateModelFromContextParameters() {

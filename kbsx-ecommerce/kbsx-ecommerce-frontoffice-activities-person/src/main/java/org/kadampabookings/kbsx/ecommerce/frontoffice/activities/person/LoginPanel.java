@@ -22,7 +22,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import one.modality.base.client.activity.ModalityButtonFactoryMixin;
-import one.modality.base.client.validation.ModalityValidationSupport;
+import dev.webfx.stack.ui.validation.ValidationSupport;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
 
 
@@ -36,7 +36,7 @@ public final class LoginPanel implements ModalityButtonFactoryMixin {
     private final PasswordField passwordField;
     private final Button button;
     private final Property<Boolean> signInModeProperty = new SimpleObjectProperty<>(true);
-    private final ModalityValidationSupport validationSupport = new ModalityValidationSupport();
+    private final ValidationSupport validationSupport = new ValidationSupport();
 
     public LoginPanel() {
         BorderPane loginWindow = SectionPanelFactory.createSectionPanel("SignInWindowTitle"); // ???

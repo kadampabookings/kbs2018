@@ -24,7 +24,7 @@ import org.kadampabookings.kbsx.ecommerce.client.businessdata.workingdocument.Wo
 import org.kadampabookings.kbsx.ecommerce.client.controls.bookingoptionspanel.BookingOptionsPanel;
 import org.kadampabookings.kbsx.ecommerce.frontoffice.activities.cart.base.CartRouting;
 import org.kadampabookings.kbsx.event.client.controls.sectionpanel.SectionPanelFactory;
-import one.modality.base.client.validation.ModalityValidationSupport;
+import dev.webfx.stack.ui.validation.ValidationSupport;
 import one.modality.base.shared.entities.Cart;
 import org.kadampabookings.kbsx.event.client.controls.bookingcalendar.BookingCalendar;
 
@@ -40,7 +40,7 @@ final class SummaryActivity extends BookingProcessActivity {
     private TextArea commentTextArea;
     private CheckBox termsCheckBox;
     private ObservableStringValue agreeTCTranslationProperty; // to avoid GC
-    private final ModalityValidationSupport validationSupport = new ModalityValidationSupport();
+    private final ValidationSupport validationSupport = new ValidationSupport();
 
     @Override
     protected void createViewNodes() {

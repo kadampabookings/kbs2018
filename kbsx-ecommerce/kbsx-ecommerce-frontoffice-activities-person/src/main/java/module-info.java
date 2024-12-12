@@ -12,7 +12,6 @@ module kbsx.ecommerce.frontoffice.activities.person {
     requires kbsx.event.client.sectionpanel;
     requires modality.base.client.activity;
     requires modality.base.client.util;
-    requires modality.base.client.validation;
     requires modality.crm.client.personaldetails;
     requires webfx.extras.util.animation;
     requires webfx.extras.util.layout;
@@ -26,6 +25,7 @@ module kbsx.ecommerce.frontoffice.activities.person {
     requires webfx.stack.routing.uirouter;
     requires webfx.stack.session.state.client.fx;
     requires webfx.stack.ui.controls;
+    requires webfx.stack.ui.validation;
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.person;

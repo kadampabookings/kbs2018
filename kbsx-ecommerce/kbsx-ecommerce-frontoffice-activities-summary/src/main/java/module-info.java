@@ -13,7 +13,6 @@ module kbsx.ecommerce.frontoffice.activities.summary {
     requires kbsx.event.client.bookingcalendar;
     requires kbsx.event.client.sectionpanel;
     requires modality.base.client.util;
-    requires modality.base.client.validation;
     requires modality.base.shared.entities;
     requires modality.crm.client.personaldetails;
     requires webfx.kit.util;
@@ -24,6 +23,7 @@ module kbsx.ecommerce.frontoffice.activities.summary {
     requires webfx.stack.orm.domainmodel.activity;
     requires webfx.stack.orm.entity.controls;
     requires webfx.stack.routing.uirouter;
+    requires webfx.stack.ui.validation;
 
     // Exported packages
     exports org.kadampabookings.kbsx.ecommerce.frontoffice.activities.summary;
