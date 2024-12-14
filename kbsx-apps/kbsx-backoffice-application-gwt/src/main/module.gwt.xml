@@ -404,6 +404,8 @@
     <source path="one/modality/crm/client/i18n"/>
     <!--======================< modality-crm-client-personaldetails >=======================-->
     <source path="one/modality/crm/client/controls/personaldetails"/>
+    <!--=============< modality-crm-frontoffice-activity-createaccount-plugin >=============-->
+    <source path="one/modality/crm/frontoffice/activities/createaccount"/>
     <!--===========================< modality-crm-shared-authn >============================-->
     <source path="one/modality/crm/shared/services/authn"/>
     <source path="one/modality/crm/shared/services/authn/serial"/>
@@ -895,6 +897,8 @@
     <source path="dev/webfx/stack/orm/entity/query_result_to_entities"/>
     <source path="dev/webfx/stack/orm/entity/result"/>
     <source path="dev/webfx/stack/orm/entity/result/impl"/>
+    <!--=========================< webfx-stack-orm-entity-binding >=========================-->
+    <source path="dev/webfx/stack/orm/entity/binding"/>
     <!--========================< webfx-stack-orm-entity-controls >=========================-->
     <source path="dev/webfx/stack/orm/entity/controls/entity/selector"/>
     <source path="dev/webfx/stack/orm/entity/controls/entity/sheet"/>
