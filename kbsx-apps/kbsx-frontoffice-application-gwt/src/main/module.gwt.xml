@@ -249,20 +249,6 @@
     <source path="one/modality/base/client/util/log"/>
     <source path="one/modality/base/client/util/masterslave"/>
     <source path="one/modality/base/client/util/routing"/>
-    <!--========================< modality-base-client-validation >=========================-->
-    <source path="one/modality/base/client/validation"/>
-    <!--===============< modality-base-frontoffice-activity-account-plugin >================-->
-    <source path="one/modality/base/frontoffice/activities/account"/>
-    <source path="one/modality/base/frontoffice/activities/account/friendsfamily"/>
-    <source path="one/modality/base/frontoffice/activities/account/friendsfamily/edit"/>
-    <source path="one/modality/base/frontoffice/activities/account/personalinfo"/>
-    <source path="one/modality/base/frontoffice/activities/account/routing"/>
-    <source path="one/modality/base/frontoffice/activities/account/settings"/>
-    <source path="one/modality/base/frontoffice/operations/routes/account"/>
-    <resource path="one/modality/base/frontoffice/activities/account/images"/>
-    <public path="" includes="one/modality/base/frontoffice/activities/account/images/"/>
-    <!--================< modality-base-frontoffice-activity-alerts-plugin >================-->
-    <source path="one/modality/base/frontoffice/activities/alerts"/>
     <!--=====================< modality-base-frontoffice-application >======================-->
     <source path="one/modality/base/frontoffice/application"/>
     <!--==================< modality-base-frontoffice-mainframe-activity >==================-->
@@ -310,11 +296,11 @@
     <source path="one/modality/crm/client/i18n"/>
     <!--======================< modality-crm-client-personaldetails >=======================-->
     <source path="one/modality/crm/client/controls/personaldetails"/>
+    <!--=============< modality-crm-frontoffice-activity-createaccount-plugin >=============-->
+    <source path="one/modality/crm/frontoffice/activities/createaccount"/>
     <!--===========================< modality-crm-shared-authn >============================-->
     <source path="one/modality/crm/shared/services/authn"/>
     <source path="one/modality/crm/shared/services/authn/serial"/>
-    <!--=========================< modality-ecommerce-client-i18n >=========================-->
-    <source path="one/modality/ecommerce/client/i18n"/>
     <!--=================< modality-event-client-activity-eventdependent >==================-->
     <source path="one/modality/event/client/activity/eventdependent"/>
     <!--=========================< modality-event-client-event-fx >=========================-->
@@ -744,6 +730,8 @@
     <source path="dev/webfx/stack/orm/entity/query_result_to_entities"/>
     <source path="dev/webfx/stack/orm/entity/result"/>
     <source path="dev/webfx/stack/orm/entity/result/impl"/>
+    <!--=========================< webfx-stack-orm-entity-binding >=========================-->
+    <source path="dev/webfx/stack/orm/entity/binding"/>
     <!--========================< webfx-stack-orm-entity-controls >=========================-->
     <source path="dev/webfx/stack/orm/entity/controls/entity/selector"/>
     <source path="dev/webfx/stack/orm/entity/controls/entity/sheet"/>
@@ -855,6 +843,7 @@
     <!--========================< webfx-stack-ui-operation-action >=========================-->
     <source path="dev/webfx/stack/ui/operation/action"/>
     <!--===========================< webfx-stack-ui-validation >============================-->
+    <source path="dev/webfx/stack/ui/validation"/>
     <source path="dev/webfx/stack/ui/validation/controlsfx/control/decoration"/>
     <source path="dev/webfx/stack/ui/validation/controlsfx/impl"/>
     <source path="dev/webfx/stack/ui/validation/controlsfx/impl/skin"/>
