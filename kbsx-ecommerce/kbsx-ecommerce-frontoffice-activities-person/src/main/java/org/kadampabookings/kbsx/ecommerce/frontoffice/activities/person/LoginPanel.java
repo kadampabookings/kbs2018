@@ -12,6 +12,7 @@ import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.util.scene.SceneUtil;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -71,8 +72,8 @@ public final class LoginPanel implements ModalityButtonFactoryMixin {
     }
 
     private void initValidation() {
-        validationSupport.addRequiredInput(usernameField, "Username is required");
-        validationSupport.addRequiredInput(passwordField, "Password is required");
+        validationSupport.addRequiredInput(usernameField, new SimpleStringProperty("Username is required"));
+        validationSupport.addRequiredInput(passwordField, new SimpleStringProperty("Password is required"));
     }
 
     public Node getNode() {

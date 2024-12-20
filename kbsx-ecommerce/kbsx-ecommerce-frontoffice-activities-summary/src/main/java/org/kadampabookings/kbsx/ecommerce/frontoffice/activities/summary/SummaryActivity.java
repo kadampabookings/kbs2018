@@ -6,6 +6,7 @@ import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.platform.util.Strings;
 import dev.webfx.stack.orm.entity.controls.entity.selector.ButtonSelectorParameters;
 import javafx.application.Platform;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableStringValue;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
@@ -70,7 +71,7 @@ final class SummaryActivity extends BookingProcessActivity {
                 nextButton
         );
 
-        validationSupport.addValidationRule(termsCheckBox.selectedProperty(), termsCheckBox, "Please read and accept the terms and conditions");
+        validationSupport.addValidationRule(termsCheckBox.selectedProperty(), termsCheckBox, new SimpleStringProperty("Please read and accept the terms and conditions"));
     }
 
     private void setTermsCheckBoxText(String text) {
