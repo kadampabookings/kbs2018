@@ -70,7 +70,7 @@ final class SummaryActivity extends BookingProcessActivity {
                 nextButton
         );
 
-        validationSupport.addValidationRule(termsCheckBox.selectedProperty(), termsCheckBox, "Please read and accept the terms and conditions");
+        validationSupport.addValidationRule(termsCheckBox.selectedProperty(), termsCheckBox, I18n.i18nTextProperty("Please read and accept the terms and conditions"));
     }
 
     private void setTermsCheckBoxText(String text) {
