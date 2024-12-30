@@ -301,6 +301,8 @@
     <source path="one/modality/base/client/services/i18n"/>
     <!--===========================< modality-base-client-icons >===========================-->
     <source path="one/modality/base/client/icons"/>
+    <resource path="images/large"/>
+    <public path="" includes="images/large/"/>
     <resource path="images/s16"/>
     <public path="" includes="images/s16/"/>
     <resource path="images/s16/actions"/>
@@ -404,8 +406,6 @@
     <source path="one/modality/crm/client/i18n"/>
     <!--======================< modality-crm-client-personaldetails >=======================-->
     <source path="one/modality/crm/client/controls/personaldetails"/>
-    <!--=============< modality-crm-frontoffice-activity-createaccount-plugin >=============-->
-    <source path="one/modality/crm/frontoffice/activities/createaccount"/>
     <!--===========================< modality-crm-shared-authn >============================-->
     <source path="one/modality/crm/shared/services/authn"/>
     <source path="one/modality/crm/shared/services/authn/serial"/>
@@ -897,8 +897,6 @@
     <source path="dev/webfx/stack/orm/entity/query_result_to_entities"/>
     <source path="dev/webfx/stack/orm/entity/result"/>
     <source path="dev/webfx/stack/orm/entity/result/impl"/>
-    <!--=========================< webfx-stack-orm-entity-binding >=========================-->
-    <source path="dev/webfx/stack/orm/entity/binding"/>
     <!--========================< webfx-stack-orm-entity-controls >=========================-->
     <source path="dev/webfx/stack/orm/entity/controls/entity/selector"/>
     <source path="dev/webfx/stack/orm/entity/controls/entity/sheet"/>
