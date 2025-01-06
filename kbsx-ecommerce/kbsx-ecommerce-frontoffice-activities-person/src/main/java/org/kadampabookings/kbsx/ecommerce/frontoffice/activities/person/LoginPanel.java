@@ -3,7 +3,6 @@ package org.kadampabookings.kbsx.ecommerce.frontoffice.activities.person;
 import dev.webfx.kit.util.properties.FXProperties;
 import dev.webfx.stack.authn.AuthenticationRequest;
 import dev.webfx.stack.authn.AuthenticateWithUsernamePasswordCredentials;
-import dev.webfx.stack.i18n.I18n;
 import dev.webfx.stack.i18n.controls.I18nControls;
 import dev.webfx.stack.session.state.client.fx.FXUserPrincipal;
 import dev.webfx.stack.ui.controls.button.ButtonFactory;
@@ -13,6 +12,7 @@ import dev.webfx.extras.util.layout.LayoutUtil;
 import dev.webfx.extras.util.scene.SceneUtil;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -72,8 +72,8 @@ public final class LoginPanel implements ModalityButtonFactoryMixin {
     }
 
     private void initValidation() {
-        validationSupport.addRequiredInput(usernameField, I18n.i18nTextProperty("Username is required"));
-        validationSupport.addRequiredInput(passwordField, I18n.i18nTextProperty("Password is required"));
+        validationSupport.addRequiredInput(usernameField, new SimpleStringProperty("Username is required"));
+        validationSupport.addRequiredInput(passwordField, new SimpleStringProperty("Password is required"));
     }
 
     public Node getNode() {
