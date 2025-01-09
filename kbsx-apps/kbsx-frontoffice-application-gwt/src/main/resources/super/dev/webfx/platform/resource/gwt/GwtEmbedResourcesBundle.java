@@ -24,13 +24,13 @@ public interface GwtEmbedResourcesBundle extends ClientBundle {
     @Source("dev/webfx/stack/i18n/en.properties")
     TextResource r5();
 
-    @Source("dev/webfx/stack/i18n/fr.properties")
+    @Source("dev/webfx/stack/i18n/es.properties")
     TextResource r6();
 
-    @Source("dev/webfx/stack/i18n/pt.properties")
+    @Source("dev/webfx/stack/i18n/fr.properties")
     TextResource r7();
 
-    @Source("dev/webfx/stack/i18n/sp.properties")
+    @Source("dev/webfx/stack/i18n/pt.properties")
     TextResource r8();
 
     @Source("dev/webfx/stack/i18n/vi.properties")
@@ -63,9 +63,9 @@ public interface GwtEmbedResourcesBundle extends ClientBundle {
             registerResource("dev/webfx/platform/meta/exe/exe.properties", R.r3());
             registerResource("dev/webfx/stack/i18n/de.properties", R.r4());
             registerResource("dev/webfx/stack/i18n/en.properties", R.r5());
-            registerResource("dev/webfx/stack/i18n/fr.properties", R.r6());
-            registerResource("dev/webfx/stack/i18n/pt.properties", R.r7());
-            registerResource("dev/webfx/stack/i18n/sp.properties", R.r8());
+            registerResource("dev/webfx/stack/i18n/es.properties", R.r6());
+            registerResource("dev/webfx/stack/i18n/fr.properties", R.r7());
+            registerResource("dev/webfx/stack/i18n/pt.properties", R.r8());
             registerResource("dev/webfx/stack/i18n/vi.properties", R.r9());
             registerResource("dev/webfx/stack/i18n/zh.properties", R.r10());
             registerResource("images/svg/color/price-tag.svg", R.r11());
