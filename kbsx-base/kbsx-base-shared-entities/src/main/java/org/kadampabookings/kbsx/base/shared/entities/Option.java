@@ -15,16 +15,17 @@ import org.kadampabookings.kbsx.hotel.shared.businessdata.time.DayTimeRange;
  * @author Bruno Salmon
  */
 public interface Option extends Entity,
-        EntityHasParent<Option>,
-        EntityHasEvent,
-        EntityHasName,
-        EntityHasLabel,
-        EntityHasIcon,
-        EntityHasArrivalSiteAndItem,
-        EntityHasItemFamily,
-        EntityHasDateTimeRange {
+    EntityHasParent<Option>,
+    EntityHasEvent,
+    EntityHasName,
+    EntityHasLabel,
+    EntityHasIcon,
+    EntityHasArrivalSiteAndItem,
+    EntityHasItemFamily,
+    EntityHasDateTimeRange,
+    EntityHasOrd {
 
-    //// Domain fields
+    /// / Domain fields
 
     default void setForceSoldout(Boolean forceSoldout) {
         setFieldValue("forceSoldout", forceSoldout);
@@ -117,8 +118,8 @@ public interface Option extends Entity,
     default String getLayout() {
         return getStringFieldValue("layout");
     }
-    
-    //// Enriched fields and methods
+
+    /// / Enriched fields and methods
 
     default boolean isNotObligatory() {
         return !isObligatory();
