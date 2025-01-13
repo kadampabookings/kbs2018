@@ -37,7 +37,7 @@ public final class WorkingDocumentLoader {
             List<WorkingDocumentLine> wdls = new ArrayList<>();
             for (DocumentLine dl : dls)
                 wdls.add(new WorkingDocumentLine(dl, Collections.filter(as, a -> a.getDocumentLine() == dl), eventAggregate));
-            WorkingDocument loadedWorkingDocument = new WorkingDocument(eventAggregate, store.getEntity(Document.class, documentPk), wdls);
+            WorkingDocument loadedWorkingDocument = new WorkingDocument(eventAggregate, store.getEntity(Document.class, documentPk, true), wdls);
             return new WorkingDocument(loadedWorkingDocument);
         });
     }
